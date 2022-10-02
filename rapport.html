@@ -308,6 +308,14 @@
         .scenario-main-steps {
             margin: 0; padding-left: 16px;        
         }
+        .scenario-main-steps {counter-reset: topLevel;}
+        .scenario-main-step {counter-increment: topLevel;}
+        .scenario-main-step ol {counter-reset: secondLevel;}
+        .scenario-main-step ol li.scenario-secondary-step {counter-increment: secondLevel;}
+        .scenario-main-step ol li.scenario-secondary-step:before {content: counter(topLevel,decimal) '.' counter(secondLevel, decimal);}
+
+        .scenario-secondary-steps
+        .scenario-secondary-step
 
         .scenario-alt {
             margin-top: 6px;
@@ -358,6 +366,12 @@
             content: '🗸'; 
             color: currentColor;
         }
+        .bare-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
     </style>
 </head>
 
@@ -604,7 +618,7 @@
                         <div class="cu-part">
                             <h5 class="cu-part-title">Postconditions</h5>
                             <ul class="bare-list cu-conditions">
-                                <li class="dash">Aucun</li>
+                                <li class="dash">L'utilisateur est enregistré dans une base de données.</li>
                             </ul>
                         </div>
                         
@@ -620,21 +634,21 @@
                             <li class="scenario-main-step">Lutilisateur clique sur 'se créer un compte'.</li>
                             <li class="scenario-main-step">L'utilisateur choisit entre créer un compte citoyen et un compte consommateur. </li>
                             <li class="scenario-main-step">L'utilisateur entre les informations nécessaires pour créer un compte.</li>
-                            <li class="scenario-main-step">Bineco valide et enregistre les informations entrées.</li>
+                            <li class="scenario-main-step">Bineco valide les informations entrées.</li>
+                            <li class="scenario-main-step">Bineco enregiste les informations entrées.</li>
                             <li class="scenario-main-step">L'utilisateur accède au menu</li>
                             
                         </ol>
 
                         <div class="scenario-alt">
                             <h5 class="scenario-alt-title">Scénarios alternatifs</h5>
-                            <div class="scenario-alt">
-                            <p>5a. Les informations entré par l'utilisateur sont invalide</p>
-			    <ol>
-			    <p>5a.1 Les informations entré par l'utilisateur sont invalide</p>
-			    </ol>
-
-                        </div>
-                                    </ol>
+                            <ol class="bare-list scenario-alt-steps">
+                                <li class="bare-list scenario-alt-step" value="5">
+                                    Les informations entrées par l'utilisateur sont invalides.
+			                        <ol class="bare-list">
+			                            <li value="5">Le serveur détecte une erreur dans les information entreés.</li>
+                                        <li value="5"> L'utilisateur est renvoyé à l'étape 4.</li>
+			                        </ol>
                                 </li>
                             </ol>
                         </div>
@@ -644,10 +658,10 @@
                 <div class="scenario" id="cu-2">
                     <div class="scenario-meta">
                         <h4 class="cu-name">
-                            <strong>CU:</strong> Consulter le répertoire des services
+                            <strong>CU:</strong> Signaler un problème.
                         </h4>
                         <p class="cu-goal">
-                            <strong>Objectif:</strong> Obtenir la liste des services et séances offerts et disponibles
+                            <strong>Objectif:</strong> Informer la ville d'un problème signalé par un utilisateur.
                         </p>
                         
                         <hr>
@@ -655,14 +669,16 @@
                         <div class="cu-part">
                             <h5 class="cu-part-title">Acteurs</h5>
                             <ul class="bare-list cu-actors">
-                                <li class="cu-actor">Agent (Principal)</li>
+                                <li class="cu-actor">Citoyen (Principal)</li>
+                                <li class="cu-actor">Consommateur (Secondaire)</li>
                             </ul>
                         </div>
                         
                         <div class="cu-part">
                             <h5 class="cu-part-title">Préconditions</h5>
                             <ul class="bare-list cu-conditions">
-                                <li class="dash">Aucun.</li>
+                                <li class="dash">L'utilisateur possède un ordinateur ou un téléphone intelligent et une connection internet.</li>
+                                <li class="dash">L'utilisateur possède un compte Bineco.</li>
                             </ul>
                         </div>
                         
@@ -681,16 +697,270 @@
                     <div class="scenario-main">
                         <h5 class="scenario-main-title">Scénario principal</h5>
                         <ol class="scenario-main-steps">
-                            <li class="scenario-main-step">L’agent ouvre le Répertoire des services.</li>
-                            <li class="scenario-main-step">Le système affiche la liste des services offerts par GYM ainsi que toutes les séances disponibles durant la journée.</li>
+                            <li class="scenario-main-step">L'utilisateur ouvre Bineco.</li>
+                            <li class="scenario-main-step">L'utilisateur se connecte à son compte.
+                                <ol class="scenario-secondary-steps bare-list">
+                                    <li class="scenario-secondary-step">L'utilisateur accède au menu principal.</li>
+                                </ol>
+                            </li>
+                            <li class="scenario-main-step">L'utilisateur choisit l'option de signaler un problème.
+                                <ol class="scenario-secondary-steps bare-list">
+                                    <li class="scenario-secondary-step">Un champ de texte est ouvert</li>
+                                </ol>
+                            </li>
+                            <li class="scenario-main-step">L'utilisateur entre les information.</li>
+                            <li class="scenario-main-step">Le serveur achemine les information à une boite de message de la ville.</li>
                         </ol>
 
                         <div class="scenario-alt">
                             <h5 class="scenario-alt-title">Scénarios alternatifs</h5>
-                            <p>Aucun</p>
+                            <ol class="bare-list scenario-alt-steps">
+                                <li class="bare-list scenario-alt-step" value="2"> L'utilisateur n'a pas de compte.
+                                    <ol class="bare-list">
+                                        <li value="2">L'utilisateur <a href=#cu-1>se crée un compte</a>.</li>
+                                        <li value="2">L'utilisateur reprends à l'étape 3.</li>
+                                    </ol>
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
+                <div class="scenario" id="cu-3">
+                    <div class="scenario-meta">
+                        <h4 class="cu-name">
+                            <strong>CU:</strong> Ajouter un bac
+                        </h4>
+                        <p class="cu-goal">
+                            <strong>Objectif:</strong> Un utilisateur ajoute un nouveau bac
+                        </p>
+                        
+                        <hr>
+
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Acteurs</h5>
+                            <ul class="bare-list cu-actors">
+                                <li class="cu-actor">Citoyen (Principal)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Préconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">L'utilisateur possède un ordinateur ou un téléphone intelligent et une connection internet.</li>
+                                <li class="dash">L'utilisateur possède un compte Bineco.</li>
+                                <li class="dash">L'utilisateur possède un bac qui n'est pas enregistré.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Postconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">Le nouveau bac est lié avec l'utilisateur dans une base de données.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part cu-part--notes">
+                            <h5 class="cu-part-title">Notes</h5>
+                            <p class="cu-notes">Notes additionnelles et hypothèses</p>
+                        </div>
+                    </div>
+                    <div class="scenario-main">
+                        <h5 class="scenario-main-title">Scénario principal</h5>
+                        <ol class="scenario-main-steps">
+                            <li class="scenario-main-step">L'utlisateur ouvre bineco.</li>
+                            <li class="scenario-main-step">L'utilisateur se connecte à son compte.
+                                <ol class="scenario-secondary-steps bare-list">
+                                    <li class="scenario-secondary-step">L'utilisateur accède au menu principal.</li>
+                                </ol>
+                            </li>
+                            <li class="scenario-main-step">L'utilisateur choisit l'option d'enregister un nouveau bac.
+                                <ol class="scenario-secondary-steps bare-list">
+                                    <li class="scenario-secondary-step">Les champs requis sont affichés.</li>
+                                </ol>
+                            </li>
+                            <li class="scenario-main-step">L'utilisateur entre les informations du bac.</li>
+                            <li class="scenario-main-step">Le serveur valide les informations.</li>
+                            <li class="scenario-main-step">Le serveur enregiste le bac avec l'utilisateur dans sa base de données.</li>
+                            <li class="scenario-main-step">L'utilisateur est renvoyé au menu principal.</li>
+                        </ol>
+
+                        <div class="scenario-alt">
+                            <h5 class="scenario-alt-title">Scénarios alternatifs</h5>
+                            <ol class="bare-list scenario-alt-steps">
+                                <li class="bare-list scenario-alt-step" value="2">L'utilisateur n'a pas de compte.
+                                    <ol class="bare-list">
+                                        <li value="2">L'utilisateur <a href=#cu-1>se crée un compte</a>.</li>
+                                        <li value="2">L'utilisateur reprends à l'étape 3.</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                            <ol class="bare-list scenario-alt-steps">
+                                <li class="bare-list scenario-alt-step" value="5">Les informations entré par l'utilisateur sont invalides.
+                                    <ol class="bare-list">
+                                        <li value="5">Le serveur détecte un erreur dans les informations entrées.</li>
+                                        <li value="5">Une erreur est affichée.</li>
+                                        <li value="5">L'utilisateur est renvoyé à l'étape 4.</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="scenario" id="cu-4">
+                    <div class="scenario-meta">
+                        <h4 class="cu-name">
+                            <strong>CU:</strong> Voir les statistiques.
+                        </h4>
+                        <p class="cu-goal">
+                            <strong>Objectif:</strong> Permet à l'utilisateur de prendre connaissances de différentes métriques écologiques le concernant.
+                        </p>
+                        
+                        <hr>
+
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Acteurs</h5>
+                            <ul class="bare-list cu-actors">
+                                <li class="cu-actor">Citoyen (Principal)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Préconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">L'utilisateur possède un ordinateur ou un téléphone intelligent et une connection internet.</li>
+                                <li class="dash">L'utilisateur possède un compte Bineco.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Postconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">Aucune</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part cu-part--notes">
+                            <h5 class="cu-part-title">Notes</h5>
+                            <p class="cu-notes">Notes additionnelles et hypothèses</p>
+                        </div>
+                    </div>
+                    <div class="scenario-main">
+                        <h5 class="scenario-main-title">Scénario principal</h5>
+                        <ol class="scenario-main-steps">
+                            <li class="scenario-main-step">L'utlisateur ouvre bineco.</li>
+                            <li class="scenario-main-step">L'utilisateur accède au menu principal.
+                                <ol class="scenario-secondary-steps bare-list">
+                                    <li class="scenario-secondary-step">L'utilisateur se connecte à son compte.</li>
+                                </ol>
+                            </li>
+                            <li class="scenario-main-step">L'utilisateur accède au volet statistiques
+                                <ol class="scenario-secondary-steps bare-list">
+                                    <li class="scenario-secondary-step">L'utilisateur clique sur le volet statistiques</li>
+                                    <li class="scenario-secondary-step">L'utilisateur choisit une catégorie parmis:
+                                        <ul>
+                                            <li>État de mes bacs</li>
+                                            <li>Métriques écologiques</li>
+                                            <li>Traitement de mes déchets</li>
+                                            <li>Activités que je maintiens</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li class="scenario-main-step">Le serveur va chercher les informations demandées.</li>
+                            <li class="scenario-main-step">L'application affiche un graphique représentant la statistique demandée.</li>
+                        </ol>
+
+                        <div class="scenario-alt">
+                            <h5 class="scenario-alt-title">Scénarios alternatifs</h5>
+                            <ol class="bare-list scenario-alt-steps">
+                                <li class="bare-list scenario-alt-step" value="2">L'utilisateur n'a pas de compte.
+                                    <ol class="bare-list">
+                                        <li value="2">L'utilisateur <a href=#cu-1>se crée un compte</a>.</li>
+                                        <li value="2">L'utilisateur reprends à l'étape 3.</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scenario" id="cu-5">
+                    <div class="scenario-meta">
+                        <h4 class="cu-name">
+                            <strong>CU:</strong> Trouver un consommateur
+                        </h4>
+                        <p class="cu-goal">
+                            <strong>Objectif:</strong> Permet à l'utilisateur de voir les consommateurs enregistrés.
+                        </p>
+                        
+                        <hr>
+
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Acteurs</h5>
+                            <ul class="bare-list cu-actors">
+                                <li class="cu-actor">Citoyen (Principal)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Préconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">L'utilisateur possède un ordinateur ou un téléphone intelligent et une connection internet.</li>
+                                <li class="dash">L'utilisateur possède un compte Bineco.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Postconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">Aucune</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part cu-part--notes">
+                            <h5 class="cu-part-title">Notes</h5>
+                            <p class="cu-notes">Notes additionnelles et hypothèses</p>
+                        </div>
+                    </div>
+                    <div class="scenario-main">
+                        <h5 class="scenario-main-title">Scénario principal</h5>
+                        <ol class="scenario-main-steps">
+                            <li class="scenario-main-step">L'utlisateur ouvre bineco.</li>
+                            <li class="scenario-main-step">L'utilisateur accède au menu principal.
+                                <ol class="scenario-secondary-steps bare-list">
+                                    <li class="scenario-secondary-step">L'utilisateur se connecte à son compte.</li>
+                                </ol>
+                            </li>
+                            <li class="scenario-main-step">L'utilisateur accède à la liste de consomateurs.
+                                <ol class="scenario-secondary-steps bare-list">
+                                    <li class="scenario-secondary-step">Le serveur va chercher les informations et les retourne.</li>
+                                    <li class="scenario-secondary-step">L'application affiche une liste de consomateurs.</li>
+                                </ol>
+                            </li>
+                        </ol>
+
+                        <div class="scenario-alt">
+                            <h5 class="scenario-alt-title">Scénarios alternatifs</h5>
+                            <ol class="bare-list scenario-alt-steps">
+                                <li class="bare-list scenario-alt-step" value="2">L'utilisateur n'a pas de compte.
+                                    <ol class="bare-list">
+                                        <li value="2">L'utilisateur <a href=#cu-1>se crée un compte</a>.</li>
+                                        <li value="2">L'utilisateur reprends à l'étape 3.</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                            <ol class="bare-list scenario-alt-steps">
+                                <li class="bare-list scenario-alt-step" value="4">L'utilisateur veux utiliser un filtre.
+                                    <ol class="bare-list">
+                                        <li value="4">L'utilisateur choisit un niveau de proximité.</li>
+                                        <li value="4">L'application discarte tout les consomateurs ne validant pas la condition.</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
             </section>
 
             <section class="main-section">

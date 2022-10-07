@@ -82,7 +82,7 @@
                 display: flex; flex-direction: column;
             }
                 .member:not(:last-child) {
-                    margin-right: 12px;
+                    margin-right: 10px;
                 }
 
                 .member-pic {
@@ -308,14 +308,6 @@
         .scenario-main-steps {
             margin: 0; padding-left: 16px;        
         }
-        .scenario-main-steps {counter-reset: topLevel;}
-        .scenario-main-step {counter-increment: topLevel;}
-        .scenario-main-step ol {counter-reset: secondLevel;}
-        .scenario-main-step ol li.scenario-secondary-step {counter-increment: secondLevel;}
-        .scenario-main-step ol li.scenario-secondary-step:before {content: counter(topLevel,decimal) '.' counter(secondLevel, decimal);}
-
-        .scenario-secondary-steps
-        .scenario-secondary-step
 
         .scenario-alt {
             margin-top: 6px;
@@ -366,11 +358,7 @@
             content: '🗸'; 
             color: currentColor;
         }
-        .bare-list {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
+	
         
     </style>
 </head>
@@ -381,19 +369,25 @@
             <div>
                 <h1 class="report-title">Rapport du livrable I</h1>
                 <p class="report-summary">
-                    <em>Court résumé du rapport</em> &ndash; Ce rapport 
+		<br></br>
+		
+                    <em>Court résumé du rapport</em> &ndash; Ce rapport est divisé en 3 sections distinctes: le cadre du projet, la définition du domaine, ainsi que l'analyse. 
+							     Le cadre du projet est la première section du livrable. Elle regroupe la présentation des membres de l'équipe, ainsi que des éléments de planification utile pour le projet.
+							     La deuxième section de ce projet est la définition du domaine. Elle regroupe les différents besoins du client, plus particulièrement les besoins fonctionnels et non fonctionnels, ainsi qu'un glossaire présentant les termes caractérisant le domaine.
+							     Finalement, la section analyse présente les risques, les besoins matériels, les contraintes physiques et conceptuelles associés au développement de bineco, des images du premier prototype développé, ainsi qu'une analyse de notre solution.
+							     
                 </p>
             </div>
 
             <ul class="bare-list report-resources">
                 <li class="report-resource has-helper">
-                    <a class="report-resource-link" href="#">
+                    <a class="report-resource-link" href="https://github.com/YohannManseauGlemot/Projet_IFT2255/">
                         <img class="report-resource-link__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTu0CEad5lKA2J__6GwOTlMUNWPQ7NkT4mp8Ow4D7kvrabfLergwDk9d_NomcEDOeYBgk&usqp=CAU" alt="">
                     </a>                   
                     <span class="helper">Répertoire GitHub</span> 
                 </li>
                 <li class="report-resource has-helper">
-                    <a class="report-resource-link" href="fichier-dm1.vpp">
+                    <a class="report-resource-link" href="https://github.com/YohannManseauGlemot/Projet_IFT2255/blob/main/VPP/Cas%20d'utilisation.vpp">
                         <img class="report-resource-link__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlI6eE2QReq-k7qfSa0vBSlhxv6VWGPuEyTuN7g-kOcUuwzQOWpM-_BA4x-5Bcvpe28h8&usqp=CAU" alt="">
                     </a>
                     <span class="helper">Fichiers VPP</span>
@@ -405,22 +399,22 @@
             <h2 class="team-title">Notre équipe</h2>
             <ul class="bare-list members">
                 <li class="member">
-                    <img class="member-pic" src="" alt="" >
-                    <div class="member-identification">
+                    <img class="member-pic" src="https://github.com/YohannManseauGlemot/Projet_IFT2255/blob/main/images/member2_pic.jpg?raw=true" alt="" >
+                    <div class="member-identification" >
                         <span class="member-name">Yohann MANSEAU-GLÉMOT</span>
                         <span class="member-id">20217138</span>
                     </div> 
                     <a href="mailto:yohann.manseau-glemot@umontreal.ca">yohann.manseau-glemot@umontreal.ca</a>
-                    <span class="member-role">Chargé de concevoir le prototype et la définition du domaine</span>
+                    <span class="member-role">Représentant de l'équipe: s'occupe de la conception du prototype et de la définition du domaine.</span>
                 </li>
                 <li class="member">
-                    <img class="member-pic" src="" alt="" >
+                    <img class="member-pic" src="https://github.com/YohannManseauGlemot/Projet_IFT2255/blob/main/images/member1_pic.jpg?raw=true" alt="" >
                     <div class="member-identification">
                         <span class="member-name">Alex Chevrier</span>
                         <span class="member-id">20216495</span>
                     </div> 
                     <a href="mailto:alex.chevrier@umontreal.ca">alex.chevrier@umontreal.ca</a>
-                    <span class="member-role">Chargé de concevoir le livrable I</span>
+                    <span class="member-role">S'occupe de la plannification, des cas d'utilisations, de la section analyse et de la mise en page du rapport</span>
                 </li>
                 <li class="member">
                     <img class="member-pic" src="" alt="" >
@@ -429,7 +423,7 @@
                         <span class="member-id">20219276</span>
                     </div> 
                     <a href="mailto:maxime.belanger.12@umontreal.ca">maxime.belanger.12@umontreal.ca</a>
-                    <span class="member-role">Chargé de concevoir le prototype et le livrable</span>
+                    <span class="member-role">S'occupe de rédiger les cas d'utilisations</span>
                 </li>
                 
             </ul>
@@ -480,13 +474,68 @@
         <div class="report-main">
             <section class="main-section">
                 <h2 id="plan" class="section-title">Plannification</h2>
-                <p>
+                
                     <em>
-                        Depuis 2010, La ville de Montréal à implanter des mesures favorisant la gestion des différentes catégories de déchets, comme le bac de recyclage et le bac de compostage, ainsi qu'un système de collecte respectif pour ces bacs. Cependant très peu d'information sur l'acheminement de ces déchets et leur utilisation sont fourni aux citoyens, ce qui démotive les citoyens à prendre soins de l'environnement et favorise la surconsommation.  <br>
-			Présentement, les citoyens sont peu informer sur le cheminement de leur déchets suite à la collecte. Aussi, ils n'ont aucun choix sur le sort de leur déchet, à part cette collecte. Seulement la ville peut décider quoi faire de ces déchets. De plus, ces déchets sont rarement acheminés à des endroit adéquats (Tout dans le dépotoir)
-                        Présentation de l'échéancier et la distribution des taches <br>
+                        Depuis 2010, La ville de Montréal à implantée des mesures favorisant la gestion des différentes catégories de déchets, comme le bac de recyclage et le bac de compostage, ainsi qu'un système de collecte respectif pour ces bacs. Cependant très peu d'information sur l'acheminement de ces déchets et leur utilisation sont fourni aux citoyens, ce qui les démotivent à prendre soins de l'environnement et favorise la surconsommation.
+			<br></br>
+			Présentement, les citoyens de la ville de Montréal n'ont aucune statistiques sur leur consommation de déchets, leur habitudes environnementales et le traitement des déchets. Il est donc difficile pour eux de faire des choix éclairés sur leur consommation. De plus, le système de collecte municipal n'est pas optimal, puisque certaines cathégories de déchets sont souvent mélangées. Aussi, ils n'ont aucun choix sur le sort de leur déchet, à part cette collecte, c'est-à-dire que seulement la ville peut décider quoi faire de ces déchets.
+                        <br></br></em>
+			<b>Présentation de l'échéancier et la distribution des taches: </b>
+			<br></br>
+		    <em>
+			Maxime Bélanger: S'occupe des différents cas d'utilisation, c'est-à-dire la rédaction des différents scénarios principaux et alternatifs pour chaque objectif décrits dans le rapport 
+			<br></br>
+			Yohann Manseau-Glémot: S'occupe de développer le protoype de l'application, c'est-à-dire la page principale, ainsi que les différents sous-menu pour chaque options du menu principal
+			<br></br>
+			Alex Chevrier: S'occupe de la plannification, de l'analyse et de la mise en page du rapport
                         Présentation des hypothèses (optionnel)
+			<br></br>
+		    </em>
+
+			
+			<p style="text-align:center;"><img src= "https://github.com/YohannManseauGlemot/Projet_IFT2255/blob/main/images/Septembre%20(19%20au%2026).png?raw=true" height = 500px width = 700px></p>
+			<br></br>
+			<b>Questions posées au client:</b>
+
+		    <em>
+
+			<ul>
+				<li>  Que veut on dire par : Afficher les métriques de l'activité écologique? </li>
+
+				<li> Qu'elle est la différence entre Afficher l'état des mes bacs et Voir l'état de traitement de mes déchets dans la liste de souhaits?</li>
+
+				<li> Doit on créer une sorte de base de données pour pouvoir se connecter si un utilisateur s'est déjà créé un compte (authentification) ? </li>
+				<li>Quels sont les diagrammes à réaliser?</li>
+				<li>Les métriques sont par rapport à l'individu ou à la ville?</li>
+				<li>C'est quoi la différence entre les contraintes physiques et conceptuelles et les besoins non fonctionnels</li>
+			</ul>
+		    </em>
+			<b>Réponses obtenues:</b>
+		    <em>
+			<ul>
+				<li>  L’application Bineco devrait afficher certaines métriques (indicateurs, ratios) liées à l’état, à la production et à l’usage des déchets. Ces métriques permettront de suivre l’activité écologique des résidents et municipalités.
+    				      L’état de mes bacs fait référence à leur capacité (niveau de remplissage), leur composition (contenu) et leur usage (lié aux métriques écologiques) </li>
+				
+				<li> Le traitement des déchets fait référence au suivi des déchets une fois qu’ils ont quitté le domicile. Il est segmenté en 3 points de contrôle (checkpoint)</li>
+
+			    <ul>
+       				 <li>Récupération des déchets (passage des camions) </li>
+        			 <li>Livraison des déchets (date, consommateur ou dépôt, état des déchets)</li>
+        			 <li>Usage des déchets (consommateur, activité, proportions exploitées)</li>
+			   </ul>
+
+				<li>  À vous de me le dire dans votre analyse </li>
+				<li>  Uniquement le diagrame de cas d'utilisation (CU) </li>
+				<li>  Les métriques sont par rapport à l'individu </li>
+			
+
                     </em>
+
+		
+      
+    
+
+
                 </p>
             </section>
 
@@ -533,13 +582,13 @@
                 <ul class="bare-list personas">
                     <li class="persona">
                         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
-                            <span class="persona-name">Bob &ndash; <em>Comptable</em></span>
+                            <span class="persona-name">Yohann &ndash; <em>Citoyen soucieu de l'environnement</em></span>
                             <div class="persona-stat">
                                 <span class="persona-type persona-type--pp" title="Pratico-pratique">PP</span>
                                 <span class="persona-market">40%</span>
                             </div>
                         </div>
-                        <span class="persona-info">Homme célibataire de 42 ans vivant au Canada</span>
+                        <span class="persona-info">Citoyen de la ville de montréal d'âge adulte </span>
                         <div class="persona-goal">
                             <h4 class="persona-title">Buts</h4>
                             <ul class="bare-list">
@@ -551,13 +600,13 @@
                     </li>
                     <li class="persona">
                         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
-                            <span class="persona-name">Eva &ndash; <em>Pharmacienne</em></span>
+                            <span class="persona-name">Angela &ndash; <em>Dirigante d'une unité de traitement de déchets</em></span>
                             <div class="persona-stat">
                                 <span class="persona-type persona-type--eco" title="Ecolo">ECO</span>
                                 <span class="persona-market">20%</span>
                             </div>
                         </div>
-                        <span class="persona-info">Femme mariée de 34 ans vivant au Canada</span>
+                        <span class="persona-info">Employée d'un système de traitement de déchets de quelconques grosseur. </span>
                         <div class="persona-goal">
                             <h4 class="persona-title">Buts</h4>
                             <ul class="bare-list">
@@ -576,7 +625,7 @@
                 <h3 class="subsection-title">Cas d'utilisation</h3>
                 <div class="use-case">
                     <a class="use-case-link" href="lien-vers-fichier.vpp">
-                        <img class="use-case-img" src="images/use_case_diagram.svg" alt="">
+                        <img class="use-case-img" src="https://github.com/YohannManseauGlemot/Projet_IFT2255/blob/main/images/299449265_779240926658015_5883246798914150838_n.png?raw=true" alt="">
                     </a>
                     <p class="use-case-notes">
                         <em>
@@ -961,6 +1010,329 @@
                     </div>
                 </div>
 
+
+<div class="scenario" id="cu-5">
+                    <div class="scenario-meta">
+                        <h4 class="cu-name">
+                            <strong>CU:</strong> Voir l'état des bacs
+                        </h4>
+                        <p class="cu-goal">
+                            <strong>Objectif:</strong> Permet à l'utilisateur de voir l'état de ses bacs
+                        </p>
+                        
+                        <hr>
+
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Acteurs</h5>
+                            <ul class="bare-list cu-actors">
+                                <li class="cu-actor">Citoyen (Principal)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Préconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">L'utilisateur possède un ordinateur ou un téléphone intelligent et une connection internet.</li>
+                                <li class="dash">L'utilisateur possède un compte Bineco.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Postconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">Aucune</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part cu-part--notes">
+                            <h5 class="cu-part-title">Notes</h5>
+                            <p class="cu-notes">Notes additionnelles et hypothèses</p>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="scenario-main">
+                        <h5 class="scenario-main-title">Scénario principal</h5>
+                        <ol class="scenario-main-steps">
+                            <li class="scenario-main-step">L'utlisateur ouvre bineco.</li>
+                            <li class="scenario-main-step">L'utilisateur accède au menu principal.
+                                <ol class="scenario-secondary-steps bare-list">
+                                    <li class="scenario-secondary-step">L'utilisateur se connecte à son compte.</li>
+                                </ol>
+                            </li>
+			  
+                        	<li class="scenario-main-step">L'utilisateur accède au volet statistique.
+                                <ol class="scenario-secondary-steps bare-list">
+				    <li class="scenario-secondary-step"> L'utilisateur choisit l'option pour voir l'état de ses bacs</li>
+                                    <li class="scenario-secondary-step"> Le serveur va chercher les informations et les retourne.</li>
+                                    <li class="scenario-secondary-step"> L'application affiche l'état des bacs de l'utilisateur</li>
+                                </ol>
+                            </li>
+                        </ol>
+
+                        <div class="scenario-alt">
+                            <h5 class="scenario-alt-title">Scénarios alternatifs</h5>
+                            <ol class="bare-list scenario-alt-steps">
+                                <li class="bare-list scenario-alt-step" value="2">L'utilisateur n'a pas de compte.
+                                    <ol class="bare-list">
+                                        <li value="2">L'utilisateur <a href=#cu-1>se crée un compte</a>.</li>
+					<li value="2">L'utilisateur <a href=#cu-3>enregistrer un bac.</a></li>
+                                        <li value="2">L'utilisateur reprends à l'étape 2.</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                            <ol class="bare-list scenario-alt-steps">
+                                <li class="bare-list scenario-alt-step" value="3">L'utilisateur n'a pas enregistré de bacs.
+                                    <ol class="bare-list">
+                                        <li value="3">L'utilisateur se connecte à son compte.</li>
+                                        <li value="3">L'utilisateur choisit l'option <a href=#cu-3>enregistrer un bac.</a></li>
+					<li value="3">L'utilisateur est redirigé vers l'étape 3</li>
+					
+                                    </ol>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+
+
+		<div class="scenario" id="cu-5">
+                    <div class="scenario-meta">
+                        <h4 class="cu-name">
+                            <strong>CU:</strong> Afficher les métriques écologiques
+                        </h4>
+                        <p class="cu-goal">
+                            <strong>Objectif:</strong> Permet à l'utilisateur de voir les métriques écologiques.
+                        </p>
+                        
+                        <hr>
+
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Acteurs</h5>
+                            <ul class="bare-list cu-actors">
+                                <li class="cu-actor">Citoyen (Principal)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Préconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">L'utilisateur possède un ordinateur ou un téléphone intelligent et une connection internet.</li>
+                                <li class="dash">L'utilisateur possède un compte Bineco.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Postconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">Aucune</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part cu-part--notes">
+                            <h5 class="cu-part-title">Notes</h5>
+                            <p class="cu-notes">Notes additionnelles et hypothèses</p>
+                        </div>
+                    </div>
+                    <div class="scenario-main">
+                        <h5 class="scenario-main-title">Scénario principal</h5>
+                        <ol class="scenario-main-steps">
+                            <li class="scenario-main-step">L'utlisateur ouvre bineco.</li>
+                            <li class="scenario-main-step">L'utilisateur accède au menu principal.
+                                <ol class="scenario-secondary-steps bare-list">
+                                    <li class="scenario-secondary-step">L'utilisateur se connecte à son compte.</li>
+                                </ol>
+                            </li>
+                            <li class="scenario-main-step">L'utilisateur accède au volet statistique
+                                <ol class="scenario-secondary-steps bare-list">
+				    <li class="scenario-secondary-step">L'utilisateur choisi l'option pour afficher les métriques écologiques</li>
+                                    <li class="scenario-secondary-step">Le serveur va chercher les informations et les retourne.</li>
+                                    <li class="scenario-secondary-step">L'application affiche les métriques écologiques.</li>
+                                </ol>
+                            </li>
+                        </ol>
+
+                        <div class="scenario-alt">
+                            <h5 class="scenario-alt-title">Scénarios alternatifs</h5>
+                            <ol class="bare-list scenario-alt-steps">
+                                <li class="bare-list scenario-alt-step" value="2">L'utilisateur n'a pas de compte.
+                                    <ol class="bare-list">
+                                        <li value="2">L'utilisateur <a href=#cu-1>se crée un compte</a>.</li>
+                                        <li value="2">L'utilisateur reprends à l'étape 2.</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                            <ol class="bare-list scenario-alt-steps">
+                                <li class="bare-list scenario-alt-step" value="4">L'utilisateur ne s'est pas enregistrer au près d'un consommateur
+                                    <ol class="bare-list">
+                                        <li value="4">L'utilisateur <a href=#cu-5>trouve un consommateur</a> </li>
+                                        <li value="4">l'utilisateur choisi un consommateur</li>
+					<li value="4">L'utilisateur reprend à l'étape 3.</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+		<div class="scenario" id="cu-5">
+                    <div class="scenario-meta">
+                        <h4 class="cu-name">
+                            <strong>CU:</strong> Afficher l'état de traitement des déchets
+                        </h4>
+                        <p class="cu-goal">
+                            <strong>Objectif:</strong> Permet à l'utilisateur de voir l'état de traitement des déchets municipaux
+                        </p>
+                        
+                        <hr>
+
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Acteurs</h5>
+                            <ul class="bare-list cu-actors">
+                                <li class="cu-actor">Citoyen (Principal)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Préconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">L'utilisateur possède un ordinateur ou un téléphone intelligent et une connection internet.</li>
+                                <li class="dash">L'utilisateur possède un compte Bineco.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Postconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">Aucune</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part cu-part--notes">
+                            <h5 class="cu-part-title">Notes</h5>
+                            <p class="cu-notes">Notes additionnelles et hypothèses</p>
+                        </div>
+                    </div>
+                    <div class="scenario-main">
+                        <h5 class="scenario-main-title">Scénario principal</h5>
+                        <ol class="scenario-main-steps">
+                            <li class="scenario-main-step">L'utlisateur ouvre bineco.</li>
+                            <li class="scenario-main-step">L'utilisateur accède au menu principal.
+                                <ol class="scenario-secondary-steps bare-list">
+                                    <li class="scenario-secondary-step">L'utilisateur se connecte à son compte.</li>
+                                </ol>
+                            </li>
+                            <li class="scenario-main-step">L'utilisateur accède au volet statistiques
+                                <ol class="scenario-secondary-steps bare-list">
+				    <li class="scenario-secondary-step">L'utilisateur chosi l'option pour voir l'état du traitement des déchets</li>
+                                    <li class="scenario-secondary-step">Le serveur va chercher les informations et les retourne.</li>
+                                    <li class="scenario-secondary-step">L'application affiche les informations concernant la récupération, la livraison et l'usage des déchets</li>
+                                </ol>
+                            </li>
+                        </ol>
+
+                        <div class="scenario-alt">
+                            <h5 class="scenario-alt-title">Scénarios alternatifs</h5>
+                            <ol class="bare-list scenario-alt-steps">
+                                <li class="bare-list scenario-alt-step" value="2">L'utilisateur n'a pas de compte.
+                                    <ol class="bare-list">
+                                        <li value="2">L'utilisateur <a href=#cu-1>se crée un compte</a>.</li>
+                                        <li value="2">L'utilisateur reprends à l'étape 2.</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                            <ol class="bare-list scenario-alt-steps">
+                                <li class="bare-list scenario-alt-step" value="4">L'utilisateur a des capteurs défectueux
+                                    <ol class="bare-list">
+                                        <li value="4">L'utilisateur <a href=#cu-2> signale un problème à la ville</a></li>
+                                        <li value="4">L'utilisateur repdrend à l'étape 2</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+		<div class="scenario" id="cu-5">
+                    <div class="scenario-meta">
+                        <h4 class="cu-name">
+                            <strong>CU:</strong> Afficher les activités que l'utilisateur maintient
+                        </h4>
+                        <p class="cu-goal">
+                            <strong>Objectif:</strong> Permet à l'utilisateur de voir les activités qu'il maintient.
+                        </p>
+                        
+                        <hr>
+
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Acteurs</h5>
+                            <ul class="bare-list cu-actors">
+                                <li class="cu-actor">Citoyen (Principal)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Préconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">L'utilisateur possède un ordinateur ou un téléphone intelligent et une connection internet.</li>
+                                <li class="dash">L'utilisateur possède un compte Bineco.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Postconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">Aucune</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part cu-part--notes">
+                            <h5 class="cu-part-title">Notes</h5>
+                            <p class="cu-notes">Notes additionnelles et hypothèses</p>
+                        </div>
+                    </div>
+                    <div class="scenario-main">
+                        <h5 class="scenario-main-title">Scénario principal</h5>
+                        <ol class="scenario-main-steps">
+                            <li class="scenario-main-step">L'utlisateur ouvre bineco.</li>
+                            <li class="scenario-main-step">L'utilisateur accède au menu principal.
+                                <ol class="scenario-secondary-steps bare-list">
+                                    <li class="scenario-secondary-step">L'utilisateur se connecte à son compte.</li>
+                                </ol>
+                            </li>
+                            <li class="scenario-main-step">L'utilisateur accède au volet statistiques
+                                <ol class="scenario-secondary-steps bare-list">
+				    <li class="scenario-secondary-step">L'utilisateur choisi l'option pour voir les activités qu'il maintient</li>
+                                    <li class="scenario-secondary-step">Le serveur va chercher les informations et les retourne.</li>
+                                    <li class="scenario-secondary-step">L'application affiche les activités maintenu par les consommateurs découlant indirectement des déchets fournis par le résident</li>
+                                </ol>
+                            </li>
+                        </ol>
+
+                        <div class="scenario-alt">
+                            <h5 class="scenario-alt-title">Scénarios alternatifs</h5>
+                            <ol class="bare-list scenario-alt-steps">
+                                <li class="bare-list scenario-alt-step" value="2">L'utilisateur n'a pas de compte.
+                                    <ol class="bare-list">
+                                        <li value="2">L'utilisateur <a href=#cu-1>se crée un compte</a>.</li>
+                                        <li value="2">L'utilisateur reprends à l'étape 2.</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                            <ol class="bare-list scenario-alt-steps">
+                                
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
             </section>
 
             <section class="main-section">
@@ -969,36 +1341,45 @@
                 <div>
                     <h3 class="subsection-title">Risques</h3>
                     <ol class="risks">
-                        <li>La base de données se fait pirater et expose les idantifiants</li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li>La base de données se fait pirater et expose les idantifiants des utilisateurs inscrits </li>
+                        <li>Changement de régulations par rapport au traitement des bacs ou à leur trie</li>
+                        <li>Erreurs ou falsification des données liées aux consommateurs ou à l'utilisateur (métriques écologiques erronées)</li>
+                        <li>Les capteurs sont défectueux, ce qui biaise les métriques receuillis</li>
+                        <li>Trop de problèmes sont signalés à la ville, ce qui retarde la résolution de ceux-ci</li>
                     </ol>
                 </div>
 
                 <div>
                     <h3 class="subsection-title">Exigences non-fonctionnelles</h3>
                     <ol class="nf-requirements">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li>La plateforme devrait être bien protégée contre des attaques sur la base de données. Ex: Lorsque l'utilisateur se créer un compte, le système le force à utiliser un mot de passe robuste</li>
+                        <li>Le système doit se naviguer facilement et de manière intuitive pour encourager les gens à tenir de bonne pratiques environnementales </li>
+                        <li>Le système doit avoir un faible impact environnemental (le moins de ressources possible)</li>
+                        <li>Le système permet de choisir entre plusieurs langues pour accomoder le pluas grand nombre d'utilisateur possible</li>
+                        <li>Le système doit être conçu pour recevoir un grand nombre d'utilisateurs simultanément</li>
                     </ol>
                 </div>
+
 
                 <div>
                     <h3 class="subsection-title">Ressources nécessaires</h3>
                     <p>
-                        <em>Description et justification des ressourcs nécessaires pour le projet...</em>
+                        <em> Les ressources nécessaire pour que le logiciel fonctionne de manière adéquate sont
+			     une base de données, c'est-à-dire plusieurs serveurs ayant une grosse capacité de stockage pour 
+			     enregistrer les informations sur les comptes, les métriques, etc. Des capteurs et des codes QR sont nécessaire
+			     Pour vérifier la composition des bacs et pour les identifier (respectivement). Il est aussi nécessaire d'avoir un API
+			     permettant d'acceder et de modifier les métriques écologiques récoltés
+	 		     
+			</em>
                     </p>
                 </div>
+
+
 
                 <div>
                     <h3 class="subsection-title">Contraintes</h3>
                     <p>
-                        <em>Discussion des contraintes physiques et conceptuelles...</em>
+                        <em></em>
                     </p>
                 </div>
 

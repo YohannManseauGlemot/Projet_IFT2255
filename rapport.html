@@ -28,7 +28,7 @@
         }
 
         .report-summary {
-            max-width: 800px;
+            width: 100%;
             font-size: 1.4em;
             color: #555;
         }
@@ -76,13 +76,15 @@
 
             .members {
                 display: flex; flex-direction: row;
+		
+		
             }
 
             .member {
                 display: flex; flex-direction: column;
             }
                 .member:not(:last-child) {
-                    margin-right: 10px;
+                    margin-right: 250px;
                 }
 
                 .member-pic {
@@ -95,6 +97,10 @@
                 .member-role {
                     font-size: 0.9em; font-weight: 500;
                     color: #555;
+		    text-align: justify;
+		    
+		    
+		    
                 }
 
         .report-body {
@@ -368,7 +374,7 @@
         <div class="title-section">
             <div>
                 <h1 class="report-title">Rapport du livrable I</h1>
-                <p class="report-summary">
+                <p class="report-summary" align="justify">
 		<br></br>
 		
                     <em>Court résumé du rapport</em> &ndash; Ce rapport est divisé en 3 sections distinctes: le cadre du projet, la définition du domaine, ainsi que l'analyse. 
@@ -396,25 +402,26 @@
         </div>
 
         <div class="team-section">
-            <h2 class="team-title">Notre équipe</h2>
+            <h2 class="team-title">Équipe 404:</h2>
+	    <br></br>
             <ul class="bare-list members">
                 <li class="member">
-                    <img class="member-pic" src="https://github.com/YohannManseauGlemot/Projet_IFT2255/blob/main/images/member2_pic.jpg?raw=true" alt="" >
+                    <img class="member-pic" src="https://github.com/YohannManseauGlemot/Projet_IFT2255/blob/main/images/member2_pic%20(2).jpg?raw=true"   alt="" >
                     <div class="member-identification" >
                         <span class="member-name">Yohann MANSEAU-GLÉMOT</span>
                         <span class="member-id">20217138</span>
                     </div> 
                     <a href="mailto:yohann.manseau-glemot@umontreal.ca">yohann.manseau-glemot@umontreal.ca</a>
-                    <span class="member-role">Représentant de l'équipe: s'occupe de la conception du prototype et de la définition du domaine.</span>
+                    <span class="member-role">Représentant de l'équipe: <br>s'occupe de la conception du prototype<br> et de la définition du domaine.</span>
                 </li>
                 <li class="member">
-                    <img class="member-pic" src="https://github.com/YohannManseauGlemot/Projet_IFT2255/blob/main/images/member1_pic.jpg?raw=true" alt="" >
+                    <img class="member-pic" src="https://github.com/YohannManseauGlemot/Projet_IFT2255/blob/main/images/member1_pic%20(2).jpg?raw=true" alt="" >
                     <div class="member-identification">
                         <span class="member-name">Alex Chevrier</span>
                         <span class="member-id">20216495</span>
                     </div> 
                     <a href="mailto:alex.chevrier@umontreal.ca">alex.chevrier@umontreal.ca</a>
-                    <span class="member-role">S'occupe de la plannification, des cas d'utilisations, de la section analyse et de la mise en page du rapport</span>
+                    <span class="member-role">S'occupe de la plannification, <br> des cas d'utilisations, de la section analyse <br> et de la mise en page du rapport</span>
                 </li>
                 <li class="member">
                     <img class="member-pic" src="" alt="" >
@@ -475,25 +482,39 @@
             <section class="main-section">
                 <h2 id="plan" class="section-title">Plannification</h2>
                 
-                    <em>
-                        Depuis 2010, La ville de Montréal à implantée des mesures favorisant la gestion des différentes catégories de déchets, comme le bac de recyclage et le bac de compostage, ainsi qu'un système de collecte respectif pour ces bacs. Cependant très peu d'information sur l'acheminement de ces déchets et leur utilisation sont fourni aux citoyens, ce qui les démotivent à prendre soins de l'environnement et favorise la surconsommation.
+                    <p align="justify"><em>
+                        Depuis 2010, La ville de Montréal à implanté des mesures favorisant la gestion des différentes catégories de déchets, comme le bac de recyclage et le bac de compostage, ainsi qu'un système de collecte respectif pour ces bacs. Cependant, ce système s'avère peu efficace pour réduire l'impact écologique de la surconsommation et pour sensibiliser les gens face à cet enjeu. 
 			<br></br>
-			Présentement, les citoyens de la ville de Montréal n'ont aucune statistiques sur leur consommation de déchets, leur habitudes environnementales et le traitement des déchets. Il est donc difficile pour eux de faire des choix éclairés sur leur consommation. De plus, le système de collecte municipal n'est pas optimal, puisque certaines cathégories de déchets sont souvent mélangées. Aussi, ils n'ont aucun choix sur le sort de leur déchet, à part cette collecte, c'est-à-dire que seulement la ville peut décider quoi faire de ces déchets.
+			Présentement, les citoyens de la ville de Montréal n'ont aucune statistique sur leur consommation de déchets, leur habitudes environnementales et le traitement des déchets. Il est donc difficile pour eux de faire des choix éclairés sur leur consommation. De plus, le système de collecte municipal n'est pas optimal, puisque certaines catégories de déchets sont souvent mélangées. Puisque la collecte de déchets se fait uniquement par la municipalité, les citoyens n'ont aucun choix sur le sort de leur déchet. Ils n'ont donc aucune donnée pour pouvoir apporter des changements à leur vie quotidienne.
                         <br></br></em>
 			<b>Présentation de l'échéancier et la distribution des taches: </b>
 			<br></br>
 		    <em>
-			Maxime Bélanger: S'occupe des différents cas d'utilisation, c'est-à-dire la rédaction des différents scénarios principaux et alternatifs pour chaque objectif décrits dans le rapport 
+			Maxime Bélanger: S'occupe des différents cas d'utilisation, c'est-à-dire la rédaction des différents scénarios principaux et alternatifs pour chaque objectif décrits dans le rapport.  
 			<br></br>
 			Yohann Manseau-Glémot: S'occupe de développer le protoype de l'application, c'est-à-dire la page principale, ainsi que les différents sous-menu pour chaque options du menu principal
 			<br></br>
-			Alex Chevrier: S'occupe de la plannification, de l'analyse et de la mise en page du rapport
-                        Présentation des hypothèses (optionnel)
-			<br></br>
-		    </em>
-
+			Alex Chevrier: S'occupe de la plannification, de l'analyse, de rédiger les CU et de la mise en page du rapport
+                        
 			
+		    </em></p>
+
+			<br></br>
+			<h4><b>Échéancier:</b></h4>
+			<br></br>
 			<p style="text-align:center;"><img src= "https://github.com/YohannManseauGlemot/Projet_IFT2255/blob/main/images/Septembre%20(19%20au%2026).png?raw=true" height = 500px width = 700px></p>
+			<br></br>
+			<h4><b>Priorisation:</b></h4>
+			
+			<ol>
+			    <li>Le glossaire est la priorité #1, puisqu'il synthétise les différents éléments nécessaire pour le projet (besoins, acteurs, etc), ce qui facilite grandement les autres tâches.  </li>
+			    <li>Les échanges avec le client permettent d'améliorer le glossaire et d'éclaicir toute confusion présente sur les différents besoins de celui-ci.
+			    <li>Maintenant que le glossaire à été conçu et que les clarifications nécessaires ont été apporté, il est pertinant de régider les différents cas d'utilisation du projet.
+			    <li>La priorité #4 est de concevoir le prototype, puisque nous avons tout les éléments pour le faire. 
+			    <li>L'avant dernière priorité est de rédiger les différentes sections restante du rapport, notament l'analyse.
+			    <li> Finalement, il ne reste plus qu'a faire la mise en page et à corriger les éléments du rapport.
+			</ol>
+			
 			<br></br>
 			<b>Questions posées au client:</b>
 
@@ -542,8 +563,8 @@
             <section class="main-section">
                 <h2 id="domain" class="section-title">Compréhension du domaine</h2>
                 <p>
-                    Après de nombreuses rencontres et une familiarisation avec l'activité VaxTodo, nous avons préparé un glossaire 
-                    rassemblant les termes et expressions clés caractérisant l'environnement.
+                    Après de nombreuses rencontres et une familiarisation avec le projet bineco, nous avons préparé un glossaire 
+                    rassemblant les termes et expressions clés caractérisant l'environnement, ce qui nous permettra de progresser aux autres éléments
                 </p>
 
                 <h3 class="subsection-title">Glossaire</h3>
@@ -624,15 +645,18 @@
 
                 <h3 class="subsection-title">Cas d'utilisation</h3>
                 <div class="use-case">
-                    <a class="use-case-link" href="lien-vers-fichier.vpp">
-                        <img class="use-case-img" src="https://github.com/YohannManseauGlemot/Projet_IFT2255/blob/main/images/299449265_779240926658015_5883246798914150838_n.png?raw=true" alt="">
+                    <a class="use-case-link" href="https://github.com/YohannManseauGlemot/Projet_IFT2255/blob/main/VPP/Cas%20d'utilisation.vpp">
+                        <img class="use-case-img" src="https://github.com/YohannManseauGlemot/Projet_IFT2255/blob/main/images/299449265_779240926658015_5883246798914150838_n.png?raw=true" width=100% alt="">
                     </a>
                     <p class="use-case-notes">
-                        <em>
-                            Notes à propos du diagramme <br>
-                            - choix des acteurs <br>
-                            - choix des relations
-                        </em>
+                        
+                            <b>Notes à propos du diagramme:</b> <br></br>
+                            - <b>Choix des acteurs:</b> <em>Les acteurs présent dans ce projet sont: Le citoyen de la ville de Montréal, le consommateur, la ville et la banque de données. </em><br></br>
+                            - <b>Choix des relations:</b> <em>Le consommateur et le citoyen sont regroupé dans le terme utilisateur. Le consommateur peut seulement s'inscrire. Le citoyen <br>
+			    peut s'inscrire, trouver un consommateur, enregistrer un bac, signaler un problème à la ville et accéder au volet statistiques, ce qui inclus <br>
+		            voir l'état de traitement des déchets, voir les activité, afficher les métriques et afficher l'état des bacs. Chaque actions, tant pour le consommateur<br>
+			    que pour le citoyen, nécessite une communication avec la base de donnée, à l'exception de signaler un problème à la ville(gérer par la ville elle même.) </em>
+                        
                     </p>
                 </div>
 
@@ -1363,12 +1387,13 @@
 
                 <div>
                     <h3 class="subsection-title">Ressources nécessaires</h3>
-                    <p>
+                    <p align="justify">
                         <em> Les ressources nécessaire pour que le logiciel fonctionne de manière adéquate sont
 			     une base de données, c'est-à-dire plusieurs serveurs ayant une grosse capacité de stockage pour 
-			     enregistrer les informations sur les comptes, les métriques, etc. Des capteurs et des codes QR sont nécessaire
-			     Pour vérifier la composition des bacs et pour les identifier (respectivement). Il est aussi nécessaire d'avoir un API
-			     permettant d'acceder et de modifier les métriques écologiques récoltés
+			     enregistrer les informations sur les comptes, les métriques, etc. Des capteurs sont nécessaires
+			     pour vérifier la composition des bacs, pour construire des métriques écologiques et pour mesurer certaines variables respectives à chaque bacs. De plus, un code QR doit être placé sur chaque bac pour permettre au citoyen de l'enregistrer sur la plateforme et pour l'identifier.
+			     Il est aussi nécessaire d'avoir un API permettant de comparer les données présentées par la ville et celles receuillies par les utilisateurs pour faire le volet statistique de l'application.
+			     permettant d'acceder et de modifier les métriques écologiques récoltés.
 	 		     
 			</em>
                     </p>
@@ -1377,9 +1402,12 @@
 
 
                 <div>
-                    <h3 class="subsection-title">Contraintes</h3>
+                    <h3 class="subsection-title">Contraintes (Jpa sur les gars j'ai écris dla merde)</h3>
                     <p>
-                        <em></em>
+		    <h4>Physiques:</h4>
+                        <em>Le citoyen doit avoir un appareil capable d'avoir l'application, d'une connection internet et muni d'une caméra pour pouvoir scanner le code QR présent sur chaque bacs. Le consommateur doit avoir un appareil pour accéder 
+			    à l'application et une connection internet. Chaque citoyen doit également avoir des capteurs dans chaques bacs. 			</em>
+		    <h4>Conceptuelles</h4>
                     </p>
                 </div>
 

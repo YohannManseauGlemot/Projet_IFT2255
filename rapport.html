@@ -1388,20 +1388,20 @@
                 <div>
                     <h3 class="subsection-title">Ressources nécessaires</h3>
                     <p align="justify">
-                        <h4>Serveur</h4>
+                        <h4 class="enum-title">Serveur</h4>
                         Le serveur va servir de point central pour le projet. En effet, c'est lui qui sera
                         responsable du traitement, du stockage et du partage des informations recueuillies.
-                        <h4>Base de données</h4>
+                        <h4 class="enum-title">Base de données</h4>
                         Afin de stocker des informations dans un serveur et pouvoir les manipuler efficacément,
                         il faut faire usage d'une base de données.
-                        <h4>Capteurs sur les bacs</h4>
+                        <h4 class="enum-title">Capteurs sur les bacs</h4>
                         Afin de mesurer la capacité et la composition d'un bac, un capteur doit y être présent.
                         Ceux-ci permettront aussi d'être "reconnus" par les camion lors de la récolte, servant 
                         alors de premier point de contrôle pour le suivi des déchets municipaux.
-                        <h4>Capteur sur les camions</h4>
+                        <h4 class="enum-title">Capteurs sur les camions</h4>
                         Afin d'automatiser l'enregistrement d'une livraison de déchets à un consomateurs, un 
                         capteur sera utilisé.
-                        <h4>API</h4>
+                        <h4 class="enum-title">API</h4>
                         Principalement dans l'optique d'informatiser le processus de retour de données chez les
                         consomateurs. Celui-ci permettra aux consommateurs de directement faire interface avec 
                         la base de donnée pour envoyer la proportion de déchets utilisés dans l'activité écologique
@@ -1422,7 +1422,31 @@
                 <div>
                     <h3 class="subsection-title">Contraintes (Jpa sur les gars j'ai écris dla merde)</h3>
                     <p>
-		            <h4>Physiques:</h4>
+                        <h4 class="enum-title">Serveur</h4>
+                        Le serveur devra lui même calculer les différentes métriques on prévoit donc un processeur 
+                        avec une puissance plus grande que pour un serveur de stockage uniquement. Capacité de 25 To
+                        (5 million [population de montréal] * 5 Mo [grandeur arbitraire]). RAM de 128 Go qui semble
+                        peu mais en réalité les information sont simples et on ne s'attends pas à un volume d'usagers
+                        très grand à un moment donné. Il faut aussi prévoir une connection internet à grand volume.
+                        <h4 class="enum-title">Base de données</h4>
+                        Deux sortes d'entrées (objets) générales: un utilisateur, un bac.<br>
+                        Pour l'utilisateur on enregistre les informations données lors de la création du compte et
+                        on le lie à un ou plusieurs bacs, dans le cas d'un citoyen.<br>
+                        Pour le bac, on lui lie un ou plusieurs citoyens , on archive les mesures liées à son état
+                        (niveau, contenu).<br>
+                        Une entrée unique pour la ville qui servira de "statistiques en direct" et où il sera
+                        question de stocker les métriques calculées à partir des points de contrôle.
+                        <h4 class="enum-title">Capteurs sur les bacs <b>(Je sais pas trop comment on ferait pour mesurer le niveau d'un bac et ce qu'il contient)</b></h4>
+                        Résistants aux intempéries, hiver principalement. Résistant au vandalisme et au vol. Capacité
+                        de diffuser son information avec une portée assez grande. Batterie qui dure pour au moins 2
+                        semaines, pourrait/doit être rechargée ou échangée lors de la récupération.
+                        <h4 class="enum-title">Capteurs sur les camions</h4>
+                        GPS et horloge. Envoie ses informations au serveur.
+                        <h4 class="enum-title">API</h4>
+                        Doit permettre: l'envoi de la proportion de déchet utilisés et de déchets reçus pour une activité à l'aide d'une
+                        clef d'API qui lie la requête avec le consommateur.
+
+		            <h4>Physiques: (Vieux)</h4>
                     Le citoyen doit avoir un appareil capable d'avoir l'application, d'une connection internet et muni d'une caméra pour pouvoir scanner le code QR présent sur chaque bacs. Le consommateur doit avoir un appareil pour accéder 
 			        à l'application et une connection internet. Chaque citoyen doit également avoir des capteurs dans chaques bacs.
 		            <h4>Conceptuelles</h4>

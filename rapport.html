@@ -1388,14 +1388,32 @@
                 <div>
                     <h3 class="subsection-title">Ressources nécessaires</h3>
                     <p align="justify">
-                        <em> Les ressources nécessaire pour que le logiciel fonctionne de manière adéquate sont
-			     une base de données, c'est-à-dire plusieurs serveurs ayant une grosse capacité de stockage pour 
-			     enregistrer les informations sur les comptes, les métriques, etc. Des capteurs sont nécessaires
-			     pour vérifier la composition des bacs, pour construire des métriques écologiques et pour mesurer certaines variables respectives à chaque bacs. De plus, un code QR doit être placé sur chaque bac pour permettre au citoyen de l'enregistrer sur la plateforme et pour l'identifier.
-			     Il est aussi nécessaire d'avoir un API permettant de comparer les données présentées par la ville et celles receuillies par les utilisateurs pour faire le volet statistique de l'application.
-			     permettant d'acceder et de modifier les métriques écologiques récoltés.
-	 		     
-			</em>
+                        <h4>Serveur</h4>
+                        Le serveur va servir de point central pour le projet. En effet, c'est lui qui sera
+                        responsable du traitement, du stockage et du partage des informations recueuillies.
+                        <h4>Base de données</h4>
+                        Afin de stocker des informations dans un serveur et pouvoir les manipuler efficacément,
+                        il faut faire usage d'une base de données.
+                        <h4>Capteurs sur les bacs</h4>
+                        Afin de mesurer la capacité et la composition d'un bac, un capteur doit y être présent.
+                        Ceux-ci permettront aussi d'être "reconnus" par les camion lors de la récolte, servant 
+                        alors de premier point de contrôle pour le suivi des déchets municipaux.
+                        <h4>Capteur sur les camions</h4>
+                        Afin d'automatiser l'enregistrement d'une livraison de déchets à un consomateurs, un 
+                        capteur sera utilisé.
+                        <h4>API</h4>
+                        Principalement dans l'optique d'informatiser le processus de retour de données chez les
+                        consomateurs. Celui-ci permettra aux consommateurs de directement faire interface avec 
+                        la base de donnée pour envoyer la proportion de déchets utilisés dans l'activité écologique
+                        poursuivie.
+
+                        <h4>Vieux paragraphe</h4>
+                        Les ressources nécessaire pour que le logiciel fonctionne de manière adéquate sont
+			            une base de données, c'est-à-dire plusieurs serveurs ayant une grosse capacité de stockage pour 
+                        pour vérifier la composition des bacs, pour construire des métriques écologiques et pour mesurer certaines variables respectives à chaque bacs. De plus, un code QR doit être placé sur chaque bac pour permettre au citoyen de l'enregistrer sur la plateforme et pour l'identifier.
+                        enregistrer les informations sur les comptes, les métriques, etc. Des capteurs sont nécessaires
+                        permettant d'acceder et de modifier les métriques écologiques récoltés.
+                        Il est aussi nécessaire d'avoir un API permettant de comparer les données présentées par la ville et celles receuillies par les utilisateurs pour faire le volet statistique de l'application.
                     </p>
                 </div>
 
@@ -1404,10 +1422,10 @@
                 <div>
                     <h3 class="subsection-title">Contraintes (Jpa sur les gars j'ai écris dla merde)</h3>
                     <p>
-		    <h4>Physiques:</h4>
-                        <em>Le citoyen doit avoir un appareil capable d'avoir l'application, d'une connection internet et muni d'une caméra pour pouvoir scanner le code QR présent sur chaque bacs. Le consommateur doit avoir un appareil pour accéder 
-			    à l'application et une connection internet. Chaque citoyen doit également avoir des capteurs dans chaques bacs. 			</em>
-		    <h4>Conceptuelles</h4>
+		            <h4>Physiques:</h4>
+                    Le citoyen doit avoir un appareil capable d'avoir l'application, d'une connection internet et muni d'une caméra pour pouvoir scanner le code QR présent sur chaque bacs. Le consommateur doit avoir un appareil pour accéder 
+			        à l'application et une connection internet. Chaque citoyen doit également avoir des capteurs dans chaques bacs.
+		            <h4>Conceptuelles</h4>
                     </p>
                 </div>
 

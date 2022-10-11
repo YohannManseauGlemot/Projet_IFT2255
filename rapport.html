@@ -1461,7 +1461,8 @@
                         Une entrée pour la ville qui servira de "statistiques en direct" et où il sera
                         question de stocker les métriques calculées à partir des points de contrôle.
                         <h4 class="enum-title">Token de session</h4>
-                        Marque de validité d'une connexion, encryptée et contient une référence à l'utilisateur.
+                        Marque de validité d'une connexion, encryptée et contient une référence à l'utilisateur, peut être demandée
+                        bureaucratiquement dans un format statique (usage visé dans l'API).
                         <h4 class="enum-title">Traget d'un camion</h4>
                         Lors du ramassage des déchets, les capteurs du camion doivent pouvoir interfacer informatiquement
                         avec les capteurs du bac afin de récupérer les informations pertinentes au niveau municipal (masse)
@@ -1469,7 +1470,7 @@
                         le capteur envoie sa position, la masse et l'état des déchets au serveur.
                         <h4 class="enum-title">API</h4>
                         Doit permettre: l'envoi de la proportion de déchet utilisés et de déchets reçus pour une activité à l'aide d'une
-                        clef d'API qui lie la requête avec le consommateur.
+                        clef d'API (token de session) qui lie la requête avec le consommateur.
                         <h4 class="enum-title">Mise à jour des statistiques</h4>
                         À tous les 24h le serveur met à jour les statistiques municipales en exécutant le ration entre la 
                         somme de la masse des déchets datant de la dernière mise à jour du consomateur 
@@ -1487,9 +1488,10 @@
                         utilisée pour référer à l'adresse du consomateur correspondant; la masse de déchet est ajoutée
                         au champ de la masse totale (la plus récente) reçue du consommateur et la date de celui-ci est
                         sauvegardée. <br>
-                        Recevoir le bilan d'un consomateur: le serveur reçoit les informations; le champ pour la masse
-                        de déchets récupéré est mis à jour et le champ de la masse totale la plus réçente reçue est
-                        copiée sur le champ de la snapshot.<br>
+                        Recevoir le bilan d'un consomateur: le consommateur envoie les information avec son token de session;
+                        le serveur utilise le token pour savoir que la requête est valide et utilise la référence contenue pour
+                        modifier les champs correspondant au consommateur; le champ pour la masse de déchets récupéré est mis à
+                        jour et le champ de la masse totale la plus réçente reçue est copiée sur le champ de la snapshot.<br>
                         Requête de connexion: l'app envoie les informations de connexion au serveur; celui-ci les valide;
                         dans le cas d'une connexion réussie, un token est émit pour la session, dans le cas d'un echec,
                         un refut est envoyé.<br>

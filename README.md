@@ -4,10 +4,10 @@
 
 1. Télécharger le zip contenant tout le projet et l'extract sur votre Desktop par exemple
 2. Ouvrir votre cmd
-3. Exécuter les commandes suivantes: cd Desktop (si vous avez extract le zip sur votre Desktop)
-                                     cd Projet_IFT2255
-                                     cd protoype
-                                     cd app
+3. Exécuter les commandes suivantes: cd Desktop (si vous avez extract le zip sur votre Desktop), 
+                                     cd Projet_IFT2255, 
+                                     cd protoype, 
+                                     cd app, 
 4. Compiler le fichier Main.java en exécutant la commande javac Main.java
 5. Exécuter la commande java Main.java afin d'exécuter l'application
 

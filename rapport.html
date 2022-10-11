@@ -529,6 +529,7 @@
 				<li>Quels sont les diagrammes à réaliser?</li>
 				<li>Les métriques sont par rapport à l'individu ou à la ville?</li>
 				<li>C'est quoi la différence entre les contraintes physiques et conceptuelles et les besoins non fonctionnels</li>
+
 			</ul>
 		    </em>
 			<b>Réponses obtenues:</b>
@@ -548,6 +549,11 @@
 				<li>  À vous de me le dire dans votre analyse </li>
 				<li>  Uniquement le diagrame de cas d'utilisation (CU) </li>
 				<li>  Les métriques sont par rapport à l'individu </li>
+				<li>Les exigences non-fonctionnelles proviennent du client et sont en lien avec des critères de qualité (performance, fiabilité, utilisabilité, accessibilité, compatibilité…). Les contraintes physiques et conceptuelles proviennent de votre analyse.
+
+				Les contraintes physiques spécifient les caractéristiques techniques du matériel de support requises pour le bon usage de l’application et les interactions permises.
+
+				Les contraintes conceptuelles spécifient les règles de fonctionnement de l’application, les abstractions (structures) utilisées pour représenter l’état de l’application et les rôles supportés par l’application.</li>
 			
 
                     </em>
@@ -606,16 +612,16 @@
                             <span class="persona-name">Yohann &ndash; <em>Citoyen soucieu de l'environnement</em></span>
                             <div class="persona-stat">
                                 <span class="persona-type persona-type--pp" title="Pratico-pratique">PP</span>
-                                <span class="persona-market">40%</span>
+                                <span class="persona-market">60%</span>
                             </div>
                         </div>
                         <span class="persona-info">Citoyen de la ville de montréal d'âge adulte </span>
                         <div class="persona-goal">
                             <h4 class="persona-title">Buts</h4>
                             <ul class="bare-list">
-                                <li class="check">But principal</li>
-                                <li class="check">But secondaire</li>
-                                <li class="check">Avantages</li>
+                                <li class="check">But principal: Réduire son empreinte écologique et adopter de saines habitudes environnementales</li>
+                                <li class="check">But secondaire: Encourager les entreprise locales</li>
+                                <li class="check">Avantages: Prendre conscience de sa consommation et les répercussions de ceux-ci, ce qui pourrait apporter des bénéfices financiers et écologiques</li>
                             </ul>
                         </div>
                     </li>
@@ -624,16 +630,16 @@
                             <span class="persona-name">Angela &ndash; <em>Dirigante d'une unité de traitement de déchets</em></span>
                             <div class="persona-stat">
                                 <span class="persona-type persona-type--eco" title="Ecolo">ECO</span>
-                                <span class="persona-market">20%</span>
+                                <span class="persona-market">30%</span>
                             </div>
                         </div>
                         <span class="persona-info">Employée d'un système de traitement de déchets de quelconques grosseur. </span>
                         <div class="persona-goal">
                             <h4 class="persona-title">Buts</h4>
                             <ul class="bare-list">
-                                <li class="check">But principal</li>
-                                <li class="check">But secondaire</li>
-                                <li class="check">Avantages</li>
+                                <li class="check">But principal: Trouver une source de déchets pour approvisioner sont unité de traitement.</li>
+                                <li class="check">But secondaire: Augmenter le taux de réutilisation des déchets.</li>
+                                <li class="check">Avantages: Augmente la visibilité de leur organisme et sensibiliser les citoyens </li>
                             </ul>
                         </div>
                     </li>
@@ -851,6 +857,7 @@
                                     <li class="scenario-secondary-step">Les champs requis sont affichés.</li>
                                 </ol>
                             </li>
+			    <li class="scenario-main-step">L'utilisateur scan le code QR de son bac.</li>
                             <li class="scenario-main-step">L'utilisateur entre les informations du bac.</li>
                             <li class="scenario-main-step">Le serveur valide les informations.</li>
                             <li class="scenario-main-step">Le serveur enregiste le bac avec l'utilisateur dans sa base de données.</li>
@@ -1102,7 +1109,7 @@
                                 <li class="bare-list scenario-alt-step" value="2">L'utilisateur n'a pas de compte.
                                     <ol class="bare-list">
                                         <li value="2">L'utilisateur <a href=#cu-1>se crée un compte</a>.</li>
-					<li value="2">L'utilisateur <a href=#cu-3>enregistrer un bac.</a></li>
+					
                                         <li value="2">L'utilisateur reprends à l'étape 2.</li>
                                     </ol>
                                 </li>
@@ -1190,11 +1197,11 @@
                                 </li>
                             </ol>
                             <ol class="bare-list scenario-alt-steps">
-                                <li class="bare-list scenario-alt-step" value="4">L'utilisateur ne s'est pas enregistrer au près d'un consommateur
+                                <li class="bare-list scenario-alt-step" value="3">L'utilisateur ne s'est pas enregistrer au près d'un consommateur
                                     <ol class="bare-list">
-                                        <li value="4">L'utilisateur <a href=#cu-5>trouve un consommateur</a> </li>
-                                        <li value="4">l'utilisateur choisi un consommateur</li>
-					<li value="4">L'utilisateur reprend à l'étape 3.</li>
+                                        <li value="3">L'utilisateur <a href=#cu-5>trouve un consommateur</a> </li>
+                                        <li value="3">l'utilisateur choisi un consommateur</li>
+					<li value="3">L'utilisateur reprend à l'étape 3.</li>
                                     </ol>
                                 </li>
                             </ol>
@@ -1269,10 +1276,10 @@
                                 </li>
                             </ol>
                             <ol class="bare-list scenario-alt-steps">
-                                <li class="bare-list scenario-alt-step" value="4">L'utilisateur a des capteurs défectueux
+                                <li class="bare-list scenario-alt-step" value="3">L'utilisateur a des capteurs défectueux
                                     <ol class="bare-list">
-                                        <li value="4">L'utilisateur <a href=#cu-2> signale un problème à la ville</a></li>
-                                        <li value="4">L'utilisateur repdrend à l'étape 2</li>
+                                        <li value="3">L'utilisateur <a href=#cu-2> signale un problème à la ville</a></li>
+                                        <li value="3">L'utilisateur repdrend à l'étape 2</li>
                                     </ol>
                                 </li>
                             </ol>
@@ -1365,11 +1372,11 @@
                 <div>
                     <h3 class="subsection-title">Risques</h3>
                     <ol class="risks">
-                        <li>La base de données se fait pirater et expose les idantifiants des utilisateurs inscrits </li>
-                        <li>Changement de régulations par rapport au traitement des bacs ou à leur trie</li>
-                        <li>Erreurs ou falsification des données liées aux consommateurs ou à l'utilisateur (métriques écologiques erronées)</li>
-                        <li>Les capteurs sont défectueux, ce qui biaise les métriques receuillis</li>
-                        <li>Trop de problèmes sont signalés à la ville, ce qui retarde la résolution de ceux-ci</li>
+                        <li>La base de données se fait pirater et expose les identifiants des utilisateurs inscrits, ce qui détruit notre objectif d'offrir une plateforme sécuritaire pour tous. </li>
+                        <li>Changement de régulations par rapport au traitement des bacs ou à leur trie. Ceci cause problème, puisque de tels changement forcerait un restructurement complet de l'application.</li>
+                        <li>Erreurs ou falsification des données liées aux consommateurs ou à l'utilisateur (métriques écologiques erronées). Ceci cause problème, puisque si des consommateurs mentent sur certaines métriques toutes les données récoltées par l'application seront erronées, ce qui peut créer une mauvaise réputation pour bineco.</li>
+                        <li>Les capteurs sont défectueux, ce qui biaise les métriques receuillis. Si les métriques receuillis ne tienne pas compte de tout les utilisateurs, alors les utilisateurs de bineco pourrait être influencés.</li>
+                        <li>Trop de problèmes sont signalés à la ville, ce qui retarde la résolution de ceux-ci et peut causer du mécontentement chez les utilisateurs.</li>
                     </ol>
                 </div>
 
@@ -1379,7 +1386,7 @@
                         <li>La plateforme devrait être bien protégée contre des attaques sur la base de données. Ex: Lorsque l'utilisateur se créer un compte, le système le force à utiliser un mot de passe robuste</li>
                         <li>Le système doit se naviguer facilement et de manière intuitive pour encourager les gens à tenir de bonne pratiques environnementales </li>
                         <li>Le système doit avoir un faible impact environnemental (le moins de ressources possible)</li>
-                        <li>Le système permet de choisir entre plusieurs langues pour accomoder le pluas grand nombre d'utilisateur possible</li>
+                        <li>Le système permet de choisir entre plusieurs langues pour accomoder le plus grand nombre d'utilisateur possible</li>
                         <li>Le système doit être conçu pour recevoir un grand nombre d'utilisateurs simultanément</li>
                     </ol>
                 </div>
@@ -1406,22 +1413,20 @@
                         consomateurs. Celui-ci permettra aux consommateurs de directement faire interface avec 
                         la base de donnée pour envoyer la proportion de déchets utilisés dans l'activité écologique
                         poursuivie.
+			<h4 class="enum-title">Code QR</h4>
+			Afin d'identifier tous les bacs de la ville et les associer à chaque domiciles.
 
-                        <h4>Vieux paragraphe</h4>
-                        Les ressources nécessaire pour que le logiciel fonctionne de manière adéquate sont
-			            une base de données, c'est-à-dire plusieurs serveurs ayant une grosse capacité de stockage pour 
-                        pour vérifier la composition des bacs, pour construire des métriques écologiques et pour mesurer certaines variables respectives à chaque bacs. De plus, un code QR doit être placé sur chaque bac pour permettre au citoyen de l'enregistrer sur la plateforme et pour l'identifier.
-                        enregistrer les informations sur les comptes, les métriques, etc. Des capteurs sont nécessaires
-                        permettant d'acceder et de modifier les métriques écologiques récoltés.
-                        Il est aussi nécessaire d'avoir un API permettant de comparer les données présentées par la ville et celles receuillies par les utilisateurs pour faire le volet statistique de l'application.
+                        
                     </p>
                 </div>
 
 
 
                 <div>
-                    <h3 class="subsection-title">Contraintes (Jpa sur les gars j'ai écris dla merde)</h3>
+                    <h3 class="subsection-title">Contraintes</h3>
                     <p>
+			<h3> Physiques:</h3>
+	
                         <h4 class="enum-title">Serveur</h4>
                         Le serveur devra lui même calculer les différentes métriques on prévoit donc un processeur 
                         avec une puissance plus grande que pour un serveur de stockage uniquement. Capacité de 25 To
@@ -1445,11 +1450,9 @@
                         <h4 class="enum-title">API</h4>
                         Doit permettre: l'envoi de la proportion de déchet utilisés et de déchets reçus pour une activité à l'aide d'une
                         clef d'API qui lie la requête avec le consommateur.
+			<h3> Conceptuelles:</h3>
 
-		            <h4>Physiques: (Vieux)</h4>
-                    Le citoyen doit avoir un appareil capable d'avoir l'application, d'une connection internet et muni d'une caméra pour pouvoir scanner le code QR présent sur chaque bacs. Le consommateur doit avoir un appareil pour accéder 
-			        à l'application et une connection internet. Chaque citoyen doit également avoir des capteurs dans chaques bacs.
-		            <h4>Conceptuelles</h4>
+		            
                     </p>
                 </div>
 
@@ -1457,7 +1460,28 @@
                     <h3 class="subsection-title">Propositions</h3>
 
                     <p>
-                        <em>Discussion de la solution proposée et de vos propositions (apports, faisabilité, impacts, couts)...</em>
+			<h4>Explication du choix des métriques:</h4>
+			<ol>
+			    <li>Métriques sur les bacs de composte au niveau résidentiel, c'est-à-dire la comparaison entre les métriques d'un utilisateur et la moyenne des autres utilisateurs:</li>
+			    <ul>
+			    <br>
+			    <li>Nous avons choisi le ratio carbone/azote (C/N), puisque plus qu'un bac est près du ratio 30:1, plus le compostage sera optimal, donc cette métrique permet aux utilisateurs de savoir si il composte mieux que les autres.</li>
+			    <li>Le taux d'oxygène dans un bac permet de comparer la vitesse de décomposition du composte ainsi que l'empreinte écologique, car plus un bac à un taux d'oxygène élevé, plus il se décompose rapidement et plus un bac à un taux d'oxygène bas, plus celui-ci dégagera de méthane.  </li>
+			    <li>Le ratio de matière compostable/non compostable permet de comparer l'utilisation adéquate du bac de composte entre les utilisateurs. Plus ce taux est bas, plus un utilisateurs met des matières non compostables dans son bac.</li>
+			    <li>Le dégagement de CO2 permet simplement de comparer son empreinte écologique avec les autres utilisateurs.</li>
+			    <li>La quantité de matière compostée permet de comparer le poid de matière compostée entre les utilisateurs.</li>
+			    </ul>
+			    
+		            <br></br>
+			    <li>Métriques au niveau municipal:</li>
+			    <ul>
+				<li>La quantité de matière organique collectée par la ville, ainsi que son taux de récupération. Permet de comparer, à chauqe mois, la quantité de matière organique réutilisée et celle gaspillée.</li>
+				<li>C'est de même pour la quantitée de matière recycable récolté par la ville ainsi que son taux de récupération.</li>
+				
+			    </ul>
+
+			</ol>
+                        
                     </p>
                 </div>
             </section>
@@ -1473,29 +1497,34 @@
                 <ul class="bare-list previews">
                     <li class="preview">
                         <h4 style="font-size: 1.2em; margin-bottom: 6px">Menu principal</h4> 
-                        <img class="preview-img" src="../assets/images/prototype_gym.jpg" alt="">
+                        <img class="preview-img" src="https://github.com/YohannManseauGlemot/Projet_IFT2255/blob/main/images/vue_prototype/menuP.PNG?raw=true" alt="">
                         Le menu principal est affiché au démarage de l'application. L'utilisateur entre le numéro 
                         associé au sous-menu ou à l'action pour y accéder ou l'exécuter.
                     </li>
                     <li class="preview">
-                        <h4 style="font-size: 1.2em; margin-bottom: 6px">Titre de la vue</h4> 
-                        <img class="preview-img" src="../assets/images/prototype2.png" alt="">
-                        Description de la vue présentée...
+                        <h4 style="font-size: 1.2em; margin-bottom: 6px">Enregistrer un bac</h4> 
+                        <img class="preview-img" src="https://github.com/YohannManseauGlemot/Projet_IFT2255/blob/main/images/vue_prototype/enregistrement1.PNG?raw=true" alt="">
+                        L'utilisateur choisit l'option #1: Enregistrer un bac. Il est redirigé vers un sous-menu ou on lui demande de scanner son code QR, 
+			de donner le nom et le type du bac.
                     </li>
                     <li class="preview">
-                        <h4 style="font-size: 1.2em; margin-bottom: 6px">Titre de la vue</h4> 
-                        <img class="preview-img" src="url-prototype.png" alt="">
-                        Description de la vue présentée...
+                        <h4 style="font-size: 1.2em; margin-bottom: 6px">Volet statistiques (Ex: État de mes bacs)</h4> 
+                        <img class="preview-img" src="https://github.com/YohannManseauGlemot/Projet_IFT2255/blob/main/images/vue_prototype/etat_bac.PNG?raw=true" alt="">
+                        L'utilisateur chosi l'option #2: statistiques. Il à 4 options supplémentaire avec 4 menus distincts pour chaque option soit: État de mes bacs,
+			Métriques Écologiques, traitement des déchets et activité maintenus. Dans cette photo, le menu pour l'état des bacs est présenté.
                     </li>
                     <li class="preview">
-                        <h4 style="font-size: 1.2em; margin-bottom: 6px">Titre de la vue</h4> 
-                        <img class="preview-img" src="url-prototype.png" alt="">
-                        Description de la vue présentée...
+                        <h4 style="font-size: 1.2em; margin-bottom: 6px">Volet statistiques (Ex: Traitement des déchets)</h4> 
+                        <img class="preview-img" src="https://github.com/YohannManseauGlemot/Projet_IFT2255/blob/main/images/vue_prototype/traitement.PNG?raw=true" alt="">
+                        L'utilisateur chosi l'option #2: statistiques. Il à 4 options supplémentaire avec 4 menus distincts pour chaque option soit: État de mes bacs,
+			Métriques Écologiques, traitement des déchets et activité maintenus. Dans cette photo, le menu présenté est celui du traitement des déchets.
                     </li>
-                    <li class="preview">
-                        <h4 style="font-size: 1.2em; margin-bottom: 6px">Titre de la vue</h4> 
-                        <img class="preview-img" src="url-prototype.png" alt="">
-                        Description de la vue présentée...
+                    
+			<li class="preview">
+                        <h4 style="font-size: 1.2em; margin-bottom: 6px">Signaler un problème</h4> 
+                        <img class="preview-img" src="https://github.com/YohannManseauGlemot/Projet_IFT2255/blob/main/images/vue_prototype/signaler_probleme.PNG?raw=true" alt="">
+                        L'utilisateur chosit l'option #4: Signaler un problème. Il est redirigé vers un menu ou il doit présenter: son nom, adresse, courriel,
+			type de problème et sa requête.
                     </li>
                 </li>
             </section>
@@ -1510,7 +1539,7 @@
                 Ajoutez tous les liens additionnels nécessaires à la compréhension du rapport ici
             </em>
         </p>
-        <p class="copyright">&copy; 2021 &ndash; 2022 Ceduni</p>
+        <p class="copyright">&copy; 2021 &ndash; 2022 Bineco</p>
     </footer>
 </body>
 

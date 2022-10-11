@@ -17,7 +17,7 @@ Utilisation de l'application
 - Vous devez maintenant entrer un chiffre qui correspond au volet que vous voulez accéder
   Ex: vous voulez accéder au volet Enregistrer un bac, alors entrez 1 et cliquez sur ENTER.
   
--Si vous accédez au volet Statistiques en ayant entré 2 comme choix, vous allez devoir entrez un autre chiffre pour accéder aux sous-volets comme à l'étape     précédente.
+- Si vous accédez au volet Statistiques en ayant entré 2 comme choix, vous allez devoir entrez un autre chiffre pour accéder aux sous-volets comme à l'étape     précédente.
 
--Lorsque vous entrez des informations dans les volets où on vous en demande, vous devez cliquer sur ENTER pour passer à l'étape suivante,
- sinon des directives vous serons spécifiées.
+- Lorsque vous entrez des informations dans les volets où on vous en demande, vous devez cliquer sur ENTER pour passer à l'étape suivante,
+  sinon des directives vous serons spécifiées.

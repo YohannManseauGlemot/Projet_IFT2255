@@ -20,6 +20,8 @@ public class Consommateur {
         System.out.println("Consommateur 2");
         System.out.println("Consommateur 3");
         System.out.println("Consommateur 4");
+        System.out.println();
+        System.out.println("Veuillez sélectionner le consommateur avec qui vous voulez travailler");
 
         String enter;
 

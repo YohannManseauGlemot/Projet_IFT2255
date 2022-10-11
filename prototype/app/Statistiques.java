@@ -34,7 +34,7 @@ public class Statistiques {
     }
 
     public void etatBac(){
-        System.out.println("Voici l'état actuel de vos différents bac, 11 octobre 2022:");
+        System.out.println("Voici l'état actuel de vos différents bacs, 11 octobre 2022:");
         System.out.println("                 Bac Brun      Bac Bleu      Bac Noir");
         System.out.println("Niv. remplissage:  50%           40%           30%");
         System.out.println("Température:       45°C          20°C          30°C");
@@ -58,9 +58,19 @@ public class Statistiques {
     }
     public void metrique(){
 
-        System.out.println("Voici une comparaison entre votre activité écologique et celle des citoyens de la ville de Montréal du mois dernier");
-        
-       
+        System.out.println("Ici vous pouvez examiner les métriques écologiques qui reflète l'efficacité du traitement des déchets de la ville de Montréal du mois dernier");
+        System.out.println();
+        System.out.println("Matière organique collecté par la ville (en tonnes):     | 90 000  |    ");
+        System.out.println("Taux de récupération des matières organiques:            |   30%   |    ");
+        System.out.println("Matière recyclable collecté par la ville (en tonnes):    | 150 000 |    ");
+        System.out.println("Taux de récupération des matières recyclables:           |   65%   |    "); 
+
+        System.out.println();
+        System.out.println();
+
+        System.out.println("Voici les métriques écologique au niveau résidentiel, c'est-à-dire une comparaison entre ");
+        System.out.println("votre activité écologique et celle des citoyens de la ville de Montréal du mois dernier. Ces métriques sont en lien avec les bac de composte");
+        System.out.println();
         System.out.println("                                                    Vous      |  Moyenne des citoyens   ");
         System.out.println("           1.Ration carbone/azote (C/N) :            30:1     |        50:1           ");
         System.out.println("            2.Concentration d'oxygène (%):           10       |        6                ");
@@ -68,23 +78,23 @@ public class Statistiques {
         System.out.println("           4.Dégagement de CO2 (lbs):                70       |        50               ");
         System.out.println("       5.Quantité de matière composté (lbs):         200      |        143                        ");
         System.out.println();
-        
 
+        
         String afficher;
         
 
         
         while(true){
-            System.out.print("Afficher les explication des métriques ci-dessus? (Oui/Non) ");
+            System.out.print("Afficher les explications des métriques au niveau résidentiel? (Oui/Non) ");
             afficher = scanner.next();
             if(afficher.equalsIgnoreCase("Oui")){
-                System.out.println("1. le ratio carbone/azote dans un bac de compost doit être le plus près possible de 30:1");
+                System.out.println("1. le ratio carbone/azote dans un bac de composte doit être le plus près possible de 30:1");
                 System.out.println("pour un compostage optimal.");
                 System.out.println();
                 System.out.println("2. le taux d'oxygène est important dans un bac de compost puisque sans oxygène, un bac de compost va généré plus de méthane que de CO2.");
                 System.out.println(" Le méthane a un pouvoir de réchauffement 80 fois plus élevé que le CO2. Aussi, un compost avec un taux d'oxygène plus élevé vas de décomposer plus rapidement");
                 System.out.println();
-                System.out.println("3.Le ratio de matière compostable et non compostable indique simplement le rapport entre les déchets bénifique et nuisible pour votre compost");
+                System.out.println("3.Le ratio de matière compostable et non compostable indique simplement le rapport entre les déchets bénifique et nuisible pour votre composte");
                 System.out.println();
                 System.out.println("4. Le dégagement de CO2 vous donne une idée de votre empreinte écologique, par contre il faut garder en tête que plus une personne compost plus elle produira de CO2");
                 System.out.println();
@@ -111,6 +121,29 @@ public class Statistiques {
     }
     public void traitement(){
 
+        System.out.println("Voici un aperçu sur le traitement actuel des déchets de la municipalité:");
+        System.out.println();
+        System.out.println("Checkpoint 1 Collecte: 3 octobre ");
+        System.out.println("      - Du 1er au 3 octobre, 20 000 tonnes de matières organiques, 40 000 tonnes de matières recyclables ");
+        System.out.println("        et 30 000 tonnes d'ordures ont été collecté par la ville de Montréal.                 ");
+        System.out.println();
+        System.out.println("Checkpoint 2 Livraison: 10 octobre                     ");
+        System.out.println("       - Le 10 octobre, la totalité des matières organiques et recyclables ont été livré à leurs usines respectives pour le triage     ");
+        System.out.println("         Les ordures ont toutes été amenées à des sites d'enfouissement et d'incinération               ");
+        
+        System.out.println();
+        
+        System.out.println();
+        System.out.println("Checkpoint 3 Usage: 21 octobre                 ");
+        System.out.println("       - Depuis la livraison du 10 octobre, 30% des matières organiques ont été réutilisées suite au triage. Dans ce 30%,  ");
+        System.out.println("         15% à été attribué aux sites de compostage municipaux, 10% aux sites de biométhanisation et 5% à d'autres organismes de compostage.");
+        System.out.println("         Le 70% des matières restantes se sont retrouvés dans des sites d'enfouissement et d'incinération       ");
+        System.out.println();
+        System.out.println("       - Dans les 40 000 tonnes de recyclage, 60% ont été réutilisé après le triage. Dans ce 60%, 40% ont été envoyé à des usines de recyclage  ");
+        System.out.println("         et le 20% restant ont été donné à de nombreux organismes de fabrication de vêtements ");
+
+
+
         enter();
 
     }
@@ -121,6 +154,7 @@ public class Statistiques {
         System.out.println("1. Fabrication de chaussures avec des plastiques recyclés");
         System.out.println("2. Écocentre Montréal");
         System.out.println("3. Collecte municipal");
+        System.out.println("4. Activité de composte municipal");
 
         enter();
 

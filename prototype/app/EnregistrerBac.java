@@ -64,9 +64,10 @@ public class EnregistrerBac{
         nom = scan.nextLine(); 
         
         
-        System.out.print("Quel est le type de votre bac? (Bleu, Vert ou Noir): ");
+        System.out.println("Quel est le type de votre bac? (Bleu, Brun ou Noir): ");
 
         type = scan.nextLine();
+        System.out.println();
         System.out.println("Votre bac a été enregistré avec succès!");
 
         String reponse;
@@ -75,7 +76,7 @@ public class EnregistrerBac{
         
 
         while(true){
-            
+            System.out.println();
             System.out.println("Voulez-vous ajouter un autre bac? (Oui/Non): ");
             
             try{

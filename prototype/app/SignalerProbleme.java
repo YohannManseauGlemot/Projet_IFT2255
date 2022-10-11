@@ -24,22 +24,27 @@ public class SignalerProbleme {
         System.out.println("Nom: ");
         nom =scanner.nextLine();
         //scanner.close();
+        System.out.println();
         System.out.println("Adresse: ");
         adresse = scanner.nextLine();
+        System.out.println();
         System.out.println("Courriel: ");
         courriel = scanner.nextLine();
+        System.out.println();
         System.out.println("Type de problème: ");
         type = scanner.nextLine();
-
+        System.out.println();
         System.out.println("Vos informations ont été enregistrées avec succès");
+        System.out.println();
         System.out.println("Veuillez rédiger votre requête: ");
         texte = scanner.nextLine();
-
+        System.out.println();
         System.out.println("Nous vous remercions pour votre requête, la ville de Montréal vous contactera sous peu");
 
         String reponse;
         int compteur = 0;
         while(true){
+            System.out.println();
             System.out.println("Voulez-vous rédiger une autre requête? (Oui/Non): ");
 
             try{

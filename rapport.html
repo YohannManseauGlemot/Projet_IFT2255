@@ -1428,7 +1428,7 @@
 			            <h3> Physiques:</h3>
 	
                         <h4 class="enum-title">Serveur</h4>
-                        Le serveur devra lui même calculer les différentes métriques on prévoit donc un processeur 
+                        <p align="justify">Le serveur devra lui même calculer les différentes métriques on prévoit donc un processeur 
                         avec une puissance plus grande que pour un serveur de stockage uniquement. Capacité de 25 To
                         (5 million [population de montréal] * 5 Mo [grandeur arbitraire]). RAM de 128 Go qui semble
                         peu mais en réalité les information sont simples et on ne s'attends pas à un volume d'usagers
@@ -1440,27 +1440,28 @@
                         <h4 class="enum-title">Capteurs sur les camions</h4>
                         GPS et horloge. Peut interfacer directement avec le capteur du bac qu'il récolte.
                         <h4 class="enum-title">Robotisation des camions</h4>
-                        Bidule robotique permettant de faire la recharge/échange des batteries des bacs récupérés.
+                        Bidule robotique permettant de faire la recharge/échange des batteries des bacs récupérés.<p>
 
 			            <h3> Conceptuelles:</h3>
 
                         <h4 class="enum-title">Base de données</h4>
-                        Trois grands tableaux pour trois sortes d'entrées (objets) générales: un citoyen, un bac
-                        et un consomateur; ainsi qu'un plus petit tableau pour les villes.<br>
+                        <p align="justify" style="line-height:1.5">Trois grands tableaux pour trois sortes d'entrées (objets) générales: un citoyen, un bac
+                        et un consomateur; ainsi qu'un plus petit tableau pour les villes.
                         Pour le citoyen on enregistre les informations d'authentification données lors de la création 
                         du compte et on le lie à un ou plusieurs bacs. Il faut aussi prendre en compte la validation 
                         des informations lors de l'inscription, simple vérification si l'adresse entrée corresponds
-                        avec un bac dans la proximité.<br>
-                        Pour le bac, on lui lie un ou plusieurs citoyens (cas d'une famille ou d'une colocation), on 
-                        archive les mesures liées à son état (niveau, contenu) et on y associe la date de la mesure.<br>
+                        avec un bac dans la proximité.
+			Pour le bac, on lui lie un ou plusieurs citoyens (cas d'une famille ou d'une colocation), on 
+                        archive les mesures liées à son état (niveau, contenu) et on y associe la date de la mesure.
                         Pour un consommateur, lors de l'enregistrement auprès de la ville, un champ vide pour celui-ci
                         est créé. Des champs pour les information d'authentification ainsi que métriques municipales propres
                         aux consomateurs est créé; spécifiquement pour la masse, un champ pour une snapshot de la masse totale
                         prédatant la dernière remise d'information du consommateur ainsi qu'un champ pour la masse totale la 
-                        plus récente. Un champ pour le type de déchets utilisé ainsi que l'activité sont aussi réservé.<br>
+                        plus récente. Un champ pour le type de déchets utilisé ainsi que l'activité sont aussi réservé.
                         Une entrée pour la ville qui servira de "statistiques en direct" et où il sera
                         question de stocker les métriques calculées à partir des points de contrôle. Un champ sera pour tous
-                        les consomateurs maintenus par la ville.
+                        les consomateurs maintenus par la ville. </p>
+
                         <h4 class="enum-title">Token de session</h4>
                         Marque de validité d'une connexion, encryptée et contient une référence à l'utilisateur, peut être demandée
                         bureaucratiquement dans un format statique (usage visé dans l'API).
@@ -1477,33 +1478,33 @@
                         somme de la masse des déchets datant de la dernière mise à jour du consomateur 
                         (champ snapshot) et la somme des déchets récupéré pour chaque type de déchets respectivement.
                         <h4 class="enum-title">Gestion des transactions d'information</h4>
-                        Enregistrer un utilisateur: l'app fait une requête d'un nouvel utilisateur, l'app remplit
+                        <p align="justify" style="line-height:1.5">Enregistrer un utilisateur: l'app fait une requête d'un nouvel utilisateur, l'app remplit
                         les informations pour initialiser l'objet, l'app renvoie, le serveur valide et stocke
-                        l'information.<br>
+                        l'information.
                         Enregister un bac: l'app fait une requête pour un nouveau bac, l'app renvoie son identification
-                        et l'utilisateur auquel il est lié, le serveur stocke l'information dans le tableau des bacs.<br>
+                        et l'utilisateur auquel il est lié, le serveur stocke l'information dans le tableau des bacs.
                         Mettre un bac à jour à tout les 24h: le capteur d'un bac envoie les différentes mesures au
                         serveur; le serveur archive, dans le champ du bac correspondant, les informations avec le temps
-                        internre du server.<br>
+                        internre du server.
                         Recevoir le bilan du traget d'un camion: le serveur reçoit les informations; la position GPS est
                         utilisée pour référer à l'adresse du consomateur correspondant; la masse de déchet est ajoutée
                         au champ de la masse totale (la plus récente) reçue du consommateur et la date de celui-ci est
-                        sauvegardée. <br>
+                        sauvegardée.
                         Recevoir le bilan d'un consomateur: le consommateur envoie les information avec son token de session;
                         le serveur utilise le token pour savoir que la requête est valide et utilise la référence contenue pour
                         modifier les champs correspondant au consommateur; le champ pour la masse de déchets récupéré est mis à
-                        jour et le champ de la masse totale la plus réçente reçue est copiée sur le champ de la snapshot.<br>
+                        jour et le champ de la masse totale la plus réçente reçue est copiée sur le champ de la snapshot.
                         Requête de connexion: l'app envoie les informations de connexion au serveur; celui-ci les valide;
                         dans le cas d'une connexion réussie, un token est émit pour la session, dans le cas d'un echec,
-                        un refut est envoyé.<br>
+                        un refut est envoyé.
                         Requête d'une statistique personnelle: l'app fait une requête pour un des champ correspondant
                         à un utilisateur et joint le token de session; le serveur utilise le token pour savoir que
                         la requête est valide et utilise la référence à l'utilisateur pour trouver l'information; et 
-                        renvoie le champ de l'utilisateur. Requête de forme: token.getChamp()<br>
+                        renvoie le champ de l'utilisateur. Requête de forme: token.getChamp()
                         Requête d'une statistique municipale: l'app fait une requête pour un champ correspondant à une
                         ville et joint token de session; le serveur utilise le token pour savoir que la requête est valide
                         et utilise la référence à l'utilisateur afin de trouver la ville auquel il est associé; et renvoie
-                        le champ de la ville. Requête de forme: token.getVille.getChamp()<br>
+                        le champ de la ville. Requête de forme: token.getVille.getChamp()</p>
 
 
                     </p>
@@ -1512,8 +1513,9 @@
                 <div>
                     <h3 class="subsection-title">Propositions</h3>
 
-                    <p>
+                    		
 			        <h4>Explication du choix des métriques:</h4>
+				<p align="jusitfy" style="line-height:1.5">
 			        <ol>
 			            <li>Métriques sur les bacs de composte au niveau résidentiel, c'est-à-dire la comparaison entre les métriques d'un utilisateur et la moyenne des autres utilisateurs:</li>
 			            <ul>
@@ -1534,20 +1536,23 @@
 			            </ul>
                     
 			        </ol>
+				</p>
                     <h4>Analyse des solutions:</h4>
+		    
                     <ol>
-                        <li>Obtenir l'état des bacs: usage d'un micro-controleur<br>
+                        <li><p align="jusitfy" style="line-height:1.5">Obtenir l'état des bacs: usage d'un micro-controleur<br>
                             Un micro-ordinateur permet d'être connecté à plusieurs capteurs nécessaires pour la prise de mesure
                             ainsi qu'à un éméteur de signaux et une source d'électricité modulaire. On considère un arduino nano
                             connecté à des senseurs et 2 batteries li-ion comme produit répondant aux critères. L'envoi de signaux
                             pourrait être fait avec un système de style téléphonique(petit et longe distance). Garder l'appareil
-                            allimenté est une question de changer les batteries aux moment de récolter les bacs.
+                            allimenté est une question de changer les batteries aux moment de récolter les bacs.</p>
                         </li>
-                        <li>Obtenir les informations du checkpoint de la récolte: déléguer le travail à un moment opportun<br>
+
+                        <li><p align="jusitfy" style="line-height:1.5">Obtenir les informations du checkpoint de la récolte: déléguer le travail à un moment opportun<br>
                             Pas besoin de traiter l'information de chaque bac individuellement par le serveur, l'information est
                             plutot donnée à l'ordinateur de bord du camion qui elle, à la fin de la récolte, sera envoyé. Tout les
                             véhicules modernes sont munis d'un ordinateur de bord plus ou moins capable, il est question de soit les
-                            modifier soit ajouter un système de style raspberry-pi.
+                            modifier soit ajouter un système de style raspberry-pi. </p>
 
                         </li>
                         

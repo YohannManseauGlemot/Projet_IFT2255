@@ -1376,18 +1376,18 @@
                         <li>Changement de régulations par rapport au traitement des bacs ou à leur trie. Ceci cause problème, puisque de tels changement forcerait un restructurement complet de l'application.</li>
                         <li>Erreurs ou falsification des données liées aux consommateurs ou à l'utilisateur (métriques écologiques erronées). Ceci cause problème, puisque si des consommateurs mentent sur certaines métriques toutes les données récoltées par l'application seront erronées, ce qui peut créer une mauvaise réputation pour bineco.</li>
                         <li>Les capteurs sont défectueux, ce qui biaise les métriques receuillis. Si les métriques receuillis ne tienne pas compte de tout les utilisateurs, alors les utilisateurs de bineco pourrait être influencés.</li>
-                        <li>Trop de problèmes sont signalés à la ville, ce qui retarde la résolution de ceux-ci et peut causer du mécontentement chez les utilisateurs.</li>
+                        <li>Trop de problèmes sont signalés à la ville, ce qui retarde la résolution de ceux-ci et peut causer du mécontentement chez les utilisateurs; risque aussi de dupliquer des signalisation, ce qui inflate artificiellement le volume de requêtes à traiter.</li>
                     </ol>
                 </div>
 
                 <div>
                     <h3 class="subsection-title">Exigences non-fonctionnelles</h3>
                     <ol class="nf-requirements">
-                        <li>La plateforme devrait être bien protégée contre des attaques sur la base de données. Ex: Lorsque l'utilisateur se créer un compte, le système le force à utiliser un mot de passe robuste</li>
+                        <li>La plateforme devrait être bien protégée contre des attaques sur la base de données. Ex: Lorsque l'utilisateur se créer un compte, le système le force à utiliser un mot de passe robuste. Puisque chaque utilisateur devrait se sentir en sécurité avec nos services et il ne faudrait pas faciliter l'enfreinte à l'anonymat.</li>
                         <li>Le système doit se naviguer facilement et de manière intuitive pour encourager les gens à tenir de bonne pratiques environnementales </li>
-                        <li>Le système doit avoir un faible impact environnemental (le moins de ressources possible)</li>
+                        <li>Le système doit avoir un faible impact environnemental (le moins de ressources possible) pour rester en accord avec le message qu'il essaie de partager</li>
                         <li>Le système permet de choisir entre plusieurs langues pour accomoder le plus grand nombre d'utilisateur possible</li>
-                        <li>Le système doit être conçu pour recevoir un grand nombre d'utilisateurs simultanément</li>
+                        <li>Le système doit être conçu pour recevoir un grand nombre de mises à jour de la part des bacs pour éviter le rallentissement des traitements affectant l'expérience utilisateur.</li>
                     </ol>
                 </div>
 
@@ -1413,8 +1413,8 @@
                         consomateurs. Celui-ci permettra aux consommateurs de directement faire interface avec 
                         la base de donnée pour envoyer la proportion de déchets utilisés dans l'activité écologique
                         poursuivie.
-			<h4 class="enum-title">Code QR</h4>
-			Afin d'identifier tous les bacs de la ville et les associer à chaque domiciles.
+			            <h4 class="enum-title">Code QR</h4>
+			            Afin d'identifier tous les bacs de la ville et les associer à chaque domiciles.
 
                         
                     </p>

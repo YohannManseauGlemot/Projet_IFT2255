@@ -59,10 +59,10 @@ public class Menu {
     
                 if(Integer.toString(choix).length() != 1 ){
 
-                    throw new InputException(" Erreur: Votre choix doit contenir un seul chiffre entre 0 et 5");
+                    throw new InputException(" Erreur: Votre choix doit contenir un seul chiffre entre 0 et 4");
                 }
-                if(choix > 5){
-                    throw new InputException("Erreur: Veuillez entrer un chiffre entre 0 et 5");
+                if(choix >= 5){
+                    throw new InputException("Erreur: Veuillez entrer un chiffre entre 0 et 4");
                 }
                 
             }

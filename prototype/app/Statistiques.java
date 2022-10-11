@@ -10,7 +10,7 @@ public class Statistiques {
 
         while (true){
             System.out.println();
-            System.out.println("Cliquez sur ENTER de votre clavier pour retourner au volet statistques");
+            System.out.println("Cliquez sur ENTER de votre clavier pour retourner au volet Statistiques");
             enter = scan.nextLine();
 
             try{
@@ -43,8 +43,8 @@ public class Statistiques {
         System.out.println();
         System.out.println("Ci dessous vous pouvez voir la composition de chacun de vos bacs. Le contenu de chacun des bacs est décrit au dessus de sa composition:");
         System.out.println();
-        System.out.println("Bac Brun: Résidus alimentaire/Produits fibreux/Produits compostable/Herbes et plantes"+ "(en % du contenu du bac)");
-        System.out.println("               50%           /        15%     /         10%        /         25%       ");
+        System.out.println("Bac Brun: Résidus alimentaires/Produits fibreux/Produits compostables/Herbes et plantes"+ "(en % du contenu du bac)");
+        System.out.println("                50%          /        15%     /         10%        /         25%       ");
         System.out.println();
         System.out.println("Bac Bleu: Papier/Carton/Verre/Metal/Conteneurs de plastique" + "(En % du contenu du bac)");
         System.out.println("            10% /  20% / 15% / 20% / 35%                                      ");
@@ -58,25 +58,25 @@ public class Statistiques {
     }
     public void metrique(){
 
-        System.out.println("Ici vous pouvez examiner les métriques écologiques qui reflète l'efficacité du traitement des déchets de la ville de Montréal du mois dernier");
+        System.out.println("Ici vous pouvez examiner les métriques écologiques qui reflètent l'efficacité du traitement des déchets de la ville de Montréal du mois dernier");
         System.out.println();
-        System.out.println("Matière organique collecté par la ville (en tonnes):     | 90 000  |    ");
-        System.out.println("Taux de récupération des matières organiques:            |   30%   |    ");
-        System.out.println("Matière recyclable collecté par la ville (en tonnes):    | 150 000 |    ");
-        System.out.println("Taux de récupération des matières recyclables:           |   65%   |    "); 
+        System.out.println("Matières organiques collectées par la ville (en tonnes):     | 90 000  |    ");
+        System.out.println("Taux de récupération des matières organiques:                |   30%   |    ");
+        System.out.println("Matières recyclables collectées par la ville (en tonnes):    | 150 000 |    ");
+        System.out.println("Taux de récupération des matières recyclables:               |   65%   |    "); 
 
         System.out.println();
         System.out.println();
 
-        System.out.println("Voici les métriques écologique au niveau résidentiel, c'est-à-dire une comparaison entre ");
-        System.out.println("votre activité écologique et celle des citoyens de la ville de Montréal du mois dernier. Ces métriques sont en lien avec les bac de composte");
+        System.out.println("Voici les métriques écologiques au niveau résidentiel, c'est-à-dire une comparaison entre ");
+        System.out.println("votre activité écologique et celle des citoyens de la ville de Montréal du mois dernier. Ces métriques sont en lien avec les bacs de composte");
         System.out.println();
         System.out.println("                                                    Vous      |  Moyenne des citoyens   ");
         System.out.println("           1.Ration carbone/azote (C/N) :            30:1     |        50:1           ");
         System.out.println("            2.Concentration d'oxygène (%):           10       |        6                ");
         System.out.println("3.Ratio matières compostables/non-compostables:      75:1     |        50:1              ");
         System.out.println("           4.Dégagement de CO2 (lbs):                70       |        50               ");
-        System.out.println("       5.Quantité de matière composté (lbs):         200      |        143                        ");
+        System.out.println("       5.Quantité de matière compostée (lbs):        200      |        143                        ");
         System.out.println();
 
         
@@ -88,20 +88,20 @@ public class Statistiques {
             System.out.print("Afficher les explications des métriques au niveau résidentiel? (Oui/Non) ");
             afficher = scanner.next();
             if(afficher.equalsIgnoreCase("Oui")){
-                System.out.println("1. le ratio carbone/azote dans un bac de composte doit être le plus près possible de 30:1");
+                System.out.println("1. Le ratio carbone/azote dans un bac de composte doit être le plus près possible de 30:1");
                 System.out.println("pour un compostage optimal.");
                 System.out.println();
-                System.out.println("2. le taux d'oxygène est important dans un bac de compost puisque sans oxygène, un bac de compost va généré plus de méthane que de CO2.");
-                System.out.println(" Le méthane a un pouvoir de réchauffement 80 fois plus élevé que le CO2. Aussi, un compost avec un taux d'oxygène plus élevé vas de décomposer plus rapidement");
+                System.out.println("2. Le taux d'oxygène est important dans un bac de composte puisque sans oxygène, un bac de composte va générer plus de méthane que de CO2.");
+                System.out.println(" Le méthane a un pouvoir de réchauffement 80 fois plus élevé que le CO2. Aussi, un composte avec un taux d'oxygène plus élevé va se décomposer plus rapidement");
                 System.out.println();
-                System.out.println("3.Le ratio de matière compostable et non compostable indique simplement le rapport entre les déchets bénifique et nuisible pour votre composte");
+                System.out.println("3.Le ratio de matières compostables et non compostables indique simplement le rapport entre les déchets bénifiques et nuisibles pour votre composte");
                 System.out.println();
-                System.out.println("4. Le dégagement de CO2 vous donne une idée de votre empreinte écologique, par contre il faut garder en tête que plus une personne compost plus elle produira de CO2");
+                System.out.println("4. Le dégagement de CO2 vous donne une idée de votre empreinte écologique, par contre il faut garder en tête que plus une personne composte plus elle produira de CO2");
                 System.out.println();
-                System.out.println("5. La quantité de matière composté permet de vous comparer avec les autres citoyens sur votre taux de compostage");
+                System.out.println("5. La quantité de matière compostée permet de vous comparer avec les autres citoyens sur votre taux de compostage");
                 System.out.println();
-                System.out.println("Note: En moyenne, un bac de compost génère 160 kg de CO2 pour 1 tonne de compost. Donc en assummant qu'un citoyen ");
-                System.out.println("prend 2 semaine à remplir son compost à 100 lbs, alors en 1 mois il auras compsoté 200 lbs et géneré environ 70 lbs de CO2");
+                System.out.println("Note: En moyenne, un bac de composte génère 160 kg de CO2 pour 1 tonne de composte. Donc en assummant qu'un citoyen ");
+                System.out.println("prend 2 semaine à remplir son composte à 100 lbs, alors en 1 mois il aura composté 200 lbs et géneré environ 70 lbs de CO2");
 
                 break;
 
@@ -125,10 +125,10 @@ public class Statistiques {
         System.out.println();
         System.out.println("Checkpoint 1 Collecte: 3 octobre ");
         System.out.println("      - Du 1er au 3 octobre, 20 000 tonnes de matières organiques, 40 000 tonnes de matières recyclables ");
-        System.out.println("        et 30 000 tonnes d'ordures ont été collecté par la ville de Montréal.                 ");
+        System.out.println("        et 30 000 tonnes d'ordures ont été collectées par la ville de Montréal.                 ");
         System.out.println();
         System.out.println("Checkpoint 2 Livraison: 10 octobre                     ");
-        System.out.println("       - Le 10 octobre, la totalité des matières organiques et recyclables ont été livré à leurs usines respectives pour le triage     ");
+        System.out.println("       - Le 10 octobre, la totalité des matières organiques et recyclables ont été livrées à leurs usines respectives pour le triage     ");
         System.out.println("         Les ordures ont toutes été amenées à des sites d'enfouissement et d'incinération               ");
         
         System.out.println();
@@ -136,11 +136,11 @@ public class Statistiques {
         System.out.println();
         System.out.println("Checkpoint 3 Usage: 21 octobre                 ");
         System.out.println("       - Depuis la livraison du 10 octobre, 30% des matières organiques ont été réutilisées suite au triage. Dans ce 30%,  ");
-        System.out.println("         15% à été attribué aux sites de compostage municipaux, 10% aux sites de biométhanisation et 5% à d'autres organismes de compostage.");
-        System.out.println("         Le 70% des matières restantes se sont retrouvés dans des sites d'enfouissement et d'incinération       ");
+        System.out.println("         15% ont été attribuées aux sites de compostage municipaux, 10% aux sites de biométhanisation et 5% à d'autres organismes de compostage.");
+        System.out.println("         Le 70% des matières restantes se sont retrouvées dans des sites d'enfouissement et d'incinération       ");
         System.out.println();
-        System.out.println("       - Dans les 40 000 tonnes de recyclage, 60% ont été réutilisé après le triage. Dans ce 60%, 40% ont été envoyé à des usines de recyclage  ");
-        System.out.println("         et le 20% restant ont été donné à de nombreux organismes de fabrication de vêtements ");
+        System.out.println("       - Dans les 40 000 tonnes de recyclage, 60% ont été réutilisées après le triage. Dans ce 60%, 40% ont été envoyées à des usines de recyclage  ");
+        System.out.println("         et le 20% restant ont été données à de nombreux organismes de fabrication de vêtements ");
 
 
 

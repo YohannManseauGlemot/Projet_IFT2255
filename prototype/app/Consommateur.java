@@ -14,7 +14,7 @@ public class Consommateur {
         System.out.println(l3);
         System.out.println();
 
-        System.out.println("Liste de consommateurs disponible: ");
+        System.out.println("Liste de consommateurs disponibles: ");
         System.out.println();
         System.out.println("Consommateur 1");
         System.out.println("Consommateur 2");

@@ -4,7 +4,7 @@
 
 Étapes à suivre pour exécuter l'application
 
-1. Télécharger le zip contenant tout le projet et l'extract sur votre Desktop par exemple
+1. Télécharger le zip contenant tout le projet et l'extract sur votre Desktop ou git clone le lien du repèrtoire Github sur votre Desktop 
 2. Ouvrir votre cmd
 3. Exécuter les commandes suivantes: cd Desktop (si vous avez extract le zip sur votre Desktop), 
                                      cd Projet_IFT2255-main, 

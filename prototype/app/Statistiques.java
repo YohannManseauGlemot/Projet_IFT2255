@@ -34,7 +34,7 @@ public class Statistiques {
     }
 
     public void etatBac(){
-        System.out.println("Voici l'état actuel de vos différents bacs, 11 octobre 2022:");
+        System.out.println("Voici l'état actuel de vos différents bacs, 11 octobre 2022. Ces données sont misent à jour à chaque 24h:");
         System.out.println("                 Bac Brun      Bac Bleu      Bac Noir");
         System.out.println("Niv. remplissage:  50%           40%           30%");
         System.out.println("Température:       45°C          20°C          30°C");

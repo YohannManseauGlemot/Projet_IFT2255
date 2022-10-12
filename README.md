@@ -1,5 +1,7 @@
 # Projet_IFT2255
 
+!!Veuillez ouvrir le rapport html sur Chrome ou Edge car il y a un bug avec l'affichage sur Firefox!!
+
 Étapes à suivre pour exécuter l'application
 
 1. Télécharger le zip contenant tout le projet et l'extract sur votre Desktop par exemple

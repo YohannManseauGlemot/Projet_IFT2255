@@ -312,8 +312,14 @@
         }
 
         .scenario-main-steps {
-            margin: 0; padding-left: 16px;        
+            margin: 0;
+            padding-left: 16px;
+            counter-reset: topLEvel
         }
+        .scenario-main-step { counter-increment: topLevel;}
+        .scenario-secondary-steps{ counter-reset: secondLevel;}
+        .scenario-secondary-step { counter-increment: secondLevel}
+        .scenario-secondary-step:before {content: counter(topLevel, decimal) '.' counter(secondLevel, decimal) '.'}
 
         .scenario-alt {
             margin-top: 6px;
@@ -321,6 +327,7 @@
 
         .scenario-alt p { margin: 0; }
 
+        
         .scenario-alt-steps { counter-reset: topLevel; }
             .scenario-alt-steps:not(:last-child) { margin-bottom: 6px; }
             .scenario-alt-step { counter-increment: topLevel; font-weight: 500; }
@@ -364,6 +371,8 @@
             content: '🗸'; 
             color: currentColor;
         }
+
+        .bare-list {list-style: none}
 	
         
     </style>
@@ -1442,7 +1451,7 @@
                         de diffuser son information avec une portée assez grande. Batterie qui dure pour au moins 2
                         semaines, pourrait/doit être rechargée ou échangée lors de la récupération, horloge interne.
                         <h4 class="enum-title">Capteurs sur les camions</h4>
-                        GPS et horloge. Peut interfacer directement avec le capteur du bac qu'il récolte.
+                        GPS. Peut interfacer directement avec le capteur du bac qu'il récolte.
                         <h4 class="enum-title">Robotisation des camions</h4>
                         Bidule robotique permettant de faire la recharge/échange des batteries des bacs récupérés.<p>
 
@@ -1455,7 +1464,7 @@
                         du compte et on le lie à un ou plusieurs bacs. Il faut aussi prendre en compte la validation 
                         des informations lors de l'inscription, simple vérification si l'adresse entrée correspond
                         avec un bac dans la proximité.
-			Pour le bac, on lui lie un ou plusieurs citoyens (cas d'une famille ou d'une colocation), on 
+			            Pour le bac, on lui lie un ou plusieurs citoyens (cas d'une famille ou d'une colocation), on 
                         archive les mesures liées à son état (niveau, contenu) et on y associe la date de la mesure.
                         Pour un consommateur, lors de l'enregistrement auprès de la ville, un champ vide pour celui-ci
                         est créé. Des champs pour les information d'authentification ainsi que métriques municipales propres
@@ -1492,7 +1501,7 @@
                         interne du server.
                         Recevoir le bilan du trajet d'un camion: le serveur reçoit les informations; la position GPS est
                         utilisée pour référer à l'adresse du consommateur correspondant; la masse de déchet est ajoutée
-                        au champ de la masse totale (la plus récente) reçue du consommateur et la date de celui-ci est
+                        au champ de la masse totale (la plus récente) reçue du consommateur et la date (du serveur) de celui-ci est
                         sauvegardée.
                         Recevoir le bilan d'un consommateur: le consommateur envoie les informations avec son token de session;
                         le serveur utilise le token pour savoir que la requête est valide et utilise la référence contenue pour
@@ -1556,8 +1565,20 @@
                             Pas besoin de traiter l'information de chaque bac individuellement par le serveur, l'information est
                             plutot donnée à l'ordinateur de bord du camion qui elle, à la fin de la récolte, sera envoyé. Tous les
                             véhicules modernes sont munis d'un ordinateur de bord plus ou moins capable, il est question de soit les
-                            modifier soit ajouter un système de style raspberry-pi. </p>
+                            modifier soit ajouter un système de style raspberry-pi. La plupart des micros-controlleurs et les ordinateur modernes
+                            supportent les connexions Bluetooth, ce qui permettra le contact entre le bac et le camion.</p>
+                        </li>
 
+                        <li><p align="justify" style="line-height:1.5">Obtenir les informations du checkpoint du dépot: réutiliser le même matériel que pour le checkpoint de la récolte.<br>
+                            Il ne faut que s'assurer que le matériel dans l'étape précédente est compatible avec un GPS afin de permettre l'envoi de la
+                            position du camion qui permettra le traitement de l'information. Le temps côté serveur sera utilisé partout pour unifier les
+                            valeurs.
+                            </p>
+                        </li>
+
+                        <li>
+                            <p align="justify" style="line-height:1.5">Obtenir les informations du checkpoint de l'usage des déchets: permettre aux compagnies d'intégrer notre système au leur.<br>
+                            </p>
                         </li>
                         
                     </ol>

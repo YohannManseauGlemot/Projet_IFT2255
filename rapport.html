@@ -1453,7 +1453,7 @@
                         <h4 class="enum-title">Capteurs sur les camions</h4>
                         GPS. Peut interfacer directement avec le capteur du bac qu'il récolte.
                         <h4 class="enum-title">Robotisation des camions</h4>
-                        Bidule robotique permettant de faire la recharge/échange des batteries des bacs récupérés.<p>
+                        Robotique permettant de faire la recharge/échange des batteries des bacs récupérés.<p>
 
 			            <h3> Conceptuelles:</h3>
 
@@ -1578,9 +1578,22 @@
 
                         <li>
                             <p align="justify" style="line-height:1.5">Obtenir les informations du checkpoint de l'usage des déchets: permettre aux compagnies d'intégrer notre système au leur.<br>
+                                L'API permettant aux consommateurs d'envoyer leurs résultat par eux même permet de
+                                mieux raccorder les intéractions entre Bineco et les consommateurs. En effet, il est
+                                logique de penser qu'un consommateur possède déja une manière de mesurer les mêmes métriques
+                                qu'on cherche à obtenir; ça devient alors une simple question d'ajouter notre API à leur
+                                système informatique.
                             </p>
                         </li>
                         
+                        <li>
+                            <p align="justify" style="line-height:1.5">Empêcher que toutes les mises à jour des bacs arrivent en même temps: 
+                                répartir également entre tout les bacs l'heure à laquelle ils envoient leur mise à jour.<br>
+                                Pour éviter que le serveur se fasse bombarder d'information à une heure arbitraire, le ramassage du bac
+                                permettra de réinitialiser le compteur de 24h, assurant ainsi que chaque compteur soit décalé de manière
+                                aléatoirement égale.
+                            </p>
+                        </li>
                     </ol>
                     </p>
                 </div>

@@ -57,7 +57,7 @@ L'ensemble des interactions est capturé dans le diagramme, mais il y a quelques
 
 ### Scénarios
 
-Bien dans l'ensemble, mais certains scénarios sont trop brefs. Bon usage des scénarios alternatifs.
+Bien dans l'ensemble. Bon usage des scénarios alternatifs.
 
 - Les étapes doivent alterner entre le système et les acteurs. Éviter d'avoir plus de 2 étapes successives pour le même acteur.
 - Ajoutez la connexion à Bineco comme préconditions à l'ensemble des CUs

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class SignalerProbleme {
-    private static Scanner scanner = new Scanner(System.in);
+    
     private static Scanner scan = new Scanner(System.in);
 
     public void menu3(){
@@ -22,24 +22,24 @@ public class SignalerProbleme {
 
         System.out.println("Veuillez inscrire votre nom, adresse de domicile, adresse courriel et le type de votre problème");
         System.out.println("Nom: ");
-        nom =scanner.nextLine();
+        nom =scan.nextLine();
         //scanner.close();
         System.out.println();
         System.out.println("Adresse: ");
-        adresse = scanner.nextLine();
+        adresse = scan.nextLine();
         System.out.println();
         System.out.println("Courriel: ");
-        courriel = scanner.nextLine();
+        courriel = scan.nextLine();
         System.out.println();
         System.out.println("Type de problème: ");
-        type = scanner.nextLine();
+        type = scan.nextLine();
         System.out.println();
         System.out.println("Vos informations ont été enregistrées avec succès");
         System.out.println();
         System.out.println("Veuillez rédiger votre requête: ");
-        texte = scanner.nextLine();
+        texte = scan.nextLine();
         System.out.println();
-        System.out.println("Nous vous remercions pour votre requête, la ville de Montréal vous contactera sous peu");
+        System.out.println("Nous vous remercions pour votre requête, MunicipInfo vous contactera sous peu");
 
         String reponse;
         int compteur = 0;

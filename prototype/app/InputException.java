@@ -1,10 +1,10 @@
 public class InputException extends Exception {
 
-    String s;//Contiendra le message personnalisé
+    String string;//Contiendra le message personnalisé
     //Constructeur qui met à jour la String ci-dessus
-    public InputException(String s){
+    public InputException(String string){
 
-        this.s = s;
+        this.string = string;
     }
     
     /** 
@@ -16,7 +16,7 @@ public class InputException extends Exception {
     
     public String toString(){
         
-        return s;
+        return string;
     }
 
 }

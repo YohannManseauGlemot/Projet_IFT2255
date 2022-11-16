@@ -5,7 +5,7 @@ public class EnregistrerBac{
 
    
     private static Scanner scan = new Scanner(System.in);
-    private static Scanner scan2 = new Scanner(System.in);
+    
     
 
     /*
@@ -13,7 +13,7 @@ public class EnregistrerBac{
      * |Enregistrement d'un bac|   
      * |||||||||||||||||||||||||
      */
-    public void menu2() throws Exception{
+    public void menu2(){
         System.out.println();
         String l1 = "*************************";
         String l2 = "*Enregistrement d'un bac*";
@@ -81,7 +81,7 @@ public class EnregistrerBac{
             
             try{
                 
-                reponse = scan2.nextLine();
+                reponse = scan.nextLine();
                 
                 
 
@@ -108,7 +108,7 @@ public class EnregistrerBac{
 
                 System.out.println(e.toString());
                 
-                scan2.nextLine();
+                scan.nextLine();
                 continue;
             }
         }

@@ -2,8 +2,15 @@ import java.util.Scanner;
 import java.util.InputMismatchException;
 
 public class Statistiques {
-    private static Scanner scanner = new Scanner(System.in);
+    
     private static Scanner scan = new Scanner(System.in);
+    private static Scanner scan1 = new Scanner(System.in);
+    private static Scanner scan2 = new Scanner(System.in);
+    private static double score = 0;
+    private static double fV = 0;
+    private static double fB = 0;
+    private static double fN = 0; 
+    
 
     public void enter(){
         String enter;
@@ -11,7 +18,7 @@ public class Statistiques {
         while (true){
             System.out.println();
             System.out.println("Cliquez sur ENTER de votre clavier pour retourner au volet Statistiques");
-            enter = scan.nextLine();
+            enter = scan1.nextLine();
 
             try{
                 
@@ -25,7 +32,7 @@ public class Statistiques {
             }
             catch (InputException e){
                 System.out.println(e.toString());
-                scan.nextLine();
+                scan1.nextLine();
                 continue;
             } 
             break;
@@ -33,51 +40,203 @@ public class Statistiques {
 
     }
 
-    public void etatBac(){
-        System.out.println("Voici l'état actuel de vos différents bacs, 11 octobre 2022. Ces données sont misent à jour à chaque 24h:");
-        System.out.println("                 Bac Brun      Bac Bleu      Bac Noir");
-        System.out.println("Niv. remplissage:  50%           40%           30%");
-        System.out.println("Température:       45°C          20°C          30°C");
-        System.out.println("    pH:             6            N/A           N/A ");
-        System.out.println("Humidité:          35%           N/A           N/A        ");
-        System.out.println();
-        System.out.println("Ci dessous vous pouvez voir la composition de chacun de vos bacs. Le contenu de chacun des bacs est décrit au dessus de sa composition:");
-        System.out.println();
-        System.out.println("Bac Brun: Résidus alimentaires/Produits fibreux/Produits compostables/Herbes et plantes"+ "(en % du contenu du bac)");
-        System.out.println("                50%          /        15%     /         10%        /         25%       ");
-        System.out.println();
-        System.out.println("Bac Bleu: Papier/Carton/Verre/Metal/Conteneurs de plastique" + "(En % du contenu du bac)");
-        System.out.println("            10% /  20% / 15% / 20% / 35%                                      ");
-        System.out.println();
-        System.out.println("Bac Noir: Déchets/Matières recyclables/Matières compostable (En % du contenu du bac)");
-        System.out.println("            80%  /        10%         /      10% ");
+    public void etatBac(int id){
+
+        if(id == 0){
+            System.out.println("Voici l'état actuel de vos différents bacs, 20 novembre 2022. Ces données sont misent à jour à chaque 24h:");
+            System.out.println("                 Bac Brun      Bac Bleu      Bac Noir");
+            System.out.println("Niv. remplissage:  50%           40%           30%");
+            System.out.println("Température:       45°C          20°C          30°C");
+            System.out.println("    pH:             6            N/A           N/A ");
+            System.out.println("Humidité:          35%           N/A           N/A        ");
+            System.out.println();
+            System.out.println("État du capteur: Fonctionnel");
+            System.out.println();
+            System.out.println("Ci dessous vous pouvez voir la composition de chacun de vos bacs. Le contenu de chacun des bacs est décrit au dessus de sa composition:");
+            System.out.println();
+            System.out.println("Bac Brun: Résidus alimentaires/Produits fibreux/Produits compostables/Herbes et plantes"+ "(en % du contenu du bac)");
+            System.out.println("                50%          /        15%     /         10%        /         25%       ");
+            System.out.println();
+            System.out.println("Bac Bleu: Papier/Carton/Verre/Metal/Conteneurs de plastique" + "(En % du contenu du bac)");
+            System.out.println("            10% /  20% / 15% / 20% / 35%                                      ");
+            System.out.println();
+            System.out.println("Bac Noir: Déchets/Matières recyclables/Matières compostable (En % du contenu du bac)");
+            System.out.println("            80%  /        10%         /      10% ");
+
+            
+            enter();
+        }
+        if(id == 1){
+            System.out.println("Voici l'état actuel de vos différents bacs, 20 novembre 2022. Ces données sont misent à jour à chaque 24h:");
+            System.out.println("                 Bac Brun      Bac Bleu      Bac Noir");
+            System.out.println("Niv. remplissage:  40%           30%           10%");
+            System.out.println("Température:       27°C          23°C          25°C");
+            System.out.println("    pH:             7            N/A           N/A ");
+            System.out.println("Humidité:          28%           N/A           N/A        ");
+            System.out.println();
+            System.out.println("État du capteur: Défectueux, veuillez le signaler à MunicipInfo");
+            System.out.println();
+            System.out.println("Ci dessous vous pouvez voir la composition de chacun de vos bacs. Le contenu de chacun des bacs est décrit au dessus de sa composition:");
+            System.out.println();
+            System.out.println("Bac Brun: Résidus alimentaires/Produits fibreux/Produits compostables/Herbes et plantes"+ "(en % du contenu du bac)");
+            System.out.println("                20%          /        20%     /         20%        /         40%       ");
+            System.out.println();
+            System.out.println("Bac Bleu: Papier/Carton/Verre/Metal/Conteneurs de plastique" + "(En % du contenu du bac)");
+            System.out.println("            5% /  40% / 10% / 15% / 30%                                      ");
+            System.out.println();
+            System.out.println("Bac Noir: Déchets/Matières recyclables/Matières compostable (En % du contenu du bac)");
+            System.out.println("            90%  /        5%         /      5% ");
+
+            
+            enter();
+        }
+        if(id == 2){
+            System.out.println("Voici l'état actuel de vos différents bacs, 20 novembre 2022. Ces données sont misent à jour à chaque 24h:");
+            System.out.println("                 Bac Brun      Bac Bleu      Bac Noir");
+            System.out.println("Niv. remplissage:  20%           30%           50%");
+            System.out.println("Température:       31°C          26°C          28°C");
+            System.out.println("    pH:            6.7           N/A           N/A ");
+            System.out.println("Humidité:          33%           N/A           N/A        ");
+            System.out.println();
+            System.out.println("État du capteur: Fonctionnel");
+            System.out.println();
+            System.out.println("Ci dessous vous pouvez voir la composition de chacun de vos bacs. Le contenu de chacun des bacs est décrit au dessus de sa composition:");
+            System.out.println();
+            System.out.println("Bac Brun: Résidus alimentaires/Produits fibreux/Produits compostables/Herbes et plantes"+ "(en % du contenu du bac)");
+            System.out.println("                10%          /        10%     /         10%        /         70%       ");
+            System.out.println();
+            System.out.println("Bac Bleu: Papier/Carton/Verre/Metal/Conteneurs de plastique" + "(En % du contenu du bac)");
+            System.out.println("            5% / 10% / 20% / 15% / 50%                                      ");
+            System.out.println();
+            System.out.println("Bac Noir: Déchets/Matières recyclables/Matières compostable (En % du contenu du bac)");
+            System.out.println("            70%  /        20%         /      10% ");
+
+            
+            enter();
+        }
 
         
-        enter();
-        
     }
-    public void metrique(){
+    public void metrique(int id){
+        
 
         System.out.println("Ici vous pouvez examiner les métriques écologiques qui reflètent l'efficacité du traitement des déchets de la ville de Montréal du mois dernier");
         System.out.println();
         System.out.println("Matières organiques collectées par la ville (en tonnes):     | 90 000  |    ");
         System.out.println("Taux de récupération des matières organiques:                |   30%   |    ");
+        System.out.println("Coût énergétique total du traitement (en kWh) :               |   300   |    ");
         System.out.println("Matières recyclables collectées par la ville (en tonnes):    | 150 000 |    ");
         System.out.println("Taux de récupération des matières recyclables:               |   65%   |    "); 
+        System.out.println("Coût énergétique total du traitement (en kWh) :              |   350   |    ");
 
         System.out.println();
         System.out.println();
 
-        System.out.println("Voici les métriques écologiques au niveau résidentiel, c'est-à-dire une comparaison entre ");
-        System.out.println("votre activité écologique et celle des citoyens de la ville de Montréal du mois dernier. Ces métriques sont en lien avec les bacs de composte");
-        System.out.println();
-        System.out.println("                                                    Vous      |  Moyenne des citoyens   ");
-        System.out.println("           1.Ration carbone/azote (C/N) :            30:1     |        50:1           ");
-        System.out.println("            2.Concentration d'oxygène (%):           10       |        6                ");
-        System.out.println("3.Ratio matières compostables/non-compostables:      75:1     |        50:1              ");
-        System.out.println("           4.Dégagement de CO2 (lbs):                70       |        50               ");
-        System.out.println("       5.Quantité de matière compostée (lbs):        200      |        143                        ");
-        System.out.println();
+        String reponse;
+
+        while(true){
+            System.out.println("Voulez-vous paramétriser le ratio matières écologiques/non-écologiques?");
+            reponse = scan2.next();
+            if(reponse.equalsIgnoreCase("Oui")){
+                while (true){
+                    
+        
+                    try{
+                        System.out.print("Facteur Vert: ");
+                        fV = scan2.nextInt();
+                        System.out.println("Facteur Bleu: ");
+                        fB = scan2.nextInt();
+                        System.out.println("Facteur Noir: ");
+                        fN = scan2.nextInt();
+            
+                        
+                        if(fV < 0 || fB <0 || fN < 0){
+                            throw new InputException("Erreur: Veuillez entrer un nombre positif");
+                        }
+                        
+                    }
+                    catch (InputMismatchException e){
+                        System.out.println(" Erreur: Vous devez entrer un chiffre");
+                        System.out.println();
+                        scan2.nextLine();
+                        continue;
+                    }
+                    catch (InputException e){
+                        System.out.println(e.toString());
+                        System.out.println();
+                        scan2.nextLine();
+                        continue;
+                    } 
+                    break;
+                }
+                break;
+            }
+            else if(reponse.equalsIgnoreCase("Non")){
+                break;
+            }
+            else{
+                continue;
+            }
+            
+        }
+        if(id == 0){
+            double qV = 200;
+            double qB = 170;
+            double qN = 150;
+            score = ((qV*fV)+(qB*fB)) /((qN*fN) +1);
+            String sc = score+"";
+            String sc2 = sc.substring(0, 4);
+
+            System.out.println("Voici les métriques écologiques au niveau résidentiel, c'est-à-dire une comparaison entre ");
+            System.out.println("votre activité écologique et celle des citoyens de la ville de Montréal du mois dernier. Ces métriques sont en lien avec vos différents bacs");
+            System.out.println();
+            System.out.println("                                                     Vous      |  Moyenne des citoyens    ");
+            System.out.println("           1.Ration carbone/azote (C/N) :             30:1     |        50:1              ");
+            System.out.println("       3 .Ratio matières écologiques/non-écologiques: "+sc2+"     |        50:1              ");
+            System.out.println("       5.Quantité de matière compostée (lbs):         "+qV+"    |        143              ");
+            System.out.println("       5.Quantité de matière recyclé (lbs):           "+qB+"    |        160              ");
+            System.out.println("       5.Quantité de déchets (lbs):                   "+qN+"    |        180              ");
+            System.out.println();
+        } 
+        else if(id == 1){
+            double qV = 230;
+            double qB = 190;
+            double qN = 140;
+            score = ((qV*fV)+(qB*fB)) /((qN*fN) +1);
+            String sc = score+"";
+            String sc2 = sc.substring(0, 4);
+
+            System.out.println("Voici les métriques écologiques au niveau résidentiel, c'est-à-dire une comparaison entre ");
+            System.out.println("votre activité écologique et celle des citoyens de la ville de Montréal du mois dernier. Ces métriques sont en lien avec vos différents bacs");
+            System.out.println();
+            System.out.println("                                                     Vous      |  Moyenne des citoyens    ");
+            System.out.println("           1.Ration carbone/azote (C/N) :             30:1     |        50:1              ");
+            System.out.println("       3 .Ratio matières écologiques/non-écologiques: "+sc2+"     |        50:1              ");
+            System.out.println("       5.Quantité de matière compostée (lbs):         "+qV+"    |        143              ");
+            System.out.println("       5.Quantité de matière recyclé (lbs):           "+qB+"    |        160              ");
+            System.out.println("       5.Quantité de déchets (lbs):                   "+qN+"    |        180              ");
+            System.out.println();
+        }
+        else if(id == 2){
+            double qV = 150;
+            double qB = 180;
+            double qN = 120;
+            score = ((qV*fV)+(qB*fB)) /((qN*fN) +1);
+            String sc = score+"";
+            String sc2 = sc.substring(0, 4);
+
+            System.out.println("Voici les métriques écologiques au niveau résidentiel, c'est-à-dire une comparaison entre ");
+            System.out.println("votre activité écologique et celle des citoyens de la ville de Montréal du mois dernier. Ces métriques sont en lien avec vos différents bacs");
+            System.out.println();
+            System.out.println("                                                     Vous      |  Moyenne des citoyens    ");
+            System.out.println("           1.Ration carbone/azote (C/N) :             30:1     |        50:1              ");
+            System.out.println("       3 .Ratio matières écologiques/non-écologiques: "+sc2+"     |        50:1              ");
+            System.out.println("       5.Quantité de matière compostée (lbs):         "+qV+"    |        143              ");
+            System.out.println("       5.Quantité de matière recyclé (lbs):           "+qB+"    |        160              ");
+            System.out.println("       5.Quantité de déchets (lbs):                   "+qN+"    |        180              ");
+            System.out.println();
+        }
+        
 
         
         String afficher;
@@ -86,7 +245,7 @@ public class Statistiques {
         
         while(true){
             System.out.print("Afficher les explications des métriques au niveau résidentiel? (Oui/Non) ");
-            afficher = scanner.next();
+            afficher = scan.next();
             if(afficher.equalsIgnoreCase("Oui")){
                 System.out.println("1. Le ratio carbone/azote dans un bac de composte doit être le plus près possible de 30:1");
                 System.out.println("pour un compostage optimal.");
@@ -160,7 +319,7 @@ public class Statistiques {
 
     }
 
-    public void menu5(){
+    public void menu5(int id){
         System.out.println();
         String l1 = "*************************";
         String l2 = "*      Statistiques     *";
@@ -173,7 +332,7 @@ public class Statistiques {
         System.out.println("Choisissez la catégorie que vous voulez afficher :");
         System.out.println();
 
-        System.out.println("    |1| État de mes bac");
+        System.out.println("    |1| État de mes bacs");
         System.out.println("    |2| Métriques écologiques");
         System.out.println("    |3| Traitement de mes déchets");
         System.out.println("    |4| Activités que je maintiens ");
@@ -187,7 +346,7 @@ public class Statistiques {
             System.out.print("Entrez votre choix: ");
 
             try{
-                choix = scanner.nextInt();
+                choix = scan.nextInt();
     
                 if(Integer.toString(choix).length() != 1 ){
 
@@ -201,13 +360,13 @@ public class Statistiques {
             catch (InputMismatchException e){
                 System.out.println(" Erreur: Vous devez entrer un chiffre");
                 System.out.println();
-                scanner.nextLine();
+                scan.nextLine();
                 continue;
             }
             catch (InputException e){
                 System.out.println(e.toString());
                 System.out.println();
-                scanner.nextLine();
+                scan.nextLine();
                 continue;
             } 
             break;
@@ -215,22 +374,22 @@ public class Statistiques {
         switch(choix){
             case 1:
 
-                etatBac();
-                menu5();
+                etatBac(id);
+                menu5(id);
                 break;
                
             case 2:
-                metrique();
-                menu5();
+                metrique(id);
+                menu5(id);
                 break;
                 
             case 3:
                 traitement();
-                menu5();
+                menu5(id);
                 break;
             case 4: 
                 activites();
-                menu5();
+                menu5(id );
                 break;
             case 0:
                 System.out.println("Retour au menu principal...");

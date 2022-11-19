@@ -1,11 +1,12 @@
 import java.util.Scanner;
 import java.util.InputMismatchException;
-public class Consommateur {
+public class Consommateur extends Main{
     private static Scanner scan = new Scanner(System.in);
     private static Scanner scan2 = new Scanner(System.in);
     private int[] noteConsommateur = {0,0,0,0,0,0,0,0,0,0};
 
     public void consommateur(){
+        //listConsommateur(): simule l'appel à la liste des consommateur
         System.out.println("Liste de consommateurs disponibles: ");
         System.out.println();
         System.out.println(noteConsommateur[0]+" 1. Composte Montréal");
@@ -20,12 +21,48 @@ public class Consommateur {
         System.out.println(noteConsommateur[9]+" 10. Cyclejunk");
         System.out.println();
 
+        int choix;
+        while (true){
+            System.out.print("Entrez le numéro du consommateur que vous voulez sélectionner: ");
+
+            try{
+                choix = scan.nextInt();
+
+                if(choix > 10 || choix < 1){
+                    throw new InputException("Erreur: Veuillez entrer un chiffre entre 1 et 10");
+                }
+                
+            }
+            catch (InputMismatchException e){
+                System.out.println(" Erreur: Vous devez entrer un chiffre");
+                System.out.println();
+                scan.nextLine();
+                continue;
+            }
+            catch (InputException e){
+                System.out.println(e.toString());
+                System.out.println();
+                scan.nextLine();
+                continue;
+            } 
+            break;
+        }
+        System.out.println();
+        System.out.println("Voici les informations du consommateur choisi: ");
+        System.out.println();
+        //"compostemontreal@gmail.com","123456","Composte Montreal","123","5147366677","composte", "600 tonnes"}
+        System.out.println("Nom: "+ consommateur[choix-1][2]);
+        System.out.println("Courriel: "+ consommateur[choix-1][0]);
+        System.out.println("Code: "+ consommateur[choix-1][3]);
+        System.out.println("Telephone: "+ consommateur[choix-1][4]);
+        System.out.println("Types de dechets: "+ consommateur[choix-1][5]);
+        System.out.println("Capacite: "+ consommateur[choix-1][6]);
+
         String enter;
-        
 
         while (true){
             System.out.println();
-            System.out.println("Veuillez choisir votre consommateur et cliquez sur ENTER pour retourner au menu principal");
+            System.out.println("Cliquez sur ENTER pour retourner au menu principal");
        
 
             try{
@@ -160,9 +197,9 @@ public class Consommateur {
 
     public void menu4() {
         System.out.println();
-        String l1 = "*************************";
-        String l2 = "*Trouver un consommateur*";
-        String l3 = "*************************";
+        String l1 = "**********************************";
+        String l2 = "*Trouver et noter un consommateur*";
+        String l3 = "**********************************";
 
         System.out.println(l1);
         System.out.println(l2);

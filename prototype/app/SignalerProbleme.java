@@ -2,6 +2,7 @@ import java.util.Scanner;
 public class SignalerProbleme {
     
     private static Scanner scan = new Scanner(System.in);
+    //private MunicipInfoService municipInfo = new MunicipInfoService();
 
     public void menu3(){
         System.out.println();
@@ -38,6 +39,9 @@ public class SignalerProbleme {
         System.out.println();
         System.out.println("Veuillez rédiger votre requête: ");
         texte = scan.nextLine();
+
+        //municipInfo.postMessage(texte); //Simule l'envoie du message à MunicipInfo
+        
         System.out.println();
         System.out.println("Nous vous remercions pour votre requête, MunicipInfo vous contactera sous peu");
 

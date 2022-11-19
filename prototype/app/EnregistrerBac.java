@@ -67,6 +67,8 @@ public class EnregistrerBac{
         System.out.println("Quel est le type de votre bac? (Bleu, Brun ou Noir): ");
 
         type = scan.nextLine();
+
+        
         System.out.println();
         System.out.println("Votre bac a été enregistré avec succès!");
 

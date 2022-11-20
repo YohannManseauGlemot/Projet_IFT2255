@@ -17,6 +17,8 @@ public class MunicipInfoService extends Main {
             }
         }
 
+        return null;
+
     }
     public String[][] listConsommateur(){
         

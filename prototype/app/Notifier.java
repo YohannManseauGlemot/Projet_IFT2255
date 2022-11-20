@@ -4,6 +4,8 @@ import java.util.InputMismatchException;
 public class Notifier {
     private static Scanner scan = new Scanner(System.in);
     private static Scanner scan1 = new Scanner(System.in);
+    //private MunicipInfoService municipInfo = new MunicipInfoService();
+
     public void menu(){
         System.out.println();
         String l1 = "*************************";
@@ -76,6 +78,7 @@ public class Notifier {
         System.out.println("Veuillez rédiger votre requête de sensibilisation: ");
         System.out.println();
         notifS = scan1.nextLine();
+        //municipInfo.postMessage(notifS);
         System.out.println();
         System.out.println("Votre requête a été enregistrée, les résidents en seront notifié !");
 
@@ -86,6 +89,7 @@ public class Notifier {
         System.out.println("Veuillez rédiger votre requête d'accumulation: ");
         System.out.println();
         notifA = scan1.nextLine();
+        //municipInfo.postMessage(notifA);
         System.out.println();
         System.out.println("Votre requête a été enregistrée, les résidents en seront notifié !");
     }

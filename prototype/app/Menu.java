@@ -6,13 +6,18 @@ import java.util.concurrent.TimeUnit;
 
 public class Menu {
 
+        private String cN;
+        private String qC;
+        private String qR;
+        private String qD;
+        private String nom;
+
     private static Scanner scanner = new Scanner(System.in);
-    Main main = new Main();
-    EnregistrerBac bac = new EnregistrerBac();
-    Consommateur cons = new Consommateur();
-    Statistiques stat = new Statistiques();
-    SignalerProbleme prob = new SignalerProbleme();
-    Notifier notif = new Notifier();
+    private EnregistrerBac bac = new EnregistrerBac();
+    private Consommateur cons = new Consommateur();
+    private Statistiques stat = new Statistiques();
+    private SignalerProbleme prob = new SignalerProbleme();
+    private Notifier notif = new Notifier();
      
     
 
@@ -111,6 +116,28 @@ public class Menu {
      * @throws Exception
      */
     public void menuPrincipal(int id) {
+        
+        if(id == 0){
+            nom = "Dylan";
+            cN = "30:1";
+            qC = "200";
+            qR = "170";
+            qD = "150";
+        }
+        if(id == 1 ){
+            nom = "James";
+            cN = "25:1";
+            qC = "230";
+            qR = "190";
+            qD = "140";
+        }
+        if(id == 2){
+            nom = "Cadet";
+            cN = "35:1";
+            qC = "150";
+            qR = "180";
+            qD = "120";
+        }
         String s1 = "    ____  _                      ";
         String s2 = "   |  _ "+'\\'+"(_)                     ";
         String s3 = "   | |_) |_ _ __   ___  ___ ___  ";
@@ -128,20 +155,26 @@ public class Menu {
         System.out.println();
        
     
-        
+        System.out.println("Bienvenue sur Bineco Mr "+ nom+ "!");
+        System.out.println();
         System.out.println("Choisissez le service que vous voulez utiliser :");
         System.out.println();
 
         System.out.println("    |1| Enregistrer un bac");
         System.out.println("    |2| Statistiques");
-        System.out.println("    |3| Trouver un consommateur");
+        System.out.println("    |3| Trouver et notifier un consommateur");
         System.out.println("    |4| Signaler un problème à MunicipInfo");
         System.out.println("    |0| Retour à l'accueil");
         System.out.println();
+        System.out.println("   Vos métriques écologiques du mois de novembre: ");
+        System.out.println();
+        System.out.println("   * Ratio C/N: "+cN+"       * Composte (lbs): "+qC      );
+        System.out.println("   * Recyclage (lbs): "+qR+"  * Ordure (lbs): "+ qD);
         
 
         int choix;
         while (true){
+            System.out.println();
             System.out.print("Entrez votre choix: ");
 
             try{

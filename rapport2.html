@@ -565,6 +565,7 @@
                 <li>Quels sont les diagrammes à réaliser?</li>
                 <li>Les métriques sont par rapport à l'individu où à la ville?</li>
                 <li>C'est quoi la différence entre les contraintes physiques et conceptuelles et les besoins non fonctionnels</li>
+                <li>Pour le prototype, est-ce qu'on doit faire en sorte que les utilisateurs peuvent se log in ou se créer un compte ou on assume que les utilisateurs ont déja un compte? Si on en a pas besoin, est ce qu'on doit quand même inclure la fonctionnalité dans notre diagramme de classe?</li>
 
             </ul>
             </em>
@@ -590,6 +591,11 @@
                 Les contraintes physiques spécifient les caractéristiques techniques du matériel de support requises pour le bon usage de l’application et les interactions permises.
 
                 Les contraintes conceptuelles spécifient les règles de fonctionnement de l’application, les abstractions (structures) utilisées pour représenter l’état de l’application et les rôles supportés par l’application.</li>
+                <li>  Le prototype doit avoir des comptes déjà créés (10 consommateurs et plus de 3 résidents) et il doit être possible de créer un compte comme résident.
+
+                Le diagramme de classe doit couvrir tous les CUs (toutes les classes nécessaires à l’implémentation finale).
+
+                Il devrait être plus complet que l’implémentation qui ne couvre que les CUs du résident (au minimum).</li>
             
 
                     </em>
@@ -777,6 +783,8 @@
                             <li class="scenario-main-step">Bineco affiche le bon formulaire selon le compte choisit.</li>
                             <li class="scenario-main-step">L'utilisateur entre les informations nécessaires pour créer un compte.</li>
                             <li class="scenario-main-step">Bineco valide les informations entrées.</li>
+                            <li class="scenario-main-step">Bineco envoi un lien de confirmation à l'utilisateur.</li>
+                            <li class="scenario-main-step">L'utilisateur confirme son inscription.</li>
                             <li class="scenario-main-step">Bineco enregistre les informations entrées.</li>
                             <li class="scenario-main-step">L'utilisateur accède au menu</li>
                             
@@ -790,6 +798,15 @@
                                     <ol class="bare-list">
                                         <li value="5">Le serveur détecte une erreur dans les informations entreés.</li>
                                         <li value="5"> L'utilisateur est renvoyé à l'étape 4.</li>
+                                    </ol>
+                                </li>
+                                    <br></br>
+                            <ol class="bare-list scenario-alt-steps">
+                                <li class="bare-list scenario-alt-step" value="7">
+                                    Trois jours se sont écoulés sans que l'utilisateur ne confirme son inscription.
+                                    <ol class="bare-list">
+                                        <li value="7">La tentative d'inscription est annulé</li>
+                                        <li value="7"> L'utilisateur est renvoyé à l'étape 1.</li>
                                     </ol>
                                 </li>
                             </ol>
@@ -842,13 +859,14 @@
                                     <li class="scenario-secondary-step">L'utilisateur accède au menu principal.</li>
                                 </ol>
                             </li>
-                            <li class="scenario-main-step">L'utilisateur choisit l'option de signaler un problème.
+                            <li class="scenario-main-step">L'utilisateur choisit l'option de signaler un problème.</li>
+                            <li class="scenario-main-step">Bineco affiche les champs requis.</li>
+                            <li class="scenario-main-step">L'utilisateur entre les informations nécessaires.</li>
+                            <li class="scenario-main-step">Bineco confirme les informations.</li>
+                            <li class="scenario-main-step">Bineco ouvre un champ de texte pour la rédaction de la requête</li>
                                 
-                                    <li class="scenario-main-step">Bineco ouvre un champ de texte pour la rédaction de la requête</li>
-                                
-                            </li>
-                            <li class="scenario-main-step">L'utilisateur entre les informations.</li>
-                            <li class="scenario-main-step">Le serveur achemine les informations à une boîte de message de MunicipInfo.</li>
+                            <li class="scenario-main-step">L'utilisateur rédige sa requête</li>
+                            <li class="scenario-main-step">Le serveur achemine la requête à une boîte de message de MunicipInfo.</li>
                         </ol>
 
                         <div class="scenario-alt">
@@ -859,6 +877,17 @@
                                         <li value="1">L'utilisateur <a href=#cu-1>se crée un compte</a>.</li>
                                         <li value="1">L'utilisateur reprends à l'étape 1.</li>
                                     </ol>
+
+                            <ol class="bare-list scenario-alt-steps">
+                                <li class="bare-list scenario-alt-step" value="6">Les informations entrées par l'utilisateur sont invalides.
+                                    <ol class="bare-list">
+                                        <li value="6">Le serveur détecte une erreur dans les informations entrées.</li>
+                                        <li value="6">Une erreur est affichée.</li>
+                                        <li value="6">L'utilisateur est renvoyé à l'étape 4.</li>
+                                    </ol>
+                                </li>
+                            </ol>
+
                                 </li>
                             </ol>
                         </div>
@@ -997,7 +1026,7 @@
                                             <li>État de mes bacs</li>
                                             <li>Métriques écologiques</li>
                                             <li>Traitement de mes déchets</li>
-                                            <li>Activités que je maintiens</li>
+                                            
                                         </ul>
                                     </li>
                             
@@ -1064,10 +1093,12 @@
                                     <li class="scenario-secondary-step">L'utilisateur accède au menu principal.</li>
                                 </ol>
                             </li>
-                            <li class="scenario-main-step">L'utilisateur accède à la liste des consommateurs.
-                                
+                            <li class="scenario-main-step">L'utilisateur choisit le volet trouver et notifier un consommateur.
+                                    <li class="scenario-main-step">L'utilisateur choisit l'option choisir un consommateur.</li>
+                                    
                                     <li class="scenario-main-step">Le serveur va chercher les informations et les retourne.</li>
                                     <li class="scenario-main-step">L'application affiche une liste de consommateurs.</li>
+                                    <li class="scenario-main-step">L'utilisateur choisit son consommateur.</li>
                                 </ol>
                             </li>
                         </ol>
@@ -1333,75 +1364,7 @@
                     </div>
                 </div>
 
-        <div class="scenario" id="cu-5">
-                    <div class="scenario-meta">
-                        <h4 class="cu-name">
-                            <strong>CU:</strong> Afficher les activités que l'utilisateur maintient
-                        </h4>
-                        <p class="cu-goal">
-                            <strong>Objectif:</strong> Permet à l'utilisateur de voir les activités qu'il maintient.
-                        </p>
-                        
-                        <hr>
-
-                        <div class="cu-part">
-                            <h5 class="cu-part-title">Acteurs</h5>
-                            <ul class="bare-list cu-actors">
-                                <li class="cu-actor">Résident (Principal)</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="cu-part">
-                            <h5 class="cu-part-title">Préconditions</h5>
-                            <ul class="bare-list cu-conditions">
-
-                                 <li class = 'dash'>L'utlisateur se connecte à bineco.</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="cu-part">
-                            <h5 class="cu-part-title">Postconditions</h5>
-                            <ul class="bare-list cu-conditions">
-                                <li class="dash">Aucune</li>
-                            </ul>
-                        </div>
-                        
-                        
-                    </div>
-                    <div class="scenario-main">
-                        <h5 class="scenario-main-title">Scénario principal</h5>
-                        <ol class="scenario-main-steps">
-                          
-                            <li class="scenario-main-step">L'utilisateur se connecte à son compte.
-                                <ol class="scenario-secondary-steps bare-list">
-                                    <li class="scenario-secondary-step">L'utilisateur accède au menu principal.</li>
-                                </ol>
-                            </li>
-                            <li class="scenario-main-step">L'utilisateur accède au volet statistiques
-                                <ol class="scenario-secondary-steps bare-list">
-                    <li class="scenario-secondary-step">L'utilisateur choisit l'option pour voir les activités qu'il maintient</li>
-                                    <li class="scenario-secondary-step">Le serveur va chercher les informations et les retourne.</li>
-                                    <li class="scenario-secondary-step">L'application affiche les activités maintenues par les consommateurs découlant indirectement des déchets fournis par le résident</li>
-                                </ol>
-                            </li>
-                        </ol>
-
-                        <div class="scenario-alt">
-                            <h5 class="scenario-alt-title">Scénarios alternatifs</h5>
-                            <ol class="bare-list scenario-alt-steps">
-                                <li class="bare-list scenario-alt-step" value="1">L'utilisateur n'a pas de compte.
-                                    <ol class="bare-list">
-                                        <li value="1">L'utilisateur <a href=#cu-1>se crée un compte</a>.</li>
-                                        <li value="1">L'utilisateur reprend à l'étape 1.</li>
-                                    </ol>
-                                </li>
-                            </ol>
-                            <ol class="bare-list scenario-alt-steps">
-                                
-                            </ol>
-                        </div>
-                    </div>
-                </div>
+        
         <div class="scenario" id="cu-6">
                     <div class="scenario-meta">
                         <h4 class="cu-name">
@@ -1446,12 +1409,12 @@
                             <ol class="scenario-secondary-steps bare-list">
                                     <li class="scenario-secondary-step">L'utilisateur accède au menu principal.</li>
                                 </ol>
-                            <li class="scenario-main-step">L'utilisateur accède à la liste de consommateurs </li>
-                            <li class="scenario-main-step">Bineco affiche la liste de consommateurs</li>
-                            <li class="scenario-main-step">L'utilisateur choisit l'activité du consommateur à noté.</li>
-                            <li class="scenario-main-step">L'utilisateur choisit l'option "Noter".</li>
-                            <li class="scenario-main-step">Bineco affiche une échelle de 1 à 5 </li>
-                            <li class="scenario-main-step">L'utilisateur choisit le note.</li>
+                            <li class="scenario-main-step">L'utilisateur choisit le volet trouver et noter un consommateur.</li>
+                            <li class="scenario-main-step">L'utilisateur choisit l'option noter un consommateur.</li>
+                            <li class="scenario-main-step">Bineco affiche la liste des consommateurs.</li>
+                            <li class="scenario-main-step">L'utilisateur choisit le consommateur à noter.</li>
+                            <li class="scenario-main-step">L'utilisateur donne une note au consommateur.</li>
+                            
                             <li class="scenario-main-step">Bineco enregistre la note et affiche la note générale de l'activité.</li>
                             
                         </ol>
@@ -1586,7 +1549,7 @@
                                 </ol>
                             <li class="scenario-main-step">L'utilisateur accède au volet statistiques. </li>
                             <li class="scenario-main-step">Bineco affiche le volet statistiques.</li>
-                            <li class="scenario-main-step">L'utilisateur choisit l'option "afficher les métriques".</li>
+                            <li class="scenario-main-step">L'utilisateur choisit l'option "métriques écologiques".</li>
                             <li class="scenario-main-step">Bineco affiche les métriques et propose à l'utilisateur s'il veut en paramétriser certaines.</li>
                             <li class="scenario-main-step">L'utilisateur choisit la métrique désirée</li>
                             <li class="scenario-main-step">Bineco montre à l'utilisateurs les paramètres pouvant être modifiés.</li>
@@ -1610,6 +1573,84 @@
                         </div>
                     </div>
                 </div>
+
+
+
+
+                <div class="scenario" id="cu-10">
+                    <div class="scenario-meta">
+                        <h4 class="cu-name">
+                            <strong>CU:</strong> Supprimer un bac
+                        </h4>
+                        <p class="cu-goal">
+                            <strong>Objectif:</strong> Permet à un résident de supprimer un bac
+                        </p>
+                        
+                        <hr>
+
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Acteurs</h5>
+                            <ul class="bare-list cu-actors">
+                                <li class="cu-actor">Résident (Principal)</li>
+                                <li class="cu-actor"></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Préconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                
+                                <li class = 'dash'>L'utlisateur se connecte à bineco.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Postconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">La configuration des métriques faites par l'utilisateurs sont mis à jour.</li>
+                            </ul>
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="scenario-main">
+                        <h5 class="scenario-main-title">Scénario principal</h5>
+                        <ol class="scenario-main-steps">
+                            
+                            <li class="scenario-main-step">L'utilisateur se connecte à son compte</li>
+                            <ol class="scenario-secondary-steps bare-list">
+                                    <li class="scenario-secondary-step">L'utilisateur accède au menu principal.</li>
+                                </ol>
+                            <li class="scenario-main-step">L'utilisateur accède au volet statistiques. </li>
+                            <li class="scenario-main-step">Bineco affiche le volet statistiques.</li>
+                            <li class="scenario-main-step">L'utilisateur choisit l'option "métriques écologiques".</li>
+                            <li class="scenario-main-step">Bineco affiche les métriques et propose à l'utilisateur s'il veut en paramétriser certaines.</li>
+                            <li class="scenario-main-step">L'utilisateur choisit la métrique désirée</li>
+                            <li class="scenario-main-step">Bineco montre à l'utilisateurs les paramètres pouvant être modifiés.</li>
+                            <li class="scenario-main-step">L'utilisateur modifie les paramètres selon ses préférences</li>
+                            <li class="scenario-main-step">Bineco enregistre les modifications et affiche les résultats.</li>
+                            
+                            
+                        </ol>
+
+                        <div class="scenario-alt">
+                            <h5 class="scenario-alt-title">Scénarios alternatifs</h5>
+                            <ol class="bare-list scenario-alt-steps">
+                                <li class="bare-list scenario-alt-step" value="1">
+                                    Le consommateur n'a pas de compte.
+                                    <ol class="bare-list">
+                                        <li value="1">Le consommateur <a href=#cu-1>se crée un compte</a>.</li>
+                                        <li value="1">Le consommateur reprend à l'étape 1.</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
 
             </section>
 
@@ -1875,8 +1916,14 @@
 
             <section class="main-section">
                 <h2 id="prototype" class="section-title">Prototype</h2>
+                <h4>Discussion du choix de design:</h4>
+                <p align="jusitfy" style="line-height:1.5">Le prototype possède un faible couplage, c'est-à-dire que la majorité des classes sont indépendnantes les unes des autres. En effet, les seules classes qui interagissent entre elles sont la classe Main, Menu et MunicipInfoService. Pour ce qui est des autres classesm telles que Statistiques, EnregistrerBac, etc. celles-ci n'ont presqu'aucunes interactions avec toutes les autres classes. <br></br>
+                Notre prototype possède aussi une forte cohésion puisque les intéractions au sein de chaques modules se font à l'intérieur d'eux mêmes.
+                Par exemple, la classe Statistiques présente un sous-menu qui permet à l'utilisateur de voir les différentes statistiques et de retourner à ce sous-menu à tout moment. Toutes les interactions ainsi que les données affichables sont contenu dans cette même classe. <br></br>
+                Les classes de notre prototypes ont des interactions semblables, ce qui facilite la réutilisation de ceux-ci pour la création de d'autres classes. Notre conception est modulaire puisque, comme mentionné plus haut, nos classes sont indépendantes et chaques classes contient une fonctionnalité précise. <br></br> Pour ce qui est de l'héritage, les comptes pré-enregistrés sont initialisés dans classe Main, donc les classes qui ont besoin d'avoir accès à ces comptes héritent de la classe Main. Pour éviter que d'autres classes aient accès aux variables d'autres classes, nous avons encapsulé toutes nos variables propres à chaques classes. Puisque notre prototype ne contient pas beaucoup de classes, nous n'avons pas eu besoin d'utiliser l'abstraction.  </p>
 
                 <p>
+
                     <em>
                         Ci-dessous nous illustrons notre prototype en présentant 5 vues de l'application. 
                         Ce prototype utilise une interface en ligne de commande...</em>

@@ -42,6 +42,7 @@ public class Statistiques {
 
     public void etatBac(int id){
 
+        //Rajouter les proportions de chaque bac
         if(id == 0){
             System.out.println("Voici l'état actuel de vos différents bacs, 20 novembre 2022. Ces données sont misent à jour à chaque 24h:");
             System.out.println("                 Bac Brun      Bac Bleu      Bac Noir");
@@ -124,7 +125,7 @@ public class Statistiques {
         System.out.println();
         System.out.println("Matières organiques collectées par la ville (en tonnes):     | 90 000  |    ");
         System.out.println("Taux de récupération des matières organiques:                |   30%   |    ");
-        System.out.println("Coût énergétique total du traitement (en kWh) :               |   300   |    ");
+        System.out.println("Coût énergétique total du traitement (en kWh) :              |   300   |    ");
         System.out.println("Matières recyclables collectées par la ville (en tonnes):    | 150 000 |    ");
         System.out.println("Taux de récupération des matières recyclables:               |   65%   |    "); 
         System.out.println("Coût énergétique total du traitement (en kWh) :              |   350   |    ");
@@ -135,7 +136,7 @@ public class Statistiques {
         String reponse;
 
         while(true){
-            System.out.println("Voulez-vous paramétriser le ratio matières écologiques/non-écologiques?");
+            System.out.println("Voulez-vous paramétriser les facteurs du score ECOLO? (Oui/Non)");
             reponse = scan2.next();
             if(reponse.equalsIgnoreCase("Oui")){
                 while (true){
@@ -144,9 +145,9 @@ public class Statistiques {
                     try{
                         System.out.print("Facteur Vert: ");
                         fV = scan2.nextInt();
-                        System.out.println("Facteur Bleu: ");
+                        System.out.print("Facteur Bleu: ");
                         fB = scan2.nextInt();
-                        System.out.println("Facteur Noir: ");
+                        System.out.print("Facteur Noir: ");
                         fN = scan2.nextInt();
             
                         
@@ -191,10 +192,10 @@ public class Statistiques {
             System.out.println("votre activité écologique et celle des citoyens de la ville de Montréal du mois dernier. Ces métriques sont en lien avec vos différents bacs");
             System.out.println();
             System.out.println("                                                     Vous      |  Moyenne des citoyens    ");
-            System.out.println("           1.Ration carbone/azote (C/N) :             30:1     |        50:1              ");
-            System.out.println("       3 .Ratio matières écologiques/non-écologiques: "+sc2+"     |        50:1              ");
-            System.out.println("       5.Quantité de matière compostée (lbs):         "+qV+"    |        143              ");
-            System.out.println("       5.Quantité de matière recyclé (lbs):           "+qB+"    |        160              ");
+            System.out.println("       1.Ration carbone/azote (C/N):                  30:1     |        50:1              ");
+            System.out.println("       2.Score ECOLO:                                 "+sc2+"     |        12              ");
+            System.out.println("       3.Quantité de matière compostée (lbs):         "+qV+"    |        143              ");
+            System.out.println("       4.Quantité de matière recyclé (lbs):           "+qB+"    |        160              ");
             System.out.println("       5.Quantité de déchets (lbs):                   "+qN+"    |        180              ");
             System.out.println();
         } 
@@ -210,10 +211,10 @@ public class Statistiques {
             System.out.println("votre activité écologique et celle des citoyens de la ville de Montréal du mois dernier. Ces métriques sont en lien avec vos différents bacs");
             System.out.println();
             System.out.println("                                                     Vous      |  Moyenne des citoyens    ");
-            System.out.println("           1.Ration carbone/azote (C/N) :             30:1     |        50:1              ");
-            System.out.println("       3 .Ratio matières écologiques/non-écologiques: "+sc2+"     |        50:1              ");
-            System.out.println("       5.Quantité de matière compostée (lbs):         "+qV+"    |        143              ");
-            System.out.println("       5.Quantité de matière recyclé (lbs):           "+qB+"    |        160              ");
+            System.out.println("       1.Ration carbone/azote (C/N):                  25:1     |        50:1              ");
+            System.out.println("       2.Score ECOLO:                                 "+sc2+"     |        12              ");
+            System.out.println("       3.Quantité de matière compostée (lbs):         "+qV+"    |        143              ");
+            System.out.println("       4.Quantité de matière recyclé (lbs):           "+qB+"    |        160              ");
             System.out.println("       5.Quantité de déchets (lbs):                   "+qN+"    |        180              ");
             System.out.println();
         }
@@ -229,10 +230,10 @@ public class Statistiques {
             System.out.println("votre activité écologique et celle des citoyens de la ville de Montréal du mois dernier. Ces métriques sont en lien avec vos différents bacs");
             System.out.println();
             System.out.println("                                                     Vous      |  Moyenne des citoyens    ");
-            System.out.println("           1.Ration carbone/azote (C/N) :             30:1     |        50:1              ");
-            System.out.println("       3 .Ratio matières écologiques/non-écologiques: "+sc2+"     |        50:1              ");
-            System.out.println("       5.Quantité de matière compostée (lbs):         "+qV+"    |        143              ");
-            System.out.println("       5.Quantité de matière recyclé (lbs):           "+qB+"    |        160              ");
+            System.out.println("       1.Ration carbone/azote (C/N):                  35:1     |        50:1              ");
+            System.out.println("       2.Score ECOLO:                                 "+sc2+"     |        12              ");
+            System.out.println("       3.Quantité de matière compostée (lbs):         "+qV+"    |        143              ");
+            System.out.println("       4.Quantité de matière recyclé (lbs):           "+qB+"    |        160              ");
             System.out.println("       5.Quantité de déchets (lbs):                   "+qN+"    |        180              ");
             System.out.println();
         }
@@ -247,17 +248,20 @@ public class Statistiques {
             System.out.print("Afficher les explications des métriques au niveau résidentiel? (Oui/Non) ");
             afficher = scan.next();
             if(afficher.equalsIgnoreCase("Oui")){
-                System.out.println("1. Le ratio carbone/azote dans un bac de composte doit être le plus près possible de 30:1");
-                System.out.println("pour un compostage optimal.");
+                System.out.println("1. Le ratio carbone/azote dans un bac de composte doit être le plus près possible de 30:1 pour un compostage optimal.");
+                System.out.println("Donc si votre taux se situe au-dessus de 30:1, alors vous jeter trop de matières riches en carbone et l'inverse signifie");
+                System.out.println("que vous jeter trop de matières riches en azote. Un ratio trop haut ou trop bas nuit à votre compostage. Voici une liste d'aliments riches en carbone et en azote");
+                System.out.println("pour vous aider à balancer votre ratio:");
                 System.out.println();
-                System.out.println("2. Le taux d'oxygène est important dans un bac de composte puisque sans oxygène, un bac de composte va générer plus de méthane que de CO2.");
-                System.out.println(" Le méthane a un pouvoir de réchauffement 80 fois plus élevé que le CO2. Aussi, un composte avec un taux d'oxygène plus élevé va se décomposer plus rapidement");
+                System.out.println("Matière riche en carbone       Matière riche en azote");
+                System.out.println(" Foin: 48:1 - 150:1             Grains de caffé: 20:1");
+                System.out.println(" Copeaux de bois: moy 639:1     Légumes: 12:1");
+                System.out.println(" Feuilles: moy 60:1             Reste nourriture: 15:1");
+                System.out.println(" Carton: 563:1                  Excréments: moy 15:1");
                 System.out.println();
-                System.out.println("3.Le ratio de matières compostables et non compostables indique simplement le rapport entre les déchets bénifiques et nuisibles pour votre composte");
+                System.out.println("2.Le ratio de matières écologiques et non écologiques indique simplement le rapport entre les déchets bénifiques et nuisibles pour votre composte");
                 System.out.println();
-                System.out.println("4. Le dégagement de CO2 vous donne une idée de votre empreinte écologique, par contre il faut garder en tête que plus une personne composte plus elle produira de CO2");
-                System.out.println();
-                System.out.println("5. La quantité de matière compostée permet de vous comparer avec les autres citoyens sur votre taux de compostage");
+                System.out.println("3. La quantité de matière compostée, recyclée et de déchets permet de vous comparer avec les autres citoyens sur la quantité de déchets que vous jeter");
                 System.out.println();
                 System.out.println("Note: En moyenne, un bac de composte génère 160 kg de CO2 pour 1 tonne de composte. Donc en assummant qu'un citoyen ");
                 System.out.println("prend 2 semaine à remplir son composte à 100 lbs, alors en 1 mois il aura composté 200 lbs et géneré environ 70 lbs de CO2");
@@ -282,19 +286,17 @@ public class Statistiques {
 
         System.out.println("Voici un aperçu sur le traitement actuel des déchets de la municipalité:");
         System.out.println();
-        System.out.println("Checkpoint 1 Collecte: 3 octobre ");
-        System.out.println("      - Du 1er au 3 octobre, 20 000 tonnes de matières organiques, 40 000 tonnes de matières recyclables ");
+        System.out.println("Checkpoint 1 Collecte: 3 novembre ");
+        System.out.println("      - Du 1er au 3 novembre, 20 000 tonnes de matières organiques, 40 000 tonnes de matières recyclables ");
         System.out.println("        et 30 000 tonnes d'ordures ont été collectées par la ville de Montréal.                 ");
         System.out.println();
-        System.out.println("Checkpoint 2 Livraison: 10 octobre                     ");
-        System.out.println("       - Le 10 octobre, la totalité des matières organiques et recyclables ont été livrées à leurs usines respectives pour le triage     ");
+        System.out.println("Checkpoint 2 Livraison: 10 novembre                     ");
+        System.out.println("       - Le 10 novembre, la totalité des matières organiques et recyclables ont été livrées à leurs usines respectives pour le triage     ");
         System.out.println("         Les ordures ont toutes été amenées à des sites d'enfouissement et d'incinération               ");
         
         System.out.println();
-        
-        System.out.println();
-        System.out.println("Checkpoint 3 Usage: 21 octobre                 ");
-        System.out.println("       - Depuis la livraison du 10 octobre, 30% des matières organiques ont été réutilisées suite au triage. Dans ce 30%,  ");
+        System.out.println("Checkpoint 3 Usage: 21 novembre                ");
+        System.out.println("       - Depuis la livraison du 10 novembre, 30% des matières organiques ont été réutilisées suite au triage. Dans ce 30%,  ");
         System.out.println("         15% ont été attribuées aux sites de compostage municipaux, 10% aux sites de biométhanisation et 5% à d'autres organismes de compostage.");
         System.out.println("         Le 70% des matières restantes se sont retrouvées dans des sites d'enfouissement et d'incinération       ");
         System.out.println();
@@ -306,18 +308,7 @@ public class Statistiques {
         enter();
 
     }
-    public void activites(){
-
-        System.out.println("Voici les activités auxquelles vous participer: ");
-        System.out.println();
-        System.out.println("1. Fabrication de chaussures avec des plastiques recyclés");
-        System.out.println("2. Écocentre Montréal");
-        System.out.println("3. Collecte municipal");
-        System.out.println("4. Activité de composte municipal");
-
-        enter();
-
-    }
+    
 
     public void menu5(int id){
         System.out.println();
@@ -335,7 +326,6 @@ public class Statistiques {
         System.out.println("    |1| État de mes bacs");
         System.out.println("    |2| Métriques écologiques");
         System.out.println("    |3| Traitement de mes déchets");
-        System.out.println("    |4| Activités que je maintiens ");
         System.out.println("    |0| Retour au menu principal ");
         
         System.out.println();
@@ -386,10 +376,6 @@ public class Statistiques {
             case 3:
                 traitement();
                 menu5(id);
-                break;
-            case 4: 
-                activites();
-                menu5(id );
                 break;
             case 0:
                 System.out.println("Retour au menu principal...");

@@ -7,8 +7,8 @@ public class Main {
     private static Menu menu = new Menu();
     private static Scanner scanner = new Scanner(System.in);
     private static Scanner scan = new Scanner(System.in);
-    private static String[][] compte = {{"bobdylan@gmail.com","123456"}, {"lebronjames@yahoo.ca","qwerty"}, {"spacecadet@gmail.com","ytrewq"}};
-    private static String[][] compte2 = {{"compostemontreal@gmail.com","123456"}, {"mayorenv@yahoo.ca","qwerty"}, {"tervita@gmail.com","ytrewq"},{"wasteservicesinc@gmail.com","54321"},{"gflenv@gmail.com","gfl123"},{"monsieurdebris@gmail.com","mrdebris123"},{"polystyvert@gmail.com","polyvert"},{"ewaste@gmail.com","ewaste$"},{"multirecycle@gmail.com","multi12$"},{"cyclejunk@gmail.com","xsqwerp"}};
+    private static String[][] residents = {{"bobdylan@gmail.com","123456"}, {"lebronjames@yahoo.ca","qwerty"}, {"spacecadet@gmail.com","ytrewq"}};
+    protected static String[][] consommateur = {{"compostemontreal@gmail.com","123456","Composte Montreal","123","5147366677","composte", "600 tonnes"}, {"mayorenv@yahoo.ca","qwerty","Mayor Environnement","456","450972828","plastique","500 tonnes"}, {"tervita@gmail.com","ytrewq","Tervita","789","5142348765","composte","300 tonnes"},{"wasteservicesinc@gmail.com","54321","Waste Services Inc","321","5149274545","composte","350 tonnes"},{"gflenv@gmail.com","gfl123","GFL Environnement","654","5143678383","composte","275 tonnes"},{"monsieurdebris@gmail.com","mrdebris123","Monsieur Debris","876","5142348789","verre et plastique","400 tonnes"},{"polystyvert@gmail.com","polyvert","Polystyvert","738","5146789876","composte","600 tonnes"},{"ewaste@gmail.com","ewaste$","E-waste","999","4509876543","metal","200 tonnes"},{"multirecycle@gmail.com","multi12$","Multi-recycle","555","5142346153","plastique","500 tonnes"},{"cyclejunk@gmail.com","xsqwerp","Cycle Junk","101","5146274836","metal","300 tonnes"}};
 
     
         
@@ -93,7 +93,7 @@ public class Main {
                 System.out.println("Veuillez entrer votre mot de passe: ");
                 mdp = scan.next();
                 
-                boolean login = valide(adresse, mdp, compte);
+                boolean login = valide(adresse, mdp, residents);
                  
 
                 if(login == true){
@@ -137,7 +137,7 @@ public class Main {
                 System.out.println("Veuillez entrer votre mot de passe: ");
                 mdp2 = scan.next();
                 
-                boolean login2 = valide(adresse2, mdp2, compte2);
+                boolean login2 = valide(adresse2, mdp2, consommateur);
                  
 
                 if(login2 == true){

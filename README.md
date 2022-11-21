@@ -22,7 +22,7 @@ Utilisation de l'application
 
     Comptes résidents: {{"bobdylan@gmail.com","123456"}, {"lebronjames@yahoo.ca","qwerty"}, {"spacecadet@gmail.com","ytrewq"}}
     
-    Comptes consommateur: {{"compostemontreal@gmail.com","123456"}, {"mayorenv@yahoo.ca","qwerty"}, {"tervita@gmail.com","ytrewq"},{"wasteservicesinc@gmail.com","54321"},        {"gflenv@gmail.com","gfl123"},{"monsieurdebris@gmail.com","mrdebris123"},{"polystyvert@gmail.com","polyvert"},{"ewaste@gmail.com","ewaste$"},                       {"multirecycle@gmail.com","multi12$"},{"cyclejunk@gmail.com","xsqwerp"}}
+    Comptes consommateur: {{"compostemontreal@gmail.com","123456"}, {"mayorenv@yahoo.ca","qwerty"}, {"tervita@gmail.com","ytrewq"},{"wasteservicesinc@gmail.com","54321"}, {"gflenv@gmail.com","gfl123"},{"monsieurdebris@gmail.com","mrdebris123"},{"polystyvert@gmail.com","polyvert"},{"ewaste@gmail.com","ewaste$"},{"multirecycle@gmail.com","multi12$"},{"cyclejunk@gmail.com","xsqwerp"}}                    
 
 - Maintenant connecté vous pouvez entrer un chiffre qui correspond au volet que vous voulez accéder
   Ex: vous voulez accéder au volet Enregistrer un bac, alors entrez 1 et cliquez sur ENTER si vous etes connecté à un compte résident.

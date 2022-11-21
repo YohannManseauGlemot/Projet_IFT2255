@@ -421,7 +421,7 @@
                         <span class="member-id">20217138</span>
                     </div> 
                     <a href="mailto:yohann.manseau-glemot@umontreal.ca">yohann.manseau-glemot@umontreal.ca</a>
-                    <span class="member-role">Représentant de l'équipe: <br>s'occupe de la conception du prototype<br> et de la définition du domaine.</span>
+                    <span class="member-role">Représentant de l'équipe: <br>s'occupe de la conception du prototype<br> et de la définition du domaine. Pour le jalon 2, il s'occupe de revisiter le prototype et de rédiger le diagramme de classes</span>
                 </li>
                 <li class="member">
                     <img class="member-pic" src="https://github.com/YohannManseauGlemot/Projet_IFT2255/blob/main/images/member1_pic%20(2).jpg?raw=true" alt="" >
@@ -430,7 +430,7 @@
                         <span class="member-id">20216495</span>
                     </div> 
                     <a href="mailto:alex.chevrier@umontreal.ca">alex.chevrier@umontreal.ca</a>
-                    <span class="member-role">S'occupe de la planification, <br> des cas d'utilisation, de la section analyse <br> et de la mise en page du rapport</span>
+                    <span class="member-role">S'occupe de la planification, <br> des cas d'utilisation, de la section analyse <br> et de la mise en page du rapport. Pour le jalon 2, il s'occupe de la rédaction des diagrammes d'acitivités et de la correction des divers éléments du rapport.</span>
                 </li>
                 <li class="member">
                     <img class="member-pic" src="https://github.com/YohannManseauGlemot/Projet_IFT2255/blob/main/images/member3.jpg?raw=true" alt="" >
@@ -439,7 +439,7 @@
                         <span class="member-id">20219276</span>
                     </div> 
                     <a href="mailto:maxime.belanger.12@umontreal.ca">maxime.belanger.12@umontreal.ca</a>
-                    <span class="member-role">S'occupe de rédiger les cas d'utilisations</span>
+                    <span class="member-role">S'occupe de rédiger les cas d'utilisations. Pour le jalon 2, il s'occupe du diagramme de séquence et l'analyse</span>
                 </li>
                 
             </ul>
@@ -510,18 +510,7 @@
             <h3>Portée:</h3>
             <p style="line-height:1.5" align="justify"> L'objectif de bineco est d'informer les résidents de la ville de Montréal sur leur habitudes de consommation, sur le compostage, sur l'état de leur bac ainsi que sur le traitement des déchets effectué par la ville. 
                 Bineco à également comme but de fournir des options aux résidents pour s'impliquer d'avantage dans l'enjeu environnemental, en rendnant disponnible des activités et des consommateurs.
-            </p> 
-            <b>Présentation de l'échéancier et la distribution des taches: </b>
-            <br></br>
             
-            Maxime Bélanger: S'occupe des différents cas d'utilisation, c'est-à-dire la rédaction des différents scénarios principaux et alternatifs pour chaque objectif décrits dans le rapport.  
-            <br></br>
-            Yohann Manseau-Glémot: S'occupe de développer le prototype de l'application, c'est-à-dire la page principale, ainsi que les différents sous-menus pour chaque option du menu principal.
-            <br></br>
-            Alex Chevrier: S'occupe de la planification, de l'analyse, de rédiger les CU et de la mise en page du rapport.
-                        
-            
-                </p>
 
             <br></br>
             <h4><b>Échéancier:</b></h4>
@@ -537,6 +526,16 @@
                 <li>La priorité #4 est de concevoir le prototype, puisque nous avons tout les éléments pour le faire. 
                 <li>L'avant-dernière priorité est de rédiger les différentes sections restantes du rapport, notamment l'analyse.
                 <li> Finalement, il ne reste plus qu'a faire la mise en page et à corriger les éléments du rapport.
+            </ol>
+
+            <h3>Jalon 2</h3>
+            <ol> 
+                <li>La priorité #1 était de corriger notre rapport en ce fiant au feedback reçu.</li>
+                <li>La deuxième priorité était les diagrammes d'activités
+                <li>La troisième était de rédiger le diagramme de classe
+                <li>La quatrième était de rédiger le diagramme de séquence
+                <li>La cinquième était de corriger et d'améliorer le prototype
+                <li> Finalement, il ne reste plus qu'a faire la discussion du choix de design.
             </ol>
             
             <br></br>
@@ -1727,14 +1726,7 @@
                         responsable du traitement, du stockage et du partage des informations recueillies.
                         <h4 class="enum-title">Base de données</h4>
                         Afin de stocker des informations dans un serveur et pouvoir les manipuler efficacement,
-                        il faut faire usage d'une base de données. Une base de données centralisée est suggérée
-                        pour le stockage des données, celle-ci simplifie les communications entre le serveur et
-                        les données.
-                        <h4 class="enum-title">Intégration municipale</h4>
-                        Il est logique d'assumer que la ville de montréal possède déja une forme de système informatique
-                        regroupant bases de données et serveurs; nous suggèrons donc de simplement y ajouter notre base
-                        de données et notre serveur à leur système. Ceci facilitera aussi la gestion des problèmes signalés
-                        pour les travailleurs de la ville.
+                        il faut faire usage d'une base de données. (Plus élaboré sur le type de données)
                         <h4 class="enum-title">Capteurs sur les bacs</h4>
                         Afin de mesurer la capacité et la composition d'un bac, un capteur doit y être présent.
                         Ceux-ci permettront aussi d'être "reconnus" par les camions lors de la récolte, servant 
@@ -1856,10 +1848,12 @@
                         <ul>
                         <br>
                         <li>Nous avons choisi le ratio carbone/azote (C/N), puisque plus qu'un bac est près du ratio 30:1, plus le compostage sera optimal, donc cette métrique permet aux utilisateurs de savoir s'il composte mieux que les autres.</li>
-                        <li>Le taux d'oxygène dans un bac permet de comparer la vitesse de décomposition du composte ainsi que l'empreinte écologique, car plus un bac à un taux d'oxygène élevé, plus il se décompose rapidement et plus un bac à un taux d'oxygène bas, plus celui-ci dégagera de méthane.  </li>
-                        <li>Le ratio de matière compostable/non compostable permet de comparer l'utilisation adéquate du bac de composte entre les utilisateurs. Plus ce taux est bas, plus un utilisateur met des matières non compostables dans son bac.</li>
-                        <li>Le dégagement de CO2 permet simplement de comparer son empreinte écologique avec les autres utilisateurs.</li>
+                        
+                        <li>Le ratio de matière compostable/non compostable, aussi appelé le score ECOLO permet de comparer l'utilisation adéquate de l'ensemble des bacs entre les utilisateurs. Plus ce taux est élevé, plus un utilisateur se sert de ses bacs de manière écologique. Ce taux est calculé avec des facteurs paramétrisable par l'utilisateur.</li>
+                        
                         <li>La quantité de matière compostée permet de comparer le poids de matière compostée entre les utilisateurs.</li>
+                        <li>La quantité de matière recyclée permet de comparer le poids de matière recyclé entre les utilisateurs.</li>
+                        <li>La quantité de déchets jettés permet de comparer le poids de déchets jettés entre les utilisateurs.</li>
                         </ul>
                     
                         <br>
@@ -1867,6 +1861,7 @@
                         <ul>
                         <li>La quantité de matière organique collectée par MunicipInfo, ainsi que son taux de récupération. Permet de comparer, à chaque mois, la quantité de matière organique réutilisée et celle gaspillée.</li>
                         <li>C'est de même pour la quantité de matière recycable récoltée par MunicipInfo ainsi que son taux de récupération.</li>
+                        <li>Le cout énergétique permet de donné une idée à l'utilisateur du cout total du traitement des déchets de la ville.</li>
                         
                         </ul>
                     
@@ -1921,6 +1916,43 @@
                 </div>
             </section>
 
+
+
+            <section class="main-section">
+                <h2 id="prototype" class="section-title">Diagrammes de classes</h2>
+
+                <p>
+                    <em>
+                        Ci-dessous nous illustrons le diagramme de classes pour l'application bineco</em>
+                </p>
+                <ul class="bare-list previews">
+                    <li class="preview">
+                        <h4 style="font-size: 1.2em; margin-bottom: 6px">Diagramme de classes</h4> 
+                        <img class="preview-img" src="https://github.com/YohannManseauGlemot/Projet_IFT2255/blob/jalon2/images/Diagramme_de_classe.PNG?raw=true" alt="">
+                        
+                    </li>
+                    
+            </section>
+
+            <section class="main-section">
+                <h2 id="prototype" class="section-title">Diagrammes de séquence</h2>
+
+                <p>
+                    <em>
+                        Ci-dessous nous illustrons le diagramme de séquence pour l'application bineco</em>
+                </p>
+                <ul class="bare-list previews">
+                    <li class="preview">
+                        <h4 style="font-size: 1.2em; margin-bottom: 6px">Diagramme de séquence</h4> 
+                        <img class="preview-img" src="https://github.com/YohannManseauGlemot/Projet_IFT2255/blob/jalon2/images/Diagramme_de_sequence.jpg?raw=true" alt="">
+                        
+                    </li>
+                    
+            </section>
+
+
+
+
             <section class="main-section">
                 <h2 id="prototype" class="section-title">Prototype</h2>
                 <h4>Discussion du choix de design:</h4>
@@ -1937,10 +1969,10 @@
                 </p>
                 <ul class="bare-list previews">
                     <li class="preview">
-                        <h4 style="font-size: 1.2em; margin-bottom: 6px">Menu principal</h4> 
-                        <img class="preview-img" src="https://github.com/YohannManseauGlemot/Projet_IFT2255/blob/main/images/vue_prototype/menuP.PNG?raw=true" alt="">
-                        Le menu principal est affiché au démarrage de l'application. L'utilisateur entre le numéro 
-                        associé au sous-menu ou à l'action pour y accéder ou l'exécuter.
+                        <h4 style="font-size: 1.2em; margin-bottom: 6px">Accueil</h4> 
+                        <img class="preview-img" src="https://github.com/YohannManseauGlemot/Projet_IFT2255/blob/jalon2/images/vue_prototype/menu%201.png?raw=true" alt="">
+                        L'accueil est affiché au démarrage de l'application. L'utilisateur entre le numéro 
+                        qui correspond au type de compte auquel il veut se connecter. Ensuite, l'utilisateur entre son courriel et son mot de passe pour se connecter.
                     </li>
                     <li class="preview">
                         <h4 style="font-size: 1.2em; margin-bottom: 6px">Enregistrer un bac</h4> 
@@ -1949,10 +1981,9 @@
             de donner le nom et le type du bac.
                     </li>
                     <li class="preview">
-                        <h4 style="font-size: 1.2em; margin-bottom: 6px">Volet statistiques (Ex: État de mes bacs)</h4> 
-                        <img class="preview-img" src="https://github.com/YohannManseauGlemot/Projet_IFT2255/blob/main/images/vue_prototype/etat_bac.PNG?raw=true" alt="">
-                        L'utilisateur chosit l'option #2: statistiques. Il à 4 options supplémentaires avec 4 menus distincts pour chaque option soit: État de mes bacs,
-            Métriques écologiques, traitement des déchets et activité maintenus. Dans cette photo, le menu pour l'état des bacs est présenté.
+                        <h4 style="font-size: 1.2em; margin-bottom: 6px">Menu principal du résident</h4> 
+                        <img class="preview-img" src="https://github.com/YohannManseauGlemot/Projet_IFT2255/blob/jalon2/images/vue_prototype/menu2.png?raw=true" alt="">
+                        Lorsqu'un résident s'est connecté à son compte, le menu ci-dessus apparait. Ce menu lui permet de choisir quelle action il veut réaliser et certaines métriques sont affichées pour une consultation rapide. 
                     </li>
                     <li class="preview">
                         <h4 style="font-size: 1.2em; margin-bottom: 6px">Volet statistiques (Ex: Traitement des déchets)</h4> 
@@ -1966,6 +1997,27 @@
                         <img class="preview-img" src="https://github.com/YohannManseauGlemot/Projet_IFT2255/blob/main/images/vue_prototype/signaler_probleme.PNG?raw=true" alt="">
                         L'utilisateur chosit l'option #4: Signaler un problème. Il est redirigé vers un menu ou il doit présenter: son nom, adresse, courriel,
             type de problème et sa requête.
+                    </li>
+                </li>
+
+            <li class="preview">
+                        <h4 style="font-size: 1.2em; margin-bottom: 6px">Métriques écologiques</h4> 
+                        <img class="preview-img" src="https://github.com/YohannManseauGlemot/Projet_IFT2255/blob/jalon2/images/vue_prototype/menu3.png?raw=true" alt="">
+                        Le résident choisit l'option métriques écologiques du volet statistiques. Bineco lui affiche les métriques municipales et lui demande s'il veut paramétriser les facteurs du score ECOLO. L'utilisateur paramétrise les facteurs et les métriques résidentielles sont affichées par la suite. 
+                    </li>
+                </li>
+
+
+            <li class="preview">
+                        <h4 style="font-size: 1.2em; margin-bottom: 6px">Menu consommateur</h4> 
+                        <img class="preview-img" src="https://github.com/YohannManseauGlemot/Projet_IFT2255/blob/jalon2/images/vue_prototype/menu4.png?raw=true" alt="">
+                         Après qu'un consommateur s'est connecté, il accède au menu ci-dessus
+                    </li>
+                </li>
+            <li class="preview">
+                        <h4 style="font-size: 1.2em; margin-bottom: 6px">Noter un consommateur</h4> 
+                        <img class="preview-img" src="https://github.com/YohannManseauGlemot/Projet_IFT2255/blob/jalon2/images/vue_prototype/menu4.png?raw=true" alt="">
+                         Lorsqu'un utilisateur veut noter un consommateur, Bineco lui affiche la liste des consommateurset permet à l'utilisateur de choisir un consommateur et de lui donner une note sur 5.
                     </li>
                 </li>
             </section>

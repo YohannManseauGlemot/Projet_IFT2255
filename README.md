@@ -14,12 +14,20 @@
 5. Exécuter la commande java Main.java afin d'exécuter l'application
 
 Utilisation de l'application
-- Après avoir exécuter le fichier Main.java, vous aller voir le menu principal.
+- Après avoir exécuter le fichier Main.java, vous aller voir l'accueil de Bineco.
 
-- Vous devez maintenant entrer un chiffre qui correspond au volet que vous voulez accéder
-  Ex: vous voulez accéder au volet Enregistrer un bac, alors entrez 1 et cliquez sur ENTER.
+-Vous devez chosir le type de compte auquel vous voulez vous connecter en entrant le chiffre correspondant
+
+-Vous pouvez maintenant entrer le email et le mot de passe que vous voulez parmis ceux ci-dessous:
+
+    Comptes résidents: {{"bobdylan@gmail.com","123456"}, {"lebronjames@yahoo.ca","qwerty"}, {"spacecadet@gmail.com","ytrewq"}}
+    
+    Comptes consommateur: {{"compostemontreal@gmail.com","123456"}, {"mayorenv@yahoo.ca","qwerty"}, {"tervita@gmail.com","ytrewq"},{"wasteservicesinc@gmail.com","54321"},        {"gflenv@gmail.com","gfl123"},{"monsieurdebris@gmail.com","mrdebris123"},{"polystyvert@gmail.com","polyvert"},{"ewaste@gmail.com","ewaste$"},                       {"multirecycle@gmail.com","multi12$"},{"cyclejunk@gmail.com","xsqwerp"}}
+
+- Maintenant connecté vous pouvez entrer un chiffre qui correspond au volet que vous voulez accéder
+  Ex: vous voulez accéder au volet Enregistrer un bac, alors entrez 1 et cliquez sur ENTER si vous etes connecté à un compte résident.
   
-- Si vous accédez au volet Statistiques en ayant entré 2 comme choix, vous allez devoir entrez un autre chiffre pour accéder aux sous-volets comme à l'étape     précédente.
+- Si vous accédez au volet Statistiques en ayant entré 2 comme choix, vous allez devoir entrez un autre chiffre pour accéder aux sous-volets comme à l'étape précédente.
 
 - Lorsque vous entrez des informations dans les volets où on vous en demande, vous devez cliquer sur ENTER pour passer à l'étape suivante,
   sinon des directives vous serons spécifiées.

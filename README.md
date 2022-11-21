@@ -16,9 +16,9 @@
 Utilisation de l'application
 - Après avoir exécuter le fichier Main.java, vous aller voir l'accueil de Bineco.
 
--Vous devez chosir le type de compte auquel vous voulez vous connecter en entrant le chiffre correspondant
+- Vous devez chosir le type de compte auquel vous voulez vous connecter en entrant le chiffre correspondant
 
--Vous pouvez maintenant entrer le email et le mot de passe que vous voulez parmis ceux ci-dessous:
+- Vous pouvez maintenant entrer le email et le mot de passe que vous voulez parmis ceux ci-dessous:
 
     Comptes résidents: {{"bobdylan@gmail.com","123456"}, {"lebronjames@yahoo.ca","qwerty"}, {"spacecadet@gmail.com","ytrewq"}}
     

@@ -46,8 +46,6 @@ public class Main {
 
         System.out.println("    |1| Résident");
         System.out.println("    |2| Consommateur");
-        //System.out.println("    |3| Trouver un consommateur");
-        //System.out.println("    |4| Signaler un problème à la ville");
         System.out.println("    |0| Quitter bineco");
         System.out.println();
         

@@ -1,6 +1,13 @@
 import java.util.concurrent.TimeUnit;
+import java.io.*;
 import java.util.Scanner;
 import java.util.InputMismatchException;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
 
 public class Main {
     private static int identifiant;
@@ -14,7 +21,7 @@ public class Main {
         
     
      
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws IOException{
         
        
         accueil();
@@ -41,11 +48,14 @@ public class Main {
         System.out.println();
        
 
-        System.out.println("Choisissez le type de compte avant de vous connecter :");
+        System.out.println("Veuillez choisir entre vous connecter à un type de compte ou d'en créer un :");
         System.out.println();
 
         System.out.println("    |1| Résident");
         System.out.println("    |2| Consommateur");
+       
+        System.out.println("    |3| Créer un compte");
+        System.out.println("    |4| Modifier son profil");
         System.out.println("    |0| Quitter bineco");
         System.out.println();
         
@@ -60,7 +70,7 @@ public class Main {
 
                     throw new InputException(" Erreur: Votre choix doit contenir un seul chiffre entre 0 et 2");
                 }
-                if(choix >= 3){
+                if(choix >= 5){
                     throw new InputException("Erreur: Veuillez entrer un chiffre entre 0 et 2");
                 }
                 
@@ -86,12 +96,12 @@ public class Main {
                 String mdp;
                 System.out.println();
                 System.out.println("Veuillez entrer votre adresse courriel: ");
-                adresse = scan.next();
+                adresse = scan.nextLine();
                
                 System.out.println("Veuillez entrer votre mot de passe: ");
-                mdp = scan.next();
+                mdp = scan.nextLine();
                 
-                boolean login = valide(adresse, mdp, residents);
+                boolean login = valide(adresse, mdp);
                  
 
                 if(login == true){
@@ -102,11 +112,14 @@ public class Main {
                     else if(adresse.equalsIgnoreCase("lebronjames@yahoo.ca")){
                         identifiant = 1;
                     }
-                    else if(adresse.equalsIgnoreCase("spacecadet@gmail.com")){
+                    else if(adresse.equalsIgnoreCase("freegunna@gmail.com")){
                         identifiant = 2;
                     }
-
-                    menu.menuPrincipal(identifiant);
+                    else{
+                        identifiant = 3;
+                    }
+                    
+                    menu.menuPrincipal(identifiant, adresse);
                 }
                 else{
                     accueil();
@@ -135,7 +148,7 @@ public class Main {
                 System.out.println("Veuillez entrer votre mot de passe: ");
                 mdp2 = scan.next();
                 
-                boolean login2 = valide(adresse2, mdp2, consommateur);
+                boolean login2 = valide(adresse2, mdp2);
                  
 
                 if(login2 == true){
@@ -156,35 +169,125 @@ public class Main {
                 
                 
                 break;
+
+            case 3:
+
+            Scanner scanCompte = new Scanner(System.in);
+            Scanner scanT =new Scanner(System.in);
+            System.out.println("Veuilez choisir le type de compte à créer (Résidents[1], Consommateur[2]): ");
+            int type = scanT.nextInt();
+            
+            System.out.println();
+            System.out.print("Entrer votre courriel: ");
+            String email = scanCompte.nextLine();
+            System.out.println();
+            System.out.print("Entrer votre mot de passe: ");
+            String password = scanCompte.nextLine();
+        
+            // Write the email and password to the text file
+            try (BufferedWriter bw = new BufferedWriter(new FileWriter("accounts.txt", true))) {
+              bw.write(email + " " + password);
+              bw.newLine();
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        
+            // Confirm that the account has been created
+            System.out.println("Compte créé avec succès!");
+
+            accueil();
+            break;
+            case 4:
+                System.out.println();
+                String l1 = "*************************";
+                String l2 = "*Modifier son profil*****";
+                String l3 = "*************************";
+                System.out.println(l1);
+                System.out.println(l2);
+                System.out.println(l3);
+                modifierProfil();
+                break;
+                
             case 0:
                 System.out.println("Merci d'avoir utilisé Bineco!");
                 break;
         }
 
     }
-    public static boolean valide(String ad, String mdp, String[][] comptes){
-        boolean val = false;
-        
-        
-        for (int i = 0; i < comptes.length; i++) {
-            if(ad.equalsIgnoreCase(comptes[i][0])){
-                
-                if(mdp.equalsIgnoreCase(comptes[i][1])){
-                    val = true;
-                    
-                   
-                    break;
-                }
-                
-            }
-        
-        }
-        return val;
+    public static boolean valide(String ad, String mdp){
+        boolean val;
 
+        try (BufferedReader br = new BufferedReader(new FileReader("accounts.txt"))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+              // Split the line into email and password fields
+              String[] fields = line.split(" ");
+              String storedEmail = fields[0];
+              String storedPassword = fields[1];
+      
+              
+              if (ad.equals(storedEmail) && mdp.equals(storedPassword)) {
+                System.out.println("Login successful!");
+                val = true;
+                return val;
+              }
+              else{
+
+                continue;
+              }
+            }  
+        } 
+        catch (IOException e) {
+         
+            e.printStackTrace();
+        }
+        val = false;
+        return val;
+   }
+   public static void modifierProfil() {
+    // Prompt the user for the email and password they want to modify
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Enter the email you want to modify: ");
+    String email = scanner.nextLine();
+    System.out.print("Enter the new password: ");
+    String password = scanner.nextLine();
+
+    // Read the file line by line
+    String line;
+    String modifiedContent = "";
+    try {
+        BufferedReader reader = new BufferedReader(new FileReader("accounts.txt"));
+        while ((line = reader.readLine()) != null) {
+            // Split the line into email and password
+            String[] parts = line.split(" ");
+            String fileEmail = parts[0];
+            //String filePassword = parts[1];
+
+            // Check if the email in the file matches the email the user wants to modify
+            if (fileEmail.equalsIgnoreCase(email)) {
+                // If it matches, modify the password
+                modifiedContent += fileEmail + " " + password + "\n";
+            } else {
+                // If it doesn't match, keep the original content
+                modifiedContent += line + "\n";
+            }
+        }
+        reader.close();
+    } catch (IOException e) {
+        e.printStackTrace();
     }
-    
-    //public void retour() throws Exception{
-       // Menu menuP = new Menu();
-       // menuP.menuPrincipal();
-   // }
+
+    // Write the modified content back to the file
+    try {
+        BufferedWriter writer = new BufferedWriter(new FileWriter("accounts.txt"));
+        writer.write(modifiedContent);
+        writer.close();
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+
+    System.out.println("Email and password successfully modified!");
+}
+
 }

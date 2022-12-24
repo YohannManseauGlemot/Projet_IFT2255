@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.InputMismatchException;
+
 public class Consommateur extends Main{
     private static Scanner scan = new Scanner(System.in);
     private static Scanner scan2 = new Scanner(System.in);

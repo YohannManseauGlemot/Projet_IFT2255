@@ -115,6 +115,10 @@ public class Statistiques {
             
             enter();
         }
+        if(id == 3){
+            System.out.println("Nous avons besoin de plus d'information sur vos bacs avant d'afficher leur état");
+        }
+
 
         
     }
@@ -236,6 +240,17 @@ public class Statistiques {
             System.out.println("       4.Quantité de matière recyclé (lbs):           "+qB+"    |        160              ");
             System.out.println("       5.Quantité de déchets (lbs):                   "+qN+"    |        180              ");
             System.out.println();
+        }
+        else if(id == 3){
+            System.out.println("Voici votre score ECOLO, vos autres métriques seront disponibles dans 24h");
+            double qV = 150;
+            double qB = 180;
+            double qN = 120;
+            score = ((qV*fV)+(qB*fB)) /((qN*fN) +1);
+            String sc = score+"";
+            String sc2 = sc.substring(0, 4);
+
+            System.out.println("       1.Score ECOLO:                                 "+sc2+"     |        12              ");
         }
         
 

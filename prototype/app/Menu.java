@@ -1,6 +1,7 @@
 import java.util.Scanner;
 import java.util.InputMismatchException;
 import java.util.concurrent.TimeUnit;
+import java.util.Random;
 
 
 
@@ -13,6 +14,7 @@ public class Menu {
         private String nom;
 
     private static Scanner scanner = new Scanner(System.in);
+    private static Main main = new Main();
     private EnregistrerBac bac = new EnregistrerBac();
     private Consommateur cons = new Consommateur();
     private Statistiques stat = new Statistiques();
@@ -115,7 +117,7 @@ public class Menu {
     /**
      * @throws Exception
      */
-    public void menuPrincipal(int id) {
+    public void menuPrincipal(int id, String ad) {
         
         if(id == 0){
             nom = "Dylan";
@@ -132,11 +134,22 @@ public class Menu {
             qD = "140";
         }
         if(id == 2){
-            nom = "Cadet";
+            nom = "Gunna";
             cN = "35:1";
             qC = "150";
             qR = "180";
             qD = "120";
+        }
+        if(id == 3){
+            nom = ad.substring(0,5);
+            Random rand = new Random();
+            String cn =  ""+(rand.nextInt(21)+20);
+            cN = cn+":1";
+            qC =  ""+(rand.nextInt(56)+115);
+        
+            qR =  ""+(rand.nextInt(61)+140);
+            qD =  ""+(rand.nextInt(41)+90);
+            
         }
         String s1 = "    ____  _                      ";
         String s2 = "   |  _ "+'\\'+"(_)                     ";
@@ -218,7 +231,7 @@ public class Menu {
                 }
 
                 
-                menuPrincipal(id);
+                menuPrincipal(id, ad);
 
                 break;
                
@@ -233,7 +246,7 @@ public class Menu {
                     System.out.println("Erreur");
                 }
                 
-                menuPrincipal(id);
+                menuPrincipal(id, ad);
                 break;
                 
             case 3:
@@ -246,7 +259,7 @@ public class Menu {
                 catch (Exception e) {
                     System.out.println("Erreur");
                 }
-                menuPrincipal(id);
+                menuPrincipal(id, ad);
                 break;
             case 4: 
                 
@@ -259,7 +272,7 @@ public class Menu {
                     System.out.println("Erreur");
                 }
                 
-                menuPrincipal(id);
+                menuPrincipal(id, ad);
 
                 break;
             case 0:

@@ -6,6 +6,7 @@ public class Notifier {
     private static Scanner scan1 = new Scanner(System.in);
     //private MunicipInfoService municipInfo = new MunicipInfoService();
 
+    
     public void menu(){
         System.out.println();
         String l1 = "*************************";

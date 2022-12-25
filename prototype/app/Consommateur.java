@@ -196,15 +196,22 @@ public class Consommateur extends Main{
  
     }
 
-    public void menu4() {
-        System.out.println();
+    public void printLogo(){
+        /*/
         String l1 = "**********************************";
         String l2 = "*Trouver et noter un consommateur*";
         String l3 = "**********************************";
 
         System.out.println(l1);
         System.out.println(l2);
-        System.out.println(l3);
+        System.out.print(l3);
+        */
+        System.out.print("**********************************\n*Trouver et noter un consommateur*\n**********************************");
+       
+    }
+    public void menu4() {
+        System.out.println();
+        printLogo();
         System.out.println();
 
         String choix;

@@ -112,7 +112,7 @@ public class Main {
                     else if(adresse.equalsIgnoreCase("lebronjames@yahoo.ca")){
                         identifiant = 1;
                     }
-                    else if(adresse.equalsIgnoreCase("freegunna@gmail.com")){
+                    else if(adresse.equalsIgnoreCase("spacecadet@gmail.com")){
                         identifiant = 2;
                     }
                     else{
@@ -143,10 +143,10 @@ public class Main {
 
                 System.out.println();
                 System.out.println("Veuillez entrer votre adresse courriel: ");
-                adresse2 = scan.next();
+                adresse2 = scan.nextLine();
                
                 System.out.println("Veuillez entrer votre mot de passe: ");
-                mdp2 = scan.next();
+                mdp2 = scan.nextLine();
                 
                 boolean login2 = valide(adresse2, mdp2);
                  
@@ -207,6 +207,7 @@ public class Main {
                 System.out.println(l2);
                 System.out.println(l3);
                 modifierProfil();
+                accueil();
                 break;
                 
             case 0:
@@ -248,9 +249,9 @@ public class Main {
    public static void modifierProfil() {
     // Prompt the user for the email and password they want to modify
     Scanner scanner = new Scanner(System.in);
-    System.out.print("Enter the email you want to modify: ");
+    System.out.print("Entrez votre email: ");
     String email = scanner.nextLine();
-    System.out.print("Enter the new password: ");
+    System.out.print("Entrez votre nouveau mot de passe: ");
     String password = scanner.nextLine();
 
     // Read the file line by line
@@ -287,7 +288,7 @@ public class Main {
         e.printStackTrace();
     }
 
-    System.out.println("Email and password successfully modified!");
+    System.out.println("Vous avez changé votre email et mot de passe!");
 }
 
 }

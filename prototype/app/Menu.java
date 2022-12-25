@@ -28,7 +28,9 @@ public class Menu {
             System.out.println();
 
     }
-
+    public void logo(){
+        System.out.print("    ____  _                      \n   |  _ "+'\\'+"(_)                     \n   |  _ "+'\\'+"(_)                     \n   |  _ <| | '_ \\ / _ \\/ __/ _ \\ \n   | |_) | | | | |  __/ (_| (_) |\n   |____/|_|_| |_|\\___|\\___\\___/ ");
+    }
     public void menuConsommateur(){
 
         String s1 = "    ____  _                      ";
@@ -51,9 +53,9 @@ public class Menu {
         System.out.println();
 
         System.out.println("    |1| Notifier les résidents");
-        //System.out.println("    |2| Statistiques");
-        //System.out.println("    |3| Trouver un consommateur");
-        //System.out.println("    |4| Signaler un problème à la ville");
+        System.out.println("    |2| Ajouter une activité");
+        System.out.println("    |3| Supprimer une activité");
+        System.out.println("    |4| Modifier une activité");
         System.out.println("    |0| Retourner à l'accueil");
         System.out.println();
 
@@ -134,7 +136,7 @@ public class Menu {
             qD = "140";
         }
         if(id == 2){
-            nom = "Gunna";
+            nom = "Cadet";
             cN = "35:1";
             qC = "150";
             qR = "180";

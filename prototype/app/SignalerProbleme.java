@@ -4,6 +4,10 @@ public class SignalerProbleme {
     private static Scanner scan = new Scanner(System.in);
     //private MunicipInfoService municipInfo = new MunicipInfoService();
 
+    public void titre(){
+        System.out.print("**************************\n*  Signaler un problème  *\n**************************");
+    }
+
     public void menu3(){
         System.out.println();
 

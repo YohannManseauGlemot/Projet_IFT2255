@@ -13,20 +13,25 @@ public class EnregistrerBac{
      * |Enregistrement d'un bac|   
      * |||||||||||||||||||||||||
      */
+    public void printL(){
+        System.out.print("*************************\n*Enregistrement d'un bac*\n*************************");
+    }
     public void menu2(){
         System.out.println();
+        printL();
+        /* 
         String l1 = "*************************";
         String l2 = "*Enregistrement d'un bac*";
         String l3 = "*************************";
 
-        String l4 = " ----------------------------";
-        String l5 = "|                            |";
+        
 
         System.out.println(l1);
         System.out.println(l2); 
         System.out.println(l3);
-        
-        
+        */
+        String l4 = " ----------------------------";
+        String l5 = "|                            |";
 
         String enter;
 
